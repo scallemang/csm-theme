@@ -130,3 +130,15 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/**
+ * Theme Options
+ */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+	acf_add_options_sub_page('Branding');
+	acf_add_options_sub_page('Business Details');
+	
+}
