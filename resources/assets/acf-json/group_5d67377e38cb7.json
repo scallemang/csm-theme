@@ -47,16 +47,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5d67444442a10": {
-                    "key": "layout_5d67444442a10",
-                    "name": "flex__cta",
-                    "label": "CTA",
+                "layout_5d67d8572ac9e": {
+                    "key": "layout_5d67d8572ac9e",
+                    "name": "flex__copy",
+                    "label": "Copy",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5d67444c42a11",
-                            "label": "CTA",
-                            "name": "block__cta",
+                            "key": "field_5d67d85e2ac9f",
+                            "label": "Copy",
+                            "name": "block__copy",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -67,7 +67,7 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_5d6738a66849b"
+                                "group_5d67d75e18e56"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -109,6 +109,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5d67444442a10": {
+                    "key": "layout_5d67444442a10",
+                    "name": "flex__cta",
+                    "label": "CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d67444c42a11",
+                            "label": "CTA",
+                            "name": "block__cta",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5d6738a66849b"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d67bc1c973bf": {
                     "key": "layout_5d67bc1c973bf",
                     "name": "flex__faqs",
@@ -130,6 +161,37 @@
                             },
                             "clone": [
                                 "group_5d67b8cd8b2be"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5d67d3774ba3a": {
+                    "key": "layout_5d67d3774ba3a",
+                    "name": "flex__reviews",
+                    "label": "Reviews",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d67d37f4ba3b",
+                            "label": "Reviews",
+                            "name": "block__reviews",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5d67d242aaf26"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -163,5 +225,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1567079516
+    "modified": 1567086753
 }
