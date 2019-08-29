@@ -20,9 +20,9 @@
         },
         {
             "key": "field_5d67ba88746da",
-            "label": "Section Heading",
+            "label": "Heading",
             "name": "faqs__heading",
-            "type": "text",
+            "type": "medium_editor",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,9 +33,38 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
+            "delay": 0
+        },
+        {
+            "key": "field_5d680351e9d20",
+            "label": "Description",
+            "name": "faq__subheading",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 1
         },
         {
             "key": "field_5d67baa1746db",
@@ -93,6 +122,20 @@
                     "toolbar": "full",
                     "media_upload": 1,
                     "delay": 1
+                },
+                {
+                    "key": "field_5d68029af41b3",
+                    "label": "Unique ID",
+                    "name": "faq__unique_id",
+                    "type": "unique_id",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "d-none",
+                        "id": ""
+                    }
                 }
             ]
         },
@@ -199,5 +242,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567079262
+    "modified": 1567097849
 }

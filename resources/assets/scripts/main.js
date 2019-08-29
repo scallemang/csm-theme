@@ -12,7 +12,8 @@ import aboutUs from './routes/about';
 
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { far } from '@fortawesome/free-regular-svg-icons'
-library.add( far );
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add( fas, far );
 dom.watch();
 
 /** Populate Router instance with DOM routes */

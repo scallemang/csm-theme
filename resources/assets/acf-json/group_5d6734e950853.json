@@ -22,7 +22,7 @@
             "key": "field_5d6736ee6795b",
             "label": "Heading",
             "name": "hero__heading",
-            "type": "text",
+            "type": "medium_editor",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,11 +31,19 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "default_value": ""
         },
         {
             "key": "field_5d6736f76795c",
@@ -51,10 +59,10 @@
                 "id": ""
             },
             "default_value": "",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5d6736ff6795d",
@@ -159,5 +167,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567078560
+    "modified": 1567093244
 }

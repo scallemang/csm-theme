@@ -1,0 +1,76 @@
+{
+    "key": "group_5d67f094d67d7",
+    "title": "Utility: Colour Picker",
+    "fields": [
+        {
+            "key": "field_5d67f094d95e9",
+            "label": "Colour Picker",
+            "name": "colour_picker",
+            "type": "select",
+            "instructions": "Colours are set under Options > Branding.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "--Default--",
+                "primary": "Primary Colour",
+                "secondary": "Secondary Colour",
+                "text": "Text Colour",
+                "background": "Background Colour",
+                "custom": "Custom Colour"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d67f0ca81efb",
+            "label": "Custom Colour",
+            "name": "colour_picker__custom",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d67f094d95e9",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1567092990
+}

@@ -31,32 +31,6 @@
             "placeholder": ""
         },
         {
-            "key": "field_5d66d73e27712",
-            "label": "Icegram code",
-            "name": "link__icegram_code",
-            "type": "acf_code_field",
-            "instructions": "Add your Icegram `onclick` code.",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5d66d69f27711",
-                        "operator": "==",
-                        "value": "icegram"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "window.icegram.get_message_by_id(4345).show();",
-            "placeholder": "",
-            "mode": "htmlmixed",
-            "theme": "monokai"
-        },
-        {
             "key": "field_5d66dbe327713",
             "label": "Page picker",
             "name": "link__page_picker",
@@ -155,6 +129,32 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5d66d73e27712",
+            "label": "Icegram code",
+            "name": "link__icegram_code",
+            "type": "acf_code_field",
+            "instructions": "Add your Icegram `onclick` code.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d66d69f27711",
+                        "operator": "==",
+                        "value": "icegram"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "window.icegram.get_message_by_id(XXXX).show();",
+            "placeholder": "",
+            "mode": "htmlmixed",
+            "theme": "monokai"
         }
     ],
     "location": [
@@ -174,5 +174,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567022221
+    "modified": 1567096156
 }

@@ -21,6 +21,8 @@
                 "secondary": "Secondary Colour",
                 "text": "Text Colour",
                 "background": "Background Colour",
+                "custom": "Custom Colour",
+                "gradient": "Gradient",
                 "image": "Background Image"
             },
             "default_value": [],
@@ -30,6 +32,29 @@
             "return_format": "value",
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_5d67f13798092",
+            "label": "Custom Colour",
+            "name": "background_picker--custom",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d66decf3e6da",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
         },
         {
             "key": "field_5d66df9c3e6db",
@@ -74,7 +99,7 @@
                 [
                     {
                         "field": "field_5d66decf3e6da",
-                        "operator": "!=",
+                        "operator": "==",
                         "value": "image"
                     }
                 ]
@@ -185,5 +210,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567023468
+    "modified": 1567095774
 }

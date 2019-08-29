@@ -82,7 +82,7 @@
             "key": "field_5d6739ebb2580",
             "label": "Heading",
             "name": "cta__heading",
-            "type": "text",
+            "type": "medium_editor",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -99,17 +99,25 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "default_value": ""
         },
         {
             "key": "field_5d673a5eb2581",
             "label": "Subheading",
             "name": "cta__subheading",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -127,10 +135,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_5d67436fb2582",
@@ -139,7 +147,15 @@
             "type": "true_false",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d673971b257e",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -158,7 +174,20 @@
             "type": "clone",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d673971b257e",
+                        "operator": "==",
+                        "value": "custom"
+                    },
+                    {
+                        "field": "field_5d67436fb2582",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -243,5 +272,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567078571
+    "modified": 1567098217
 }

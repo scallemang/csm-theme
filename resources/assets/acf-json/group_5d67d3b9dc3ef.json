@@ -22,7 +22,7 @@
             "key": "field_5d67d3fbce54a",
             "label": "Section Heading",
             "name": "contact__heading",
-            "type": "text",
+            "type": "medium_editor",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,13 +33,23 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
+            "delay": 0
         },
         {
             "key": "field_5d67d40ace54b",
-            "label": "Section Subheading",
+            "label": "Subheading",
             "name": "contact__subheading",
             "type": "text",
             "instructions": "",
@@ -107,6 +117,54 @@
             "allow_null": 0
         },
         {
+            "key": "field_5d68009ba10dc",
+            "label": "Has button?",
+            "name": "contact__has_button",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d6800a8a10dd",
+            "label": "Button",
+            "name": "contact__button",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d68009ba10dc",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d66e262be84f"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5d67d5985bd47",
             "label": "Options",
             "name": "",
@@ -161,5 +219,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567086358
+    "modified": 1567097059
 }

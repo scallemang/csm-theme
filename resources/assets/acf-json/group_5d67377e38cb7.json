@@ -78,6 +78,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5d67fab7a7db9": {
+                    "key": "layout_5d67fab7a7db9",
+                    "name": "flex__fiftyfifty",
+                    "label": "Fifty\/Fifty",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d67fab7a7dba",
+                            "label": "Fifty\/Fifty",
+                            "name": "block__fiftyfifty",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5d67f781ebd37"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d6750f25e9ce": {
                     "key": "layout_5d6750f25e9ce",
                     "name": "flex__services",
@@ -201,6 +232,37 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5d67ffcf73cca": {
+                    "key": "layout_5d67ffcf73cca",
+                    "name": "flex__contact",
+                    "label": "Contact",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d67ffcf73ccb",
+                            "label": "Contact",
+                            "name": "block__contact",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5d67d3b9dc3ef"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Section",
@@ -222,8 +284,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1567086753
+    "modified": 1567096807
 }

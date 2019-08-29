@@ -20,9 +20,9 @@
         },
         {
             "key": "field_5d67496db0b50",
-            "label": "Section Heading",
-            "name": "services__section-heading",
-            "type": "text",
+            "label": "Heading",
+            "name": "services__heading",
+            "type": "medium_editor",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,9 +33,38 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
+            "delay": 0
+        },
+        {
+            "key": "field_5d67f2f882b20",
+            "label": "Subheading",
+            "name": "services__subheading",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_5d674997b0b51",
@@ -56,6 +85,22 @@
             "layout": "block",
             "button_label": "Add Service\/Solution",
             "sub_fields": [
+                {
+                    "key": "field_5d67f4ab009d7",
+                    "label": "Content",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
                 {
                     "key": "field_5d6749c2b0b52",
                     "label": "Icon",
@@ -116,10 +161,10 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_5d674f3db0b55",
-                    "label": "Has button?",
-                    "name": "service__has_button",
-                    "type": "true_false",
+                    "key": "field_5d67f63890f42",
+                    "label": "Link",
+                    "name": "service__link",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -128,42 +173,94 @@
                         "class": "",
                         "id": ""
                     },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": ""
+                    "return_format": "array"
                 },
                 {
-                    "key": "field_5d674f4bb0b56",
-                    "label": "Button",
-                    "name": "service__button",
+                    "key": "field_5d67f4b5009d8",
+                    "label": "Options",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5d67f4bd009d9",
+                    "label": "Colour",
+                    "name": "service__colour",
                     "type": "clone",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_5d674f3db0b55",
-                                "operator": "==",
-                                "value": "1"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
                     "clone": [
-                        "group_5d66e262be84f"
+                        "group_5d67f094d67d7"
                     ],
-                    "display": "group",
+                    "display": "seamless",
                     "layout": "block",
                     "prefix_label": 0,
                     "prefix_name": 0
                 }
             ]
+        },
+        {
+            "key": "field_5d67f5574d4bc",
+            "label": "Has button?",
+            "name": "services__has_button",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5d67f5664d4bd",
+            "label": "Button",
+            "name": "services__button",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d67f5574d4bc",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d66e262be84f"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_5d674fc6b0b59",
@@ -220,5 +317,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567051764
+    "modified": 1567094378
 }

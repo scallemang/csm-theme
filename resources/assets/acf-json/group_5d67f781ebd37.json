@@ -1,9 +1,9 @@
 {
-    "key": "group_5d67d242aaf26",
-    "title": "Block: Reviews",
+    "key": "group_5d67f781ebd37",
+    "title": "Block: Fifty\/Fifty",
     "fields": [
         {
-            "key": "field_5d67d24b0d0ef",
+            "key": "field_5d67f78a099d3",
             "label": "Content",
             "name": "",
             "type": "tab",
@@ -19,10 +19,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d67d26a0d0f0",
-            "label": "Heading",
-            "name": "reviews__heading",
-            "type": "medium_editor",
+            "key": "field_5d67f928099d5",
+            "label": "Left Column",
+            "name": "fiftyfifty__left",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -31,28 +31,20 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "standard_buttons": [
-                "bold",
-                "italic",
-                "underline",
-                "removeFormat"
+            "clone": [
+                "group_5d67f7b0e90e0"
             ],
-            "custom_buttons": "",
-            "other_options": [
-                "disableReturn",
-                "disableDoubleReturn",
-                "disableExtraSpaces"
-            ],
-            "delay": 0
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
         },
         {
-            "key": "field_5d67d2780d0f1",
-            "label": "Shortcode",
-            "name": "reviews__shortcode",
-            "type": "text",
-            "instructions": "Please add your shortcode as generated under Reviews Bundle from the dashboard menu.",
+            "key": "field_5d67f9ad099d6",
+            "label": "Right Column",
+            "name": "fiftyfifty__right",
+            "type": "clone",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -60,14 +52,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "clone": [
+                "group_5d67f7b0e90e0"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 1
         },
         {
-            "key": "field_5d67d2a70d0f2",
+            "key": "field_5d67f9e5099d7",
             "label": "Options",
             "name": "",
             "type": "tab",
@@ -83,9 +77,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d67d2ad0d0f3",
+            "key": "field_5d67f9f1099d8",
             "label": "Background",
-            "name": "reviews__background",
+            "name": "fiftyfifty__background",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -121,5 +115,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567092169
+    "modified": 1567096029
 }

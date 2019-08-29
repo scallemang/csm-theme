@@ -47,7 +47,7 @@
             "label": "Button Colour",
             "name": "button__colour",
             "type": "select",
-            "instructions": "primary : Primary Colour\r\nsecondary : Secondary Colour\r\ntext : Text Colour\r\nbackground : Background Colour",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -55,7 +55,12 @@
                 "class": "",
                 "id": ""
             },
-            "choices": [],
+            "choices": {
+                "primary": "Primary Colour",
+                "secondary": "Secondary Colour",
+                "text": "Text Colour",
+                "background": "Background Colour"
+            },
             "default_value": [],
             "allow_null": 0,
             "multiple": 0,
@@ -82,5 +87,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567023869
+    "modified": 1567094598
 }
