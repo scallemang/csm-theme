@@ -1,0 +1,178 @@
+{
+    "key": "group_5d66d6926dd65",
+    "title": "Element: Link",
+    "fields": [
+        {
+            "key": "field_5d66d69f27711",
+            "label": "Link type",
+            "name": "link__type",
+            "type": "select",
+            "instructions": "Select your link type",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "icegram": "Icegram pop-up",
+                "page": "Internal page",
+                "site": "External site",
+                "email": "Email",
+                "phone": "Phone"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d66d73e27712",
+            "label": "Icegram code",
+            "name": "link__icegram_code",
+            "type": "acf_code_field",
+            "instructions": "Add your Icegram `onclick` code.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d66d69f27711",
+                        "operator": "==",
+                        "value": "icegram"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "window.icegram.get_message_by_id(4345).show();",
+            "placeholder": "",
+            "mode": "htmlmixed",
+            "theme": "monokai"
+        },
+        {
+            "key": "field_5d66dbe327713",
+            "label": "Page picker",
+            "name": "link__page_picker",
+            "type": "link",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d66d69f27711",
+                        "operator": "==",
+                        "value": "page"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_5d66dc0b27714",
+            "label": "Site URL",
+            "name": "link__site_url",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d66d69f27711",
+                        "operator": "==",
+                        "value": "site"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d66dc1e27715",
+            "label": "Email address",
+            "name": "link__email_address",
+            "type": "email",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d66d69f27711",
+                        "operator": "==",
+                        "value": "email"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5d66dc3427716",
+            "label": "Phone number",
+            "name": "link__phone_number",
+            "type": "text",
+            "instructions": "Enter the phone number in whatever format you wish, e.g.: (416) 555-1234, 416.555.1234, etc.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d66d69f27711",
+                        "operator": "==",
+                        "value": "phone"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1567022221
+}

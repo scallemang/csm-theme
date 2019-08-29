@@ -1,0 +1,84 @@
+{
+    "key": "group_5d66dcc4e9a88",
+    "title": "Options: Color",
+    "fields": [
+        {
+            "key": "field_5d66dcd30c90b",
+            "label": "Primary Colour",
+            "name": "colour__primary",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#F00000"
+        },
+        {
+            "key": "field_5d66dd050c90c",
+            "label": "Secondary",
+            "name": "colour__secondary",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#0000F0"
+        },
+        {
+            "key": "field_5d66dd160c90d",
+            "label": "Text",
+            "name": "colour__text",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#212121"
+        },
+        {
+            "key": "field_5d66de5a27fd7",
+            "label": "Background Colour",
+            "name": "colour__background",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#f0f0f0"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1567022734
+}
