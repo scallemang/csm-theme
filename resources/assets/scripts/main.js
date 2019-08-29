@@ -10,6 +10,11 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { far } from '@fortawesome/free-regular-svg-icons'
+library.add( far );
+dom.watch();
+
 /** Populate Router instance with DOM routes */
 const routes = new Router({
   // All pages

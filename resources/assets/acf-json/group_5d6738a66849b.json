@@ -100,10 +100,10 @@
                 "id": ""
             },
             "default_value": "",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
             "key": "field_5d673a5eb2581",
@@ -243,5 +243,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567048704
+    "modified": 1567078571
 }
