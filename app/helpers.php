@@ -255,9 +255,59 @@ function return_fiftyfifty_col( $group = null )
     return $col;
 }
 
-function return_background()
+function return_background( $group = null )
 {
+    $type = null;
+    if( $group ) {
 
+    } else {
+        
+    }
+    return return_background_from_type( $type );
+}
+
+function return_background_from_type( $type = null, $args = null )
+{
+    $background = array(
+        'type' => null,
+        'value' => null,
+    );
+    switch( $type ) {
+        case 'primary':
+        case 'secondary':
+        case 'info':
+        case 'text':
+        case 'background':
+            $background['type'] = 'color';
+            $background['value'] = $type;
+            break;
+        case 'custom':
+            if( isset($args['prefix']) ):
+                if( isset($args['option'])):
+                    $value = $args['prefix']. get_field('background_picker--custom', 'option');
+                else:
+                    $value = $args['prefix']. get_field('background_picker--custom');
+                endif;
+            else: 
+                $value = get_field('background_picker--custom');
+            endif;
+            $background['type'] = 'color';
+            $background['value'] = $value;
+            break;
+        case 'gradient':
+            $background['type'] = 'gradient';
+            $background['value'] = array(
+                $from => null,
+                $to => null
+            );
+            break;
+        case 'image':
+            $background['type'] = 'image';
+            $background['value'] = isset($args['prefix']) ? $args['prefix']. get_field('background__image') : get_field('background__image');
+        default:
+            break;
+    }
+    return $background;
 }
 
 function return_color()
@@ -308,6 +358,8 @@ function return_cta()
             $ctaMeta = get_post_meta($id);
             $cta['heading'] = get_field('cta__heading', $id);
             $cta['subheading'] = get_field('cta__subheading', $id);
+            $backgroundType = get_field('background_picker', $id);
+            $cta['background'] = return_background_from_type( $backgroundType );
             $hasButton = get_field('cta__has_button', $id);
             if( $hasButton ):
                 $cta['button'] = return_button( get_field('cta__button', $id) );
@@ -316,6 +368,8 @@ function return_cta()
         case 'custom':
             $cta['heading'] = get_sub_field('cta__heading');
             $cta['subheading'] = get_sub_field('cta__subheading');
+            $backgroundType = get_field('background_picker', $id);
+            $cta['background'] = return_background_from_type( $backgroundType );
             $hasButton = get_sub_field('cta__has_button');
             if( $hasButton ):
                 $cta['button'] = return_button( get_sub_field('cta__button') );
@@ -325,4 +379,36 @@ function return_cta()
             break;
     }
     return $cta;
+}
+
+function return_logo( $light = null )
+{
+    if( !$light ) {
+        $logo = get_field('branding__logo', 'option');
+        
+    } else {
+        $logo = get_field('branding__logo_light', 'option');
+    }
+    return $logo;
+}
+
+function social_list()
+{
+    $facebook =  get_field('social__facebook ', 'option');
+    $twitter = get_field('social__twitter', 'option');
+    $instagram = get_field('social__instagram', 'option');
+    $youtube = get_field('social__youtube', 'option');
+    $linkedin = get_field('social__linkedin', 'option');
+    $html = '';
+    
+    if( $facebook || $twitter || $instagram || $youtube || $linkedin ) {
+        $html .= '<ul class="list--social">';
+        if( $facebook ): $html.= '<li><a href="' . $facebook . '" target=_"blank"><i class="fab fa-facebook"></i></a></li>'; endif;
+        if( $twitter): $html.= '<li><a href="' . $twitter . '" target=_"blank"><i class="fab fa-twitter"></i></a></li>'; endif;
+        if( $instagram): $html.= '<li><a href="' . $instagram . '" target=_"blank"><i class="fab fa-instagram"></i></a></li>'; endif;
+        if( $youtube): $html.= '<li><a href="' . $youtube . '" target=_"blank"><i class="fab fa-youtube"></i></a></li>'; endif;
+        if( $linkedin): $html.= '<li><a href="' . $linkedin . '" target=_"blank"><i class="fab fa-linkedin"></i></a></li>'; endif;
+        $html .= '</ul>';
+    }
+    return $html;
 }

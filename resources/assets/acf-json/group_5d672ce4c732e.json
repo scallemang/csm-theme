@@ -3,6 +3,54 @@
     "title": "Options: Branding",
     "fields": [
         {
+            "key": "field_5d6e9f4d51dbf",
+            "label": "Logo",
+            "name": "branding__logo",
+            "type": "image",
+            "instructions": "Primary logo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5d6e9f6951dc0",
+            "label": "Light Logo",
+            "name": "branding__logo_light",
+            "type": "image",
+            "instructions": "Variant logo for sections with dark backgrounds.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5d672ced85c5b",
             "label": "Colours",
             "name": "branding__colours",
@@ -41,5 +89,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1567042865
+    "modified": 1567531082
 }

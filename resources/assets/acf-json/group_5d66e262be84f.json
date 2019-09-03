@@ -58,6 +58,7 @@
             "choices": {
                 "primary": "Primary Colour",
                 "secondary": "Secondary Colour",
+                "info": "Info Colour",
                 "text": "Text Colour",
                 "background": "Background Colour"
             },
@@ -87,5 +88,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567094598
+    "modified": 1567521493
 }

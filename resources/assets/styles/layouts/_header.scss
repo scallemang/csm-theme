@@ -4,4 +4,74 @@
 
 .banner .nav a {
   @extend .nav-link;
+
+  padding: 0.4rem 0.8rem;
+}
+
+header {
+  &.banner {
+    background-color: white;
+  }
+
+  .header-secondary {
+    display: flex;
+
+    .list--social {
+      margin-bottom: 0;
+
+      i {
+        font-size: 1.25em;
+      }
+    }
+
+    .header-secondary__right {
+      div {
+        &:not(:last-of-type) {
+          margin-right: 1em;
+        }
+
+        &[class*="__wrapper"] {
+          .d-flex {
+            > span {
+              font-size: 0.7rem;
+              line-height: 1;
+              text-transform: uppercase;
+            }
+
+            a {
+              font-size: 0.9em;
+            }
+          }
+        }
+      }
+
+      svg {
+        height: 1.5em;
+        margin-right: 8px;
+
+        &.fa-w-14 {
+          width: 1.3125em;
+        }
+
+        &.fa-w-16 {
+          width: 1.5em;
+        }
+      }
+    }
+  }
+
+  img.header__logo {
+    width: 150px;
+  }
+
+  ul#menu-main-menu {
+    li {
+      &.active {
+        a {
+          background-color: theme-color("primary");
+          color: #fff;
+        }
+      }
+    }
+  }
 }

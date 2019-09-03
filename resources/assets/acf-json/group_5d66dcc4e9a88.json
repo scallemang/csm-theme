@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#F00000"
+            "default_value": "#f00000"
         },
         {
             "key": "field_5d66dd050c90c",
@@ -30,7 +30,22 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#0000F0"
+            "default_value": "#0000f0"
+        },
+        {
+            "key": "field_5d6e7a0a2fec7",
+            "label": "Info",
+            "name": "colour__info",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#00f000"
         },
         {
             "key": "field_5d66dd160c90d",
@@ -80,5 +95,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567042844
+    "modified": 1567521319
 }

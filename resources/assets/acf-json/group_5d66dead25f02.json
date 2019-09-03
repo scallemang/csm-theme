@@ -19,6 +19,7 @@
                 "none": "--None--",
                 "primary": "Primary Colour",
                 "secondary": "Secondary Colour",
+                "info": "Info Colour",
                 "text": "Text Colour",
                 "background": "Background Colour",
                 "custom": "Custom Colour",
@@ -210,5 +211,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567095774
+    "modified": 1567522969
 }

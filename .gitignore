@@ -7,4 +7,4 @@ npm-debug.log
 yarn-error.log
 /vendor
 resources/assets/config-local.json
-resources/assets/styles/theme-styles.css
+resources/assets/styles/common/_theme-styles.scss
