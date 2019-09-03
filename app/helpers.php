@@ -136,3 +136,193 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+/**
+ * Theme helpers
+ */
+function return_button($group = null, $link = null)
+{
+    $button = array();
+    if( $group ) {
+        $button['text'] = $group['button__text'];
+        $button['colour'] = $group['button__colour'];
+        $button['link'] = return_link($group);
+    } else {
+        $button['text'] = get_sub_field('button__text');
+        $button['colour'] = get_sub_field('button__colour');
+        $button['link'] = return_link();
+    }
+    return $button;
+}
+
+function return_icon( $group = null )
+{
+    $icon = null;
+    if( $group ) {
+        switch( $group['icon__type'] ) {
+            case 'fa':
+                print $group['icon__fa'];
+                break;
+            case 'custom':
+                break;
+            default:
+                break;
+        }
+    } else {
+        switch( get_sub_field('icon__type') ) {
+            case 'fa':
+                $icon = get_sub_field('icon__fa');
+                break;
+            case 'custom':
+                $image = get_sub_field('icon__custom');
+                $icon = '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" class="img-fluid">';
+                break;
+            default:
+                break;
+        }
+    }
+    return $icon;
+}
+
+function return_link( $group = null )
+{
+    $link = array(
+        'onclick' => null,
+        'target' => null,
+        'url' => null,
+        'title' => null
+    );
+    if( $group ) {
+        switch( $group['link__type'] ) {
+            case 'icegram':
+                $link['onclick'] = $group['link__icegram_code'];
+                break;
+            case 'page':
+                $link['url'] = $group['link__page_picker']['url'];
+                $link['title'] = $group['link__page_picker']['title'];
+                break;
+            case 'site':
+                $link['url'] = $group['link__site_url'];
+                $link['title'] = $group['button__text'];
+                $link['target'] = "_blank";
+                break;
+            case 'email':
+                $link['url'] = 'mailto:' . $group['link__email_address'];
+                $link['target'] = "_blank";
+                break;
+            case 'phone':
+                $link['url'] = 'tel:' . $group['link__phone_number'];
+                $link['target'] = "_blank";
+                break;
+            default:
+                break;
+        }
+    } else {
+
+    }
+    return $link;
+}
+
+function return_fiftyfifty_col( $group = null )
+{
+    $col = array(
+        'type' => null,
+        'heading' => null,
+        'subheading' => null,
+        'copy' => null,
+        'image' => null
+    );
+    if( $group ) {
+        switch( $group['fiftyfifty__column_type'] ) {
+            case 'image':
+                $col['image'] = array(
+                    'id'  => $group['fiftyfifty__image']['id'],
+                    'url' => $group['fiftyfifty__image']['sizes']['large'],
+                    'alt' => $group['fiftyfifty__image']['alt']
+                );
+                break;
+            case 'text':
+                $col['heading'] = $group['fiftyfifty__heading'];
+                $col['subheading'] = $group['fiftyfifty__subheading'];
+                $col['copy'] = $group['fiftyfifty__copy'];
+                break;
+            default:
+                break;
+        }
+    } else {
+
+    }
+    return $col;
+}
+
+function return_background()
+{
+
+}
+
+function return_color()
+{
+
+}
+
+function strip_phone( $phone )
+{
+    return preg_replace('/\D+/', '', $phone);
+}
+
+function return_contact_info($checkbox = null)
+{
+    $info = array(
+        'name' => get_field('business__name', 'option'),
+        'map' => get_field('business__map', 'option'),
+        'form' => get_field('business__form', 'option'),
+        'phone' => get_field('business__phone', 'option'),
+        'address' => get_field('business__address', 'option'),
+        'hours' => get_field('business__hours', 'option'),
+    );
+    if( $checkbox ) {
+        $info['map'] = in_array('map', $checkbox) ? $info['map'] : null;
+        $info['form'] = in_array('form', $checkbox) ? $info['form'] : null;
+        $info['phone'] = in_array('phone', $checkbox) ? $info['phone'] : null;
+        $info['address'] = in_array('address', $checkbox) ? $info['address'] : null;
+        $info['hours'] = in_array('hours', $checkbox) ? $info['hours'] : null;
+    } else {
+
+    }
+    return $info;
+}
+
+function return_cta()
+{
+    $cta = array(
+        'heading' => null,
+        'subheading' => null,
+        'button' => null,
+        'background' => null
+    );
+    $type = get_sub_field('cta__type');
+    switch($type) {
+        case 'global':
+            $id = get_sub_field('cta__picker')[0]->ID;
+            // Apparently, get_post_meta is good for speed per https://support.advancedcustomfields.com/forums/topic/whats-faster/
+            $ctaMeta = get_post_meta($id);
+            $cta['heading'] = get_field('cta__heading', $id);
+            $cta['subheading'] = get_field('cta__subheading', $id);
+            $hasButton = get_field('cta__has_button', $id);
+            if( $hasButton ):
+                $cta['button'] = return_button( get_field('cta__button', $id) );
+            endif;
+            break;
+        case 'custom':
+            $cta['heading'] = get_sub_field('cta__heading');
+            $cta['subheading'] = get_sub_field('cta__subheading');
+            $hasButton = get_sub_field('cta__has_button');
+            if( $hasButton ):
+                $cta['button'] = return_button( get_sub_field('cta__button') );
+            endif;
+            break;
+        default:
+            break;
+    }
+    return $cta;
+}

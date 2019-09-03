@@ -1,3 +1,14 @@
+# Notes on CloudSurfer
+
+* Custom Fields menu item is hidden from non-authorised users in app/admin.php
+* Custom Styles set under the Options > Branding panel in Dashboard save to resources/assets/styles/theme-styles.css
+
+## To-Do
+
+* Run compiler after Custom Styles are saved.
+
+---
+
 # [Sage](https://roots.io/sage/)
 [![Packagist](https://img.shields.io/packagist/vpre/roots/sage.svg?style=flat-square)](https://packagist.org/packages/roots/sage)
 [![devDependency Status](https://img.shields.io/david/dev/roots/sage.svg?style=flat-square)](https://david-dm.org/roots/sage#info=devDependencies)

@@ -41,6 +41,25 @@
             "new_lines": ""
         },
         {
+            "key": "field_5d685ef498d99",
+            "label": "Business Phone",
+            "name": "business__phone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d672e6af06c0",
             "label": "Business Email",
             "name": "business__email",
@@ -80,7 +99,7 @@
         {
             "key": "field_5d673034817b7",
             "label": "Google Map",
-            "name": "business__google_map",
+            "name": "business__map",
             "type": "acf_code_field",
             "instructions": "Please input your Google Maps iframe code. <strong>Note:<\/strong> please set height and width to 100%.",
             "required": 0,
@@ -94,6 +113,21 @@
             "placeholder": "",
             "mode": "htmlmixed",
             "theme": "monokai"
+        },
+        {
+            "key": "field_5d685d5a6306d",
+            "label": "Contact Form",
+            "name": "business__form",
+            "type": "wp_forms_field",
+            "instructions": "Please select the default WPForms form to be used for people to contact you.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "allow_null": 0
         }
     ],
     "location": [
@@ -113,5 +147,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567079308
+    "modified": 1567121165
 }

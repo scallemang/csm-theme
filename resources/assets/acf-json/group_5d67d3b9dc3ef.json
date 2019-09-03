@@ -20,7 +20,7 @@
         },
         {
             "key": "field_5d67d3fbce54a",
-            "label": "Section Heading",
+            "label": "Heading",
             "name": "contact__heading",
             "type": "medium_editor",
             "instructions": "",
@@ -219,5 +219,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567097059
+    "modified": 1567119568
 }
