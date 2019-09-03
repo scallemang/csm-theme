@@ -1,0 +1,15 @@
+section {
+  position: relative;
+
+  &[class*="overlay-"] {
+    &::before {
+      @include absolute;
+    }
+
+    &.overlay-info {
+      &::before {
+        background-color: rgba(theme-color("info"), 0.5);
+      }
+    }
+  }
+}

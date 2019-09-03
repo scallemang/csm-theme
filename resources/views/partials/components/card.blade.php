@@ -5,16 +5,16 @@
     $color = $card['colour'];
     $body = $card['body'];
     $icon = $card['icon'];
+    $class = isset($card['class']) ? $card['class'] : null;
 @endphp
 
-<div class="col-md-4">
-    <div class="card">
-        <div class="card-body">
+<div class="card @if($class){{ $class }}@endif">
+    <div class="card-body">
+        <div class="card-header__wrapper">
             @if( $icon ){!! $icon !!}@endif
-            @if( $title )<h3>{!! $title !!}</h3>@endif
-            @if( $body ){!! $body !!}@endif
+            @if( $title )<h3 class="my-3">{!! $title !!}</h3>@endif
         </div>
+        @if( $body ){!! $body !!}@endif
     </div>
 </div>
-
 @endif

@@ -1,0 +1,141 @@
+section.block-services {
+  .card {
+    svg {
+      height: 2rem;
+      width: auto;
+    }
+
+    &.style-2 {
+      svg {
+        color: theme-color("info");
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: theme-color("info");
+      }
+    }
+  }
+
+  &.style-1 {
+    .row-services {
+      display: grid;
+      row-gap: 0.8em;
+      grid-template-rows: auto;
+      grid-auto-flow: row;
+
+      @include media-breakpoint-up(md) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.8em;
+      }
+
+      @include media-breakpoint-up(lg) {
+        grid-template-columns: auto;
+        grid-auto-flow: column;
+        grid-template-rows: 1fr;
+      }
+
+      .card {
+        border: none;
+        box-shadow: 0 6px 10px -6px rgba(black, 0.5);
+        border-top: 6px solid black;
+        border-radius: 0;
+
+        &.color-primary {
+          border-color: theme-color("primary");
+
+          h3,
+          svg {
+            color: theme-color("primary");
+          }
+        }
+
+        &.color-secondary {
+          border-color: theme-color("secondary");
+
+          h3,
+          svg {
+            color: theme-color("secondary");
+          }
+        }
+
+        &.color-info {
+          border-color: theme-color("info");
+
+          h3,
+          svg {
+            color: theme-color("info");
+          }
+        }
+
+        &.color-text {
+          border-color: theme-color("text");
+
+          h3,
+          svg {
+            color: theme-color("text");
+          }
+        }
+      }
+    }
+  }
+
+  &.style-2 {
+    .row-services {
+      display: grid;
+      row-gap: 0.8em;
+      grid-template-rows: auto;
+      grid-auto-flow: row;
+
+      @include media-breakpoint-up(md) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.8em;
+      }
+
+      .card {
+        border: none;
+        border-radius: 0;
+      }
+    }
+  }
+
+  // &.style-1,
+  // &.style-2, {
+  //   &.color-primary {
+  //     border-color: theme-color("primary");
+
+  //     h3,
+  //     svg {
+  //       color: theme-color("primary");
+  //     }
+  //   }
+
+  //   &.color-secondary {
+  //     border-color: theme-color("secondary");
+
+  //     h3,
+  //     svg {
+  //       color: theme-color("secondary");
+  //     }
+  //   }
+
+  //   &.color-info {
+  //     border-color: theme-color("info");
+
+  //     h3,
+  //     svg {
+  //       color: theme-color("info");
+  //     }
+  //   }
+
+  //   &.color-text {
+  //     border-color: theme-color("text");
+
+  //     h3,
+  //     svg {
+  //       color: theme-color("text");
+  //     }
+  //   }
+  // }
+}

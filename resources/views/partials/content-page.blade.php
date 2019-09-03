@@ -3,6 +3,7 @@
 
 @if( have_rows('flex-content') )
     @while ( have_rows('flex-content') ) @php the_row() @endphp
+      @include('partials.snippets.background')
 
       @if( get_row_layout() == 'flex__hero' )
       	@include('partials.blocks.block-hero')

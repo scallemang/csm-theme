@@ -1,0 +1,9 @@
+@mixin absolute {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}

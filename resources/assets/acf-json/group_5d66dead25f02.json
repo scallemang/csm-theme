@@ -106,7 +106,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -140,7 +140,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -182,6 +182,7 @@
                 "none": "--None--",
                 "primary": "Primary Colour",
                 "secondary": "Secondary Colour",
+                "info": "Info Colour",
                 "text": "Text Colour",
                 "background": "Background Colour"
             },
@@ -211,5 +212,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567522969
+    "modified": 1567538396
 }

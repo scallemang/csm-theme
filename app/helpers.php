@@ -271,6 +271,9 @@ function return_background_from_type( $type = null, $args = null )
     $background = array(
         'type' => null,
         'value' => null,
+        'position' => null,
+        'overlay' => null,
+        'class' => null
     );
     switch( $type ) {
         case 'primary':
@@ -280,11 +283,14 @@ function return_background_from_type( $type = null, $args = null )
         case 'background':
             $background['type'] = 'color';
             $background['value'] = $type;
+            $background['class'] = 'bg-' . $type;
             break;
         case 'custom':
             if( isset($args['prefix']) ):
                 if( isset($args['option'])):
                     $value = $args['prefix']. get_field('background_picker--custom', 'option');
+                elseif( isset($args['block'])):
+                    $value = $args['prefix']. get_sub_field('background_picker--custom');
                 else:
                     $value = $args['prefix']. get_field('background_picker--custom');
                 endif;
@@ -302,8 +308,23 @@ function return_background_from_type( $type = null, $args = null )
             );
             break;
         case 'image':
-            $background['type'] = 'image';
-            $background['value'] = isset($args['prefix']) ? $args['prefix']. get_field('background__image') : get_field('background__image');
+            if( isset($args['option'])):
+                
+            elseif( isset($args['block'])):
+                $background['type'] = 'image';
+                $background['value'] = isset($args['prefix']) ? $args['prefix']. get_sub_field('background__image') : get_sub_field('background__image');
+                // $background['position'] = array(
+                //     'x' => get_sub_field('background__image--x'),
+                //     'y' => get_sub_field('background__image--y')
+                // );
+                $background['position'] = get_sub_field('background__image--x') . ' ' . get_sub_field('background__image--y');
+                $background['overlay'] = array(
+                    'color' => get_sub_field('background__image--overlay')
+                );
+                $background['class'] = 'bg-image';
+            else:
+                $value = $args['prefix']. get_field('background_picker--custom');
+            endif;
         default:
             break;
     }

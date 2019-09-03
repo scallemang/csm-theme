@@ -4,7 +4,6 @@
   $heading = $cta['heading'];
   $subheading = $cta['subheading'];
   $hasButton = null != $cta['button'] ? true : false;
-  print_r( $cta );
   if( 'color' == $cta['background']['type']) {
     $backgroundClass = 'bg-' . $cta['background']['value'];
   }

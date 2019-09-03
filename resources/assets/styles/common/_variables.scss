@@ -1,6 +1,11 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 @import "theme-styles";
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400,400i,900&display=swap");
+
+$jumbotron-padding: 12rem;
+$jumbotron-bg: transparent;
+$font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
