@@ -1,0 +1,49 @@
+{
+    "key": "group_5d6fdc4c0c611",
+    "title": "Utility: Light\/Dark",
+    "fields": [
+        {
+            "key": "field_5d6fdc5a4fd97",
+            "label": "Light\/Dark picker",
+            "name": "lightdark__picker",
+            "type": "select",
+            "instructions": "Do you want text in this section to be light (white) or dark (brand colours)? This is to ensure contrast can be achieved against dark or light backgrounds.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light",
+                "dark": "Dark"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1567612083
+}

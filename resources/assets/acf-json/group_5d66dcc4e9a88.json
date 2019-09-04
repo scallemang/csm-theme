@@ -37,7 +37,7 @@
             "label": "Info",
             "name": "colour__info",
             "type": "color_picker",
-            "instructions": "",
+            "instructions": "A darker colour is recommended, based on some of the contexts in which this is used.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -45,7 +45,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "#00f000"
+            "default_value": "#006000"
         },
         {
             "key": "field_5d66dd160c90d",
@@ -95,5 +95,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567521319
+    "modified": 1567612859
 }

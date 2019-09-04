@@ -1,0 +1,32 @@
+section.block-cta {
+  h2 {
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+
+    &.line-bottom {
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid theme-color("info");
+    }
+  }
+
+  h3 {
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: lighten(theme-color("info"), 15%);
+  }
+
+  &.light {
+    h2,
+    h3 {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  a,
+  button {
+    &.btn-lg {
+      border-radius: 28px;
+    }
+  }
+}

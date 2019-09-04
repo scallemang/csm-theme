@@ -141,6 +141,7 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_sub_page('Branding');
     acf_add_options_sub_page('Business Details');
     acf_add_options_sub_page('Header');
+    acf_add_options_sub_page('Blog');
 	
 }
 
@@ -156,3 +157,9 @@ add_filter('sage/display_sidebar', function ($display) {
 
     return $display;
 });
+
+function admin_assets() {
+    wp_enqueue_style( 'theme/admin.css',  asset_path('styles/admin.css') );
+}
+add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\admin_assets', 10 );
+add_action( 'login_enqueue_scripts', __NAMESPACE__ . '\\admin_assets', 10 );

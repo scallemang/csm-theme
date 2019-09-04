@@ -31,7 +31,7 @@ p {
 .bg-secondary,
 .bg-info,
 .bg-image {
-  :not(a):not(i):not(h2) {
+  :not(a):not(i):not(h2):not(h3) {
     color: #fff;
   }
 }

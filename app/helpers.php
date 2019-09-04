@@ -314,7 +314,9 @@ function return_background_from_type( $type = null, $args = null )
                 
             elseif( isset($args['block'])):
                 $background['type'] = 'image';
-                $background['value'] = isset($args['prefix']) ? $args['prefix']. get_sub_field('background__image') : get_sub_field('background__image');
+                $background['value'] = isset($args['prefix']) 
+                    ? $args['prefix']. get_sub_field('background__image') 
+                    : get_sub_field('background__image');
                 // $background['position'] = array(
                 //     'x' => get_sub_field('background__image--x'),
                 //     'y' => get_sub_field('background__image--y')
@@ -325,7 +327,25 @@ function return_background_from_type( $type = null, $args = null )
                 );
                 $background['class'] = 'bg-image';
             else:
-                $value = $args['prefix']. get_field('background_picker--custom');
+                $background['type'] = 'image';
+                if( isset($args['id'])):
+                    $background['value'] = isset($args['prefix'])
+                        ? $args['prefix']. get_field('background__image', $args['id']) 
+                        : get_field('background__image', $args['id']);
+                    $background['position'] = get_field('background__image--x', $args['id']) . ' ' . get_field('background__image--y', $args['id']);
+                    $background['overlay'] = array(
+                        'color' => get_field('background__image--overlay', $args['id'])
+                    );
+                else:
+                    $background['value'] = isset($args['prefix'])
+                        ? $args['prefix']. get_field('background__image') 
+                        : get_field('background__image');
+                    $background['position'] = get_field('background__image--x') . ' ' . get_field('background__image--y');
+                    $background['overlay'] = array(
+                        'color' => get_field('background__image--overlay')
+                    );
+                endif;
+                $background['class'] = 'bg-image';
             endif;
         default:
             break;
@@ -371,7 +391,8 @@ function return_cta()
         'heading' => null,
         'subheading' => null,
         'button' => null,
-        'background' => null
+        'background' => null,
+        'alignment' => null
     );
     $type = get_sub_field('cta__type');
     switch($type) {
@@ -382,7 +403,9 @@ function return_cta()
             $cta['heading'] = get_field('cta__heading', $id);
             $cta['subheading'] = get_field('cta__subheading', $id);
             $backgroundType = get_field('background_picker', $id);
-            $cta['background'] = return_background_from_type( $backgroundType );
+            $cta['background'] = return_background_from_type( $backgroundType, array( 'id' => $id ) );
+            $cta['alignment'] = get_field('alignment__text', $id);
+            $cta['lightdark'] = get_field('lightdark__picker', $id);
             $hasButton = get_field('cta__has_button', $id);
             if( $hasButton ):
                 $cta['button'] = return_button( get_field('cta__button', $id) );
@@ -393,6 +416,8 @@ function return_cta()
             $cta['subheading'] = get_sub_field('cta__subheading');
             $backgroundType = get_field('background_picker', $id);
             $cta['background'] = return_background_from_type( $backgroundType );
+            $cta['alignment'] = get_sub_field('alignment__text');
+            $cta['lightdark'] = get_sub_field('lightdark__picker');
             $hasButton = get_sub_field('cta__has_button');
             if( $hasButton ):
                 $cta['button'] = return_button( get_sub_field('cta__button') );
