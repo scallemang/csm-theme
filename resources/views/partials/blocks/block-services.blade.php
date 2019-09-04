@@ -2,9 +2,6 @@
   $heading = get_sub_field( 'services__heading' );
   $subheading = get_sub_field( 'services__subheading' );
   $hasButton = get_sub_field( 'services__has_button' );
-  $backgroundClass = null;
-  $backgroundImage = null;
-  $backgroundPosition = null;
   $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
   $style = get_sub_field('services__style');
 @endphp
