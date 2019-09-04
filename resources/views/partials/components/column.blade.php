@@ -7,12 +7,14 @@
     $copy = $column['copy'];
 @endphp
 
-<div class="col-md-6">
-    @if( $image )
-    <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="img-fluid">
-    @elseif( $heading || $subheading || $copy )
-        @if($heading)<h2>{!! $heading !!}</h2>@endif
-        @if($subheading)<h3>{!! $subheading !!}</h3>@endif
+<div class="col-{{ $column['type'] }}" 
+    @if( $image ) style="background-image:url('{{ $image['url'] }}'); background-size: cover;" @endif>
+    @if( !$image )
+        @if( $heading || $subheading || $copy )
+            @if($heading)<h2>{!! $heading !!}</h2>@endif
+            @if($subheading)<h3>{!! $subheading !!}</h3>@endif
+            @if($copy){!! $copy !!}@endif
+        @endif
     @endif
 </div>
 @endif

@@ -7,3 +7,7 @@
   height: 100%;
   width: 100%;
 }
+
+@mixin bg-gradient {
+  background-image: linear-gradient(to bottom, theme-color("primary"), theme-color("secondary"));
+}

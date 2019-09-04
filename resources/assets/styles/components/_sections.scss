@@ -1,6 +1,21 @@
 section {
   position: relative;
 
+  blockquote {
+    background-color: theme-color("background");
+    padding: 2rem;
+    font-size: 1.4em;
+    font-weight: 400;
+
+    p {
+      color: theme-color("info");
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &[class*="overlay-"] {
     &::before {
       @include absolute;

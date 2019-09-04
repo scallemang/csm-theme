@@ -27,9 +27,23 @@ p {
   }
 }
 
+.bg-primary,
+.bg-secondary,
 .bg-info,
 .bg-image {
-  * {
+  :not(a):not(i):not(h2) {
     color: #fff;
+  }
+}
+
+.bg-gradient {
+  @include bg-gradient;
+
+  *:not(a) {
+    color: #fff;
+  }
+
+  a {
+    color: theme-color("info");
   }
 }

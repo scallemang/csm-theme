@@ -52,7 +52,7 @@
 
         @if( $hasButton )
           @php 
-            $buttonGroup = get_sub_field( 'hero__button' ); 
+            $buttonGroup = get_sub_field( 'services__button' ); 
             $button = App\return_button($buttonGroup);
           @endphp
           @include('partials.components.button', ['button' => $button])

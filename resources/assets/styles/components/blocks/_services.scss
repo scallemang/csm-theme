@@ -1,20 +1,14 @@
+@import "services-elements";
+
 section.block-services {
-  .card {
-    svg {
-      height: 2rem;
+  .btn-wrapper {
+    text-align: center;
+  }
+
+  .row-services {
+    img {
+      max-height: 60px;
       width: auto;
-    }
-
-    &.style-2 {
-      svg {
-        color: theme-color("info");
-      }
-
-      h3 {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        color: theme-color("info");
-      }
     }
   }
 
@@ -44,38 +38,18 @@ section.block-services {
 
         &.color-primary {
           border-color: theme-color("primary");
-
-          h3,
-          svg {
-            color: theme-color("primary");
-          }
         }
 
         &.color-secondary {
           border-color: theme-color("secondary");
-
-          h3,
-          svg {
-            color: theme-color("secondary");
-          }
         }
 
         &.color-info {
           border-color: theme-color("info");
-
-          h3,
-          svg {
-            color: theme-color("info");
-          }
         }
 
         &.color-text {
           border-color: theme-color("text");
-
-          h3,
-          svg {
-            color: theme-color("text");
-          }
         }
       }
     }
@@ -96,46 +70,11 @@ section.block-services {
       .card {
         border: none;
         border-radius: 0;
+
+        .card-header__wrapper {
+          display: flex;
+        }
       }
     }
   }
-
-  // &.style-1,
-  // &.style-2, {
-  //   &.color-primary {
-  //     border-color: theme-color("primary");
-
-  //     h3,
-  //     svg {
-  //       color: theme-color("primary");
-  //     }
-  //   }
-
-  //   &.color-secondary {
-  //     border-color: theme-color("secondary");
-
-  //     h3,
-  //     svg {
-  //       color: theme-color("secondary");
-  //     }
-  //   }
-
-  //   &.color-info {
-  //     border-color: theme-color("info");
-
-  //     h3,
-  //     svg {
-  //       color: theme-color("info");
-  //     }
-  //   }
-
-  //   &.color-text {
-  //     border-color: theme-color("text");
-
-  //     h3,
-  //     svg {
-  //       color: theme-color("text");
-  //     }
-  //   }
-  // }
 }

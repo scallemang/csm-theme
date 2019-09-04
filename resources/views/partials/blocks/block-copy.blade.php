@@ -8,12 +8,12 @@
   @php $image = get_sub_field( 'eden_block_image' ); @endphp
 @endif --}}
 
-<section @if($sectionId)id="{{ $sectionId }}"@endif class="block-copy"> 
+<section @if($sectionId)id="{{ $sectionId }}"@endif class="block-copy py-5 text-center"> 
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         @if( $heading )<h2>{!! $heading !!}</h2>@endif
-        @if( $body ){!! $body !!}@endif
+        @if( $body )<div @if( $hasButton )class="mb-5"@endif>{!! $body !!}</div>@endif
         @if( $hasButton )
           @php 
             $buttonGroup = get_sub_field( 'copy__button' ); 

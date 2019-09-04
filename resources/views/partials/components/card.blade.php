@@ -12,7 +12,7 @@
     <div class="card-body">
         <div class="card-header__wrapper">
             @if( $icon ){!! $icon !!}@endif
-            @if( $title )<h3 class="my-3">{!! $title !!}</h3>@endif
+            @if( $title )<h3>{!! $title !!}</h3>@endif
         </div>
         @if( $body ){!! $body !!}@endif
     </div>

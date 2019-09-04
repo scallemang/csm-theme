@@ -233,6 +233,7 @@ function return_fiftyfifty_col( $group = null )
         'image' => null
     );
     if( $group ) {
+        $col['type'] = $group['fiftyfifty__column_type'];
         switch( $group['fiftyfifty__column_type'] ) {
             case 'image':
                 $col['image'] = array(
@@ -302,10 +303,11 @@ function return_background_from_type( $type = null, $args = null )
             break;
         case 'gradient':
             $background['type'] = 'gradient';
-            $background['value'] = array(
-                $from => null,
-                $to => null
-            );
+            // $background['value'] = array(
+            //     'from' => get_field('colour__primary', 'option'),
+            //     'to' => get_field('colour__secondary', 'option')
+            // );
+            $background['class'] = 'bg-gradient';
             break;
         case 'image':
             if( isset($args['option'])):

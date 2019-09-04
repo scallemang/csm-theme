@@ -18,7 +18,8 @@ section.block-hero {
   }
 
   .hero__subheading {
-    background-image: linear-gradient(to bottom, theme-color("primary"), theme-color("secondary"));
+    @include bg-gradient;
+
     padding: 1.8rem;
     font-size: 2rem;
     font-weight: 900;
