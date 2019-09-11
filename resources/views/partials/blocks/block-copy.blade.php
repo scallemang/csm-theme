@@ -2,13 +2,18 @@
   $heading = get_sub_field('copy__heading');
   $body = get_sub_field('copy__body');
   $hasButton = get_sub_field('copy__has_button');
+  $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
 @endphp
 
 {{-- @if( get_sub_field( 'eden_block_image' ) )
   @php $image = get_sub_field( 'eden_block_image' ); @endphp
 @endif --}}
 
-<section @if($sectionId)id="{{ $sectionId }}"@endif class="block-copy py-5 text-center"> 
+<section 
+  @if($sectionId)id="{{ $sectionId }}"@endif 
+  class="block-copy py-5 text-center {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
+  @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
+> 
   <div class="container">
     <div class="row">
       <div class="col-sm-12">

@@ -29,7 +29,7 @@
 
         {{--  Repeater --}}
         @if( have_rows('services__repeater') )
-          <div class="row row-services my-4">
+          <div class="row-services my-4">
           @while( have_rows('services__repeater') ) @php the_row(); @endphp
             @php
 

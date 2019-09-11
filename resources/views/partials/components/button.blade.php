@@ -6,7 +6,7 @@
         @else
             @php $el = 'a'; @endphp 
         @endif
-        <{{ $el }} id="" class="btn btn-lg @if ($button['colour']) btn-{{ $button['colour'] }} @endif" 
+        <{{ $el }} id="" class="btn @if( $button['class'] ){{ $button['class'] }}@else btn-lg @endif @if ($button['colour']) btn-{{ $button['colour'] }} @endif" 
             @if ($button['link']['url']) href="{{ $button['link']['url'] }}" @endif
             @if ($button['link']['target']) target="{{ $button['link']['target'] }}" @endif
             @if ($button['link']['onclick']) onclick="{{ $button['link']['onclick'] }}" @endif

@@ -140,7 +140,7 @@ function display_sidebar()
 /**
  * Theme helpers
  */
-function return_button($group = null, $link = null)
+function return_button($group = null, $args = null)
 {
     $button = array();
     if( $group ) {
@@ -289,16 +289,16 @@ function return_background_from_type( $type = null, $args = null )
         case 'custom':
             if( isset($args['prefix']) ):
                 if( isset($args['option'])):
-                    $value = $args['prefix']. get_field('background_picker--custom', 'option');
+                    $value = get_field($args['prefix'] . 'background_picker--custom', 'option');
                 elseif( isset($args['block'])):
-                    $value = $args['prefix']. get_sub_field('background_picker--custom');
+                    $value = get_sub_field($args['prefix'] . 'background_picker--custom');
                 else:
-                    $value = $args['prefix']. get_field('background_picker--custom');
+                    $value = get_field($args['prefix'] . 'background_picker--custom');
                 endif;
             else: 
                 $value = get_field('background_picker--custom');
             endif;
-            $background['type'] = 'color';
+            $background['type'] = 'color--custom';
             $background['value'] = $value;
             break;
         case 'gradient':
@@ -315,7 +315,7 @@ function return_background_from_type( $type = null, $args = null )
             elseif( isset($args['block'])):
                 $background['type'] = 'image';
                 $background['value'] = isset($args['prefix']) 
-                    ? $args['prefix']. get_sub_field('background__image') 
+                    ? get_sub_field($args['prefix'] . 'background__image') 
                     : get_sub_field('background__image');
                 // $background['position'] = array(
                 //     'x' => get_sub_field('background__image--x'),
@@ -330,7 +330,7 @@ function return_background_from_type( $type = null, $args = null )
                 $background['type'] = 'image';
                 if( isset($args['id'])):
                     $background['value'] = isset($args['prefix'])
-                        ? $args['prefix']. get_field('background__image', $args['id']) 
+                        ? get_field($args['prefix'] . 'background__image', $args['id']) 
                         : get_field('background__image', $args['id']);
                     $background['position'] = get_field('background__image--x', $args['id']) . ' ' . get_field('background__image--y', $args['id']);
                     $background['overlay'] = array(
@@ -338,7 +338,7 @@ function return_background_from_type( $type = null, $args = null )
                     );
                 else:
                     $background['value'] = isset($args['prefix'])
-                        ? $args['prefix']. get_field('background__image') 
+                        ? get_field($args['prefix'] . 'background__image') 
                         : get_field('background__image');
                     $background['position'] = get_field('background__image--x') . ' ' . get_field('background__image--y');
                     $background['overlay'] = array(
@@ -347,7 +347,10 @@ function return_background_from_type( $type = null, $args = null )
                 endif;
                 $background['class'] = 'bg-image';
             endif;
+            break;
         default:
+            $background['type'] = 'none';
+            $background['class'] = 'bg-none';
             break;
     }
     return $background;
@@ -363,24 +366,25 @@ function strip_phone( $phone )
     return preg_replace('/\D+/', '', $phone);
 }
 
-function return_contact_info($checkbox = null)
+function return_contact_info($checkbox = null, $args = array('strip-hours' => false) )
 {
     $info = array(
         'name' => get_field('business__name', 'option'),
         'map' => get_field('business__map', 'option'),
         'form' => get_field('business__form', 'option'),
+        'email' => get_field('business__email', 'option'),
         'phone' => get_field('business__phone', 'option'),
         'address' => get_field('business__address', 'option'),
-        'hours' => get_field('business__hours', 'option'),
+        'hours' => $args['strip-hours'] ? get_field('business__hours', 'option', false) : get_field('business__hours', 'option'),
     );
     if( $checkbox ) {
+        $info['name'] = null;
+        $info['email'] = in_array('email', $checkbox) ? $info['email'] : null;
         $info['map'] = in_array('map', $checkbox) ? $info['map'] : null;
         $info['form'] = in_array('form', $checkbox) ? $info['form'] : null;
         $info['phone'] = in_array('phone', $checkbox) ? $info['phone'] : null;
         $info['address'] = in_array('address', $checkbox) ? $info['address'] : null;
         $info['hours'] = in_array('hours', $checkbox) ? $info['hours'] : null;
-    } else {
-
     }
     return $info;
 }

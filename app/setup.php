@@ -86,10 +86,10 @@ add_action('widgets_init', function () {
         'name'          => __('Primary', 'sage'),
         'id'            => 'sidebar-primary'
     ] + $config);
-    register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
-    ] + $config);
+    // register_sidebar([
+    //     'name'          => __('Footer', 'sage'),
+    //     'id'            => 'sidebar-footer'
+    // ] + $config);
 });
 
 /**
@@ -141,6 +141,7 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_sub_page('Branding');
     acf_add_options_sub_page('Business Details');
     acf_add_options_sub_page('Header');
+    acf_add_options_sub_page('Footer');
     acf_add_options_sub_page('Blog');
 	
 }

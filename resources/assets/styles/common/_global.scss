@@ -36,6 +36,12 @@ p {
   }
 }
 
+.bg-primary {
+  a {
+    color: white;
+  }
+}
+
 .bg-gradient {
   @include bg-gradient;
 

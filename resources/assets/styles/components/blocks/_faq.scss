@@ -1,0 +1,36 @@
+section.block-faq {
+  .card {
+    border-radius: 0;
+    border-color: darken(theme-color("primary"), 10%);
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    button {
+      font-weight: 900;
+    }
+
+    .card-header {
+      background-color: theme-color("primary");
+      border-radius: 0;
+
+      @include transition;
+
+      .btn-link {
+        color: white;
+      }
+
+      &:hover {
+        background-color: darken(theme-color("primary"), 10%);
+        cursor: pointer;
+
+        .btn-link {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

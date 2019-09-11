@@ -1,0 +1,36 @@
+section.block-divider {
+  hr {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  &.primary {
+    hr {
+      border-color: theme-color("primary");
+    }
+  }
+
+  &.secondary {
+    hr {
+      border-color: theme-color("secondary");
+    }
+  }
+
+  &.info {
+    hr {
+      border-color: theme-color("info");
+    }
+  }
+
+  &.text {
+    hr {
+      border-color: theme-color("text");
+    }
+  }
+
+  &.background {
+    hr {
+      border-color: theme-color("background");
+    }
+  }
+}

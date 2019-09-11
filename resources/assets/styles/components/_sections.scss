@@ -16,14 +16,44 @@ section {
     }
   }
 
+  // &.bg-none {
+  //   + .bg-none {
+  //     padding-top: 0 !important;
+  //   }
+  // }
+
   &[class*="overlay-"] {
     &::before {
       @include absolute;
     }
 
+    &.overlay-primary {
+      &::before {
+        background-color: rgba(theme-color("primary"), 0.5);
+      }
+    }
+
+    &.overlay-seconary {
+      &::before {
+        background-color: rgba(theme-color("secondary"), 0.5);
+      }
+    }
+
     &.overlay-info {
       &::before {
         background-color: rgba(theme-color("info"), 0.5);
+      }
+    }
+
+    &.overlay-text {
+      &::before {
+        background-color: rgba(theme-color("text"), 0.5);
+      }
+    }
+
+    &.overlay-background {
+      &::before {
+        background-color: rgba(theme-color("background"), 0.5);
       }
     }
   }

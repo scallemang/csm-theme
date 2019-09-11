@@ -22,7 +22,7 @@
             "key": "field_5d66e40afd11c",
             "label": "Heading",
             "name": "cta__heading",
-            "type": "text",
+            "type": "medium_editor",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,15 +33,23 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableExtraSpaces"
+            ],
+            "delay": 0
         },
         {
             "key": "field_5d66e41dfd11d",
             "label": "Subheading",
             "name": "cta__subheading",
-            "type": "text",
+            "type": "medium_editor",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -52,9 +60,17 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableExtraSpaces"
+            ],
+            "delay": 0
         },
         {
             "key": "field_5d66e43efd11e",
@@ -121,7 +137,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d6fdccebc938",
+            "key": "field_5d6ff2554277b",
             "label": "Light\/Dark",
             "name": "cta__lightdark",
             "type": "clone",
@@ -201,5 +217,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1567612162
+    "modified": 1567630854
 }

@@ -17,3 +17,17 @@
   @extend .btn;
   @extend .btn-secondary;
 }
+
+form.wpforms-form {
+  .wpforms-submit-container {
+    text-align: center;
+
+    button {
+      div.wpforms-container-full & {
+        @extend .btn;
+        @extend .btn-lg;
+        @extend .btn-info;
+      }
+    }
+  }
+}

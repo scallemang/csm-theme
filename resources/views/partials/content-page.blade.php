@@ -29,6 +29,9 @@
       @elseif( get_row_layout() == 'flex__contact' )
         @include('partials.blocks.block-contact')
 
+      @elseif( get_row_layout() == 'flex__divider' )
+        @include('partials.blocks.block-divider')
+
       @endif
 
     @endwhile

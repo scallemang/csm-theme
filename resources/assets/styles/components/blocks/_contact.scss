@@ -1,0 +1,62 @@
+section.block-contact {
+  .col-info {
+    @include bg-gradient;
+
+    padding: 1.4rem;
+    display: flex;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      width: 100%;
+
+      li {
+        color: white;
+        display: flex;
+        align-items: center;
+        font-size: 1.2em;
+
+        span {
+          padding-top: 0.5em;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 0.5em;
+
+          span {
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid white;
+            display: block;
+            width: 100%;
+          }
+        }
+
+        svg {
+          height: auto;
+          width: 1.5em;
+          margin-right: 0.8em;
+        }
+      }
+
+      a {
+        color: white;
+      }
+    }
+  }
+
+  .row-contact {
+    text-align: left;
+    display: grid;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: row;
+
+      > div:nth-child(3n) {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
