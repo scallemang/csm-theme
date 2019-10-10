@@ -7,11 +7,11 @@
 
 <header class="banner">
   <section class="header-secondary py-2 d-md-flex {{ $background['class'] }}">
-    <div class="container-fluid d-flex align-items-center flex-column flex-md-row">
+    <div class="container d-flex align-items-center flex-column flex-md-row">
       {!! App\social_list() !!}
       <div class="header-secondary__right d-md-flex ml-md-auto">
-        @if( $phone )<div class="phone__wrapper d-flex align-items-center"><i class="fas fa-phone-square-alt"></i><span class="d-flex flex-column"><span>Contact</span><a href="{{ App\strip_phone( $phone ) }}">{{ $phone }}</a></span></div>@endif
-        @if( $email )<div class="email__wrapper d-flex align-items-center"><i class="fas fa-envelope"></i></i><span class="d-flex flex-column"><span>Email</span><a href="mailto:{{ $email }}">{{ $email }}</a></span></div>@endif
+        @if( $phone )<div class="phone__wrapper d-flex align-items-center"><i class="fas fa-phone-square-alt"></i><span class="d-flex flex-column">{{--<span>Contact</span>--}}<a href="{{ App\strip_phone( $phone ) }}">{{ $phone }}</a></span></div>@endif
+        @if( $email )<div class="email__wrapper d-flex align-items-center"><i class="fas fa-envelope"></i></i><span class="d-flex flex-column">{{--<span>Email</span>--}}<a href="mailto:{{ $email }}">{{ $email }}</a></span></div>@endif
         @php 
           $buttonGroup = get_field( 'header_secondary__cta', 'option' ); 
           if(!empty($buttonGroup)):
@@ -27,7 +27,7 @@
   </section>
 
   <div class="pt-2">
-    <nav class="navbar navbar-expand-md nav-primary">
+    <nav class="navbar navbar-expand-md nav-primary container">
       <a class="brand" href="{{ home_url('/') }}">
         @if( $logo )<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="img-fluid header__logo my-1">
         @else{{ get_bloginfo('name', 'display') }}@endif

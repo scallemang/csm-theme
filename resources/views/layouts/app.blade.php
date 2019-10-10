@@ -10,14 +10,16 @@
           @yield('content')
         </main>
         @if (App\display_sidebar())
-          <aside class="sidebar col-md-4 col-lg-3 py-4">
+          <aside class="sidebar col-md-4 col-lg-3 mt-5 mb-4">
             @include('partials.sidebar')
           </aside>
         @endif
       </div>
     </div>
     @php do_action('get_footer') @endphp
-    @include('partials.footer')
+    @if( basename(get_page_template() != "template-contact.blade.php") )
+      @include('partials.footer')
+    @endif
     @php wp_footer() @endphp
   </body>
 </html>

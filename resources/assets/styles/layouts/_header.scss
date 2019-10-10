@@ -2,14 +2,15 @@
   @extend .nav-item;
 }
 
-.banner .navbar a,
-.banner .navbar .navbar-nav a {
+.banner .navbar a:not(.brand),
+.banner .navbar .navbar-nav a:not(.brand) {
   @extend .nav-link;
 
+  font-family: $font-family-condensed;
   padding: 0.6rem 0.8rem;
   color: theme-color("primary");
   font-size: 1.1em;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .navbar-toggler-icon {
@@ -19,6 +20,7 @@
 header {
   &.banner {
     background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 
     .navbar.nav-primary {
       padding-top: 0;

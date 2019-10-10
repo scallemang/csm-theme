@@ -13,7 +13,7 @@
   class="content-info py-5 {{ $background['class'] }} {{ $lightdark }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
   @if( $background['type'] == 'color--custom' ) style="background-color: {{ $background['value'] }};" @endif>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row-footer">
       @if( $logo )
         <div class="col-footer text-lg-center">
