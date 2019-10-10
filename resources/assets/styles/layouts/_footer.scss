@@ -71,8 +71,11 @@ footer {
     }
 
     .list--social {
-      justify-content: center;
       align-items: center;
+
+      @include media-breakpoint-up(lg) {
+        justify-content: center;
+      }
 
       i {
         font-size: 1.8em;

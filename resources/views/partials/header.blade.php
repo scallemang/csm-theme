@@ -6,10 +6,10 @@
 @endphp
 
 <header class="banner">
-  <section class="header-secondary py-2 d-flex {{ $background['class'] }}">
-    <div class="container-fluid d-flex align-items-center">
+  <section class="header-secondary py-2 d-md-flex {{ $background['class'] }}">
+    <div class="container-fluid d-flex align-items-center flex-column flex-md-row">
       {!! App\social_list() !!}
-      <div class="header-secondary__right d-flex ml-auto">
+      <div class="header-secondary__right d-md-flex ml-md-auto">
         @if( $phone )<div class="phone__wrapper d-flex align-items-center"><i class="fas fa-phone-square-alt"></i><span class="d-flex flex-column"><span>Contact</span><a href="{{ App\strip_phone( $phone ) }}">{{ $phone }}</a></span></div>@endif
         @if( $email )<div class="email__wrapper d-flex align-items-center"><i class="fas fa-envelope"></i></i><span class="d-flex flex-column"><span>Email</span><a href="mailto:{{ $email }}">{{ $email }}</a></span></div>@endif
         @php 
@@ -36,9 +36,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       </button>
-      <div class="collapse navbar-collapse align-self-end" id="navigation--primary">
+      <div class="collapse navbar-collapse align-self-center" id="navigation--primary">
         @if (has_nav_menu('primary_navigation'))
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-nav ml-auto']) !!}
+          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-nav ml-auto', 'walker' => new \App\wp_bootstrap4_navwalker()]) !!}
         @endif
       </div>
     </nav>

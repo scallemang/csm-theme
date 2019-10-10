@@ -1,0 +1,48 @@
+{
+    "key": "group_5d953ba2dac5f",
+    "title": "Template: Page",
+    "fields": [
+        {
+            "key": "field_5d953bc12bea5",
+            "label": "Alternate Title",
+            "name": "page__alternate_title",
+            "type": "text",
+            "instructions": "If you want an alternate title to appear as your &lt;h1&gt;, please enter it here. If not, the default title will appear.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1570061410
+}

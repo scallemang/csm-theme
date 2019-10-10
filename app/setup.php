@@ -153,7 +153,9 @@ add_filter('sage/display_sidebar', function ($display) {
       // The sidebar will be displayed if any of the following return true
       is_single(),
       is_404(),
-      is_page_template('template-custom.php')
+      // Default template:
+      basename(get_page_template()) === 'page.blade.php',
+      basename(get_page_template()) === 'template-blog.blade.php'
     ]);
 
     return $display;
@@ -164,3 +166,13 @@ function admin_assets() {
 }
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\admin_assets', 10 );
 add_action( 'login_enqueue_scripts', __NAMESPACE__ . '\\admin_assets', 10 );
+
+add_filter('template_include', function ($template) {
+    if (is_amp_endpoint()) {
+        $amp_template = locate_template(['amp/'.basename($template)]);
+
+        return ($amp_template) ? $amp_template : $template;
+    }
+
+    return $template;
+}, 100);

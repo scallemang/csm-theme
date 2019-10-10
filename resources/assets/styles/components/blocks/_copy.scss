@@ -1,0 +1,14 @@
+section.block-copy {
+  &.text-center {
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      // li {
+      //   &::before {
+      //     content: "•";
+      //   }
+      // }
+    }
+  }
+}

@@ -16,7 +16,7 @@
   <div class="container-fluid">
     <div class="row-footer">
       @if( $logo )
-        <div class="col-footer text-center">
+        <div class="col-footer text-lg-center">
           <img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="img-fluid footer__logo mb-3">
           {!! App\social_list() !!}
         </div>

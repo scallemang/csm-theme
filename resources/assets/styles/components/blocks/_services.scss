@@ -25,9 +25,8 @@ section.block-services {
       }
 
       @include media-breakpoint-up(lg) {
-        grid-template-columns: auto;
-        grid-auto-flow: column;
-        grid-template-rows: 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: row;
       }
 
       .card {
@@ -62,7 +61,8 @@ section.block-services {
       grid-template-rows: auto;
       grid-auto-flow: row;
 
-      img {
+      img,
+      svg {
         margin-right: 0.4em;
       }
 

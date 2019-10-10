@@ -464,3 +464,10 @@ function social_list()
     }
     return $html;
 }
+
+function alter_attr_wpse_102158($attr) {
+    remove_filter('wp_get_attachment_image_attributes','alter_attr_wpse_102158');
+    $attr['class'] .= ' img-fluid mb-3';
+    return $attr;
+}
+add_filter('wp_get_attachment_image_attributes', __NAMESPACE__ . '\\alter_attr_wpse_102158'); 

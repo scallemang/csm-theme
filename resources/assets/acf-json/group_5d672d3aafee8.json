@@ -118,8 +118,8 @@
             "key": "field_5d685d5a6306d",
             "label": "Contact Form",
             "name": "business__form",
-            "type": "wp_forms_field",
-            "instructions": "Please select the default WPForms form to be used for people to contact you.",
+            "type": "text",
+            "instructions": "Please enter the shortcode for the default WPForms form to be used for people to contact you.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -127,7 +127,11 @@
                 "class": "",
                 "id": ""
             },
-            "allow_null": 0
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -147,5 +151,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567121165
+    "modified": 1570025556
 }

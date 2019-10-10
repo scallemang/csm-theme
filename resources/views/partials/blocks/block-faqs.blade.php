@@ -11,7 +11,7 @@
 
 <section 
   @if($sectionId)id="{{ $sectionId }}"@endif 
-  class="block-faq py-5 text-center {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
+  class="block-faq @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif  text-center {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
 >
   <div class="container">

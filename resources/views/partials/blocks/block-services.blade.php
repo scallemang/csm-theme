@@ -12,7 +12,7 @@
 
 <section 
   @if($sectionId)id="{{ $sectionId }}"@endif 
-  class="block-services my-5 {{ $style }} {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
+  class="block-services @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif  {{ $style }} {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
 > 
   <div class="container">

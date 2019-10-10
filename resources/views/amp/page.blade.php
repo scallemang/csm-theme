@@ -1,7 +1,3 @@
-{{--
-  Template Name: Custom Template
---}}
-
 @extends('layouts.app')
 
 @section('content')
@@ -9,4 +5,6 @@
     @include('partials.page-header')
     @include('partials.content-page')
   @endwhile
+
+  {{-- @include('partials.footer-cta') --}}
 @endsection
