@@ -297,6 +297,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_5db1b878e88b4",
+            "label": "Block Title",
+            "name": "block__title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d6ed1e301400",
             "label": "Style",
             "name": "services__style",
@@ -360,5 +379,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567563532
+    "modified": 1571928191
 }

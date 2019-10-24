@@ -210,15 +210,7 @@
             "type": "tab",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5d673971b257e",
-                        "operator": "==",
-                        "value": "custom"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -226,6 +218,25 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_5db1b8150da8c",
+            "label": "Block Title",
+            "name": "block__title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5d6743b0b2585",
@@ -346,5 +357,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571838267
+    "modified": 1571928128
 }

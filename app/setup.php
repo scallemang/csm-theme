@@ -167,13 +167,3 @@ function admin_assets() {
 }
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\admin_assets', 10 );
 add_action( 'login_enqueue_scripts', __NAMESPACE__ . '\\admin_assets', 10 );
-
-add_filter('template_include', function ($template) {
-    if (is_amp_endpoint()) {
-        $amp_template = locate_template(['amp/'.basename($template)]);
-
-        return ($amp_template) ? $amp_template : $template;
-    }
-
-    return $template;
-}, 100);

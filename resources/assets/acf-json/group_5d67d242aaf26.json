@@ -83,6 +83,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_5db1b870a96ea",
+            "label": "Block Title",
+            "name": "block__title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d67d2ad0d0f3",
             "label": "Background",
             "name": "reviews__background",
@@ -121,5 +140,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567092169
+    "modified": 1571928183
 }

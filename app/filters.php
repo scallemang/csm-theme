@@ -89,3 +89,26 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+// CSM Customizations
+add_filter('acf/fields/flexible_content/layout_title', function( $title, $field, $layout, $i ) {
+    // remove layout title from text
+    
+    // load text sub field
+    if( $text = get_sub_field( 'block__title' ) ) {
+        $title .= ': <strong>' . $text . '</strong>';
+    }
+    
+    // return
+    return $title;
+}, 10, 4);
+
+add_filter('template_include', function ($template) {
+    if (is_amp_endpoint()) {
+        $amp_template = locate_template(['amp/'.basename($template)]);
+
+        return ($amp_template) ? $amp_template : $template;
+    }
+
+    return $template;
+}, 100);

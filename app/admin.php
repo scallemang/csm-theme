@@ -43,12 +43,11 @@ add_action('admin_menu', function() {
 /**
  * Custom styles from ACF options
  */
-function generate_options_css() {
+add_action('acf/save_post', function() {
     $ss_dir = get_stylesheet_directory();
-    print $ss_dir;
+    //print $ss_dir;
     ob_start();
     require($ss_dir . '/assets/styles/theme-styles.php');
     $css = ob_get_clean();
     file_put_contents($ss_dir . '/assets/styles/common/_theme-styles.scss', $css, LOCK_EX);
-}
-add_action('acf/save_post', __NAMESPACE__ . '\\generate_options_css', 20);
+}, 20);
