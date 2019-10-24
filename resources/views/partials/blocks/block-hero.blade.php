@@ -16,7 +16,7 @@
 > 
   <div class="container {{-- container-fluid-md-down --}}">
     <div class="row row-hero">
-      <div class="col-sm-12 col-lg-6">
+      <div class="col-sm-12 col-lg-6 ml-lg-auto text-lg-right">
         @if( $heading || $subheading )@if( $heading )<h1 class="hero__heading">{!! $heading !!}</h1>@endif @if( $subheading )<p class="hero__subheading">{!! $subheading !!}</p>@endif @endif
       
         @if( $hasButton )

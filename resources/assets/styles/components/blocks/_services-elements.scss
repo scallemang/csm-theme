@@ -10,6 +10,10 @@ h3 {
     text-transform: uppercase;
     color: theme-color("info");
     margin-bottom: 0.3em;
+
+    a {
+      color: theme-color("info");
+    }
   }
 
   section.block-services.style-1 .card.color-primary & {

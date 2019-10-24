@@ -33,21 +33,6 @@
             "default_value": "#0000f0"
         },
         {
-            "key": "field_5d6e7a0a2fec7",
-            "label": "Info",
-            "name": "colour__info",
-            "type": "color_picker",
-            "instructions": "A darker colour is recommended, based on some of the contexts in which this is used.",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "#006000"
-        },
-        {
             "key": "field_5d66dd160c90d",
             "label": "Text",
             "name": "colour__text",
@@ -76,6 +61,68 @@
                 "id": ""
             },
             "default_value": "#f0f0f0"
+        },
+        {
+            "key": "field_5d6e7a0a2fec7",
+            "label": "Info",
+            "name": "colour__info",
+            "type": "color_picker",
+            "instructions": "A darker colour is recommended, based on some of the contexts in which this is used.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#006000"
+        },
+        {
+            "key": "field_5db1b1429b41a",
+            "label": "Gradient",
+            "name": "colour__gradient",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5db1b1589b41b",
+                    "label": "Colour One",
+                    "name": "colour__gradient_one",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5db1b1729b41c",
+                    "label": "Colour Two",
+                    "name": "colour__gradient_two",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -95,5 +142,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567612859
+    "modified": 1571926406
 }

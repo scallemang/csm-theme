@@ -1,4 +1,10 @@
 aside.sidebar {
+  text-align: center;
+
+  img.size-thumbnail {
+    border-radius: 50%;
+  }
+
   form {
     .wpforms-one-half {
       width: 100%;

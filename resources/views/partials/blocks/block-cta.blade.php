@@ -4,7 +4,8 @@
   $heading = $cta['heading'];
   $subheading = $cta['subheading'];
   $hasButton = null != $cta['button'] ? true : false;
-  $alignment = $cta['alignment'];
+  $alignmentOverride = get_sub_field('cta__override_alignment');
+  $alignment = $alignmentOverride ? get_sub_field('copy__alignment')['alignment__picker'] : $cta['alignment'];
   $lightdark = $cta['lightdark'];
   if( 'color' == $cta['background']['type']) {
     $backgroundClass = 'bg-' . $cta['background']['value'];

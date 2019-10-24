@@ -155,6 +155,14 @@ function return_button($group = null, $args = null)
     return $button;
 }
 
+function return_keywords()
+{
+    $title = get_bloginfo('name');
+    $tagline = get_bloginfo('description');
+    $keywords = $title . ( $tagline ? ' | ' . $tagline : '');
+    return $keywords;
+}
+
 function return_icon( $group = null )
 {
     $icon = null;
@@ -175,6 +183,7 @@ function return_icon( $group = null )
                 break;
             case 'custom':
                 $image = get_sub_field('icon__custom');
+                $image['alt'] = $image['alt'] ? $image['alt'] . ' | ' . return_keywords() : 'Icon | ' . return_keywords();
                 $icon = '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '" class="img-fluid">';
                 break;
             default:
@@ -254,6 +263,16 @@ function return_fiftyfifty_col( $group = null )
 
     }
     return $col;
+}
+
+function return_alignment( $args = null )
+{
+    $align = null;
+    if( isset($args['block']) ):
+        $align = get_sub_field( 'alignment__picker' );
+    endif;
+
+    return $align;
 }
 
 function return_background( $group = null )

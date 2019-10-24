@@ -1,5 +1,5 @@
 @if(function_exists('bcn_display'))
-<div class="breadcrumbs breadcrumbs-navxt mt-5 mb-4 container" typeof="BreadcrumbList" vocab="http://schema.org/">
+<div class="breadcrumbs breadcrumbs-navxt mt-4 mb-4 container" typeof="BreadcrumbList" vocab="http://schema.org/">
   {{ bcn_display() }}
 </div>
 @endif

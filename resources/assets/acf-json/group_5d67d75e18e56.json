@@ -148,6 +148,27 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_5db051dc789a8",
+            "label": "Text Alignment",
+            "name": "copy__alignment",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5db0514a4359c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -167,5 +188,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567092213
+    "modified": 1571836404
 }

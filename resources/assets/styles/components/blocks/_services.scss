@@ -12,6 +12,12 @@ section.block-services {
     }
   }
 
+  .card-body {
+    p {
+      text-align: justify;
+    }
+  }
+
   &.style-1 {
     .row-services {
       display: grid;
