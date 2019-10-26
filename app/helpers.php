@@ -437,7 +437,7 @@ function return_cta()
         case 'custom':
             $cta['heading'] = get_sub_field('cta__heading');
             $cta['subheading'] = get_sub_field('cta__subheading');
-            $backgroundType = get_field('background_picker', $id);
+            $backgroundType = get_sub_field('cta__background')['background_picker'];
             $cta['background'] = return_background_from_type( $backgroundType );
             $cta['alignment'] = get_sub_field('alignment__text');
             $cta['lightdark'] = get_sub_field('lightdark__picker');

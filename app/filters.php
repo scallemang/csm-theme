@@ -112,3 +112,29 @@ add_filter('template_include', function ($template) {
 
     return $template;
 }, 100);
+
+add_filter( 'tiny_mce_before_init', function ( $init ) {
+
+    $formats = array(
+        'p'          => __( 'Paragraph', 'text-domain' ),
+        'h1'         => __( 'Heading 1', 'text-domain' ),
+        'h2'         => __( 'Heading 2', 'text-domain' ),
+        'h3'         => __( 'Heading 3', 'text-domain' ),
+        'h4'         => __( 'Heading 4', 'text-domain' ),
+        'h5'         => __( 'Heading 5', 'text-domain' ),
+        'h6'         => __( 'Heading 6', 'text-domain' ),
+        'pre'        => __( 'Preformatted', 'text-domain' ),
+        'p-xxl' => __( 'XXL Paragraph', 'text-domain' ),
+        'p-xl' => __( 'XL Paragraph', 'text-domain' ),
+        'p-l' => __( 'L Paragraph', 'text-domain' ),
+    );
+    
+    // concat array elements to string
+    array_walk( $formats, function ( $key, $val ) use ( &$block_formats ) {
+        $block_formats .= esc_attr( $key ) . '=' . esc_attr( $val ) . ';';
+    }, $block_formats = '' );
+
+    $init['block_formats'] = $block_formats;
+
+    return $init;
+});

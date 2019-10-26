@@ -12,7 +12,7 @@
 <section 
   @if($sectionId)id="{{ $sectionId }}"@endif 
   class="block-hero jumbotron {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
-  @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
+  @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['sizes']['large'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
 > 
   <div class="container {{-- container-fluid-md-down --}}">
     <div class="row row-hero">

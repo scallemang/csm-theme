@@ -33,6 +33,18 @@ body,
 p {
   color: theme-color("text");
 
+  &.xxl {
+    font-size: 2em;
+  }
+
+  &.xl {
+    font-size: 1.5em;
+  }
+
+  &.l {
+    font-size: 1.2em;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 1.2rem;
   }

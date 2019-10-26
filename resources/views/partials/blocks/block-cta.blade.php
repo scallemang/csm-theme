@@ -30,7 +30,7 @@
 <section 
   @if($sectionId)id="{{ $sectionId }}"@endif 
   class="block-cta @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif  {{ $cta['background']['class'] }} {{ $lightdark }} @if( $cta['background']['overlay'] )overlay-{{ $cta['background']['overlay']['color'] }}@endif" 
-  @if( $cta['background']['type'] == 'image' ) style="background-image: url('{{ $cta['background']['value']['url'] }}'); background-size: cover; background-position: {{ $cta['background']['position'] }};" @endif
+  @if( $cta['background']['type'] == 'image' ) style="background-image: url('{{ $cta['background']['value']['sizes']['large'] }}'); background-size: cover; background-position: {{ $cta['background']['position'] }};" @endif
 > 
   <div class="container">
     <div class="row">

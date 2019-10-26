@@ -1,9 +1,9 @@
 {
-    "key": "group_5d7005bf1e8c5",
-    "title": "Block: Divider",
+    "key": "group_5db42d7a256e1",
+    "title": "Block: Empty Space",
     "fields": [
         {
-            "key": "field_5db4351c35310",
+            "key": "field_5db4352df4a22",
             "label": "Settings",
             "name": "",
             "type": "tab",
@@ -19,30 +19,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d7005c5672e5",
-            "label": "Colour",
-            "name": "divider__colour",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_5d67f094d95e9"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_5db42d3ee6486",
+            "key": "field_5db42d7a2e8f4",
             "label": "Height",
-            "name": "divider__height",
+            "name": "space__height",
             "type": "number",
             "instructions": "Enter a pixel value without 'px'.",
             "required": 0,
@@ -61,7 +40,7 @@
             "step": ""
         },
         {
-            "key": "field_5db1b84482c4d",
+            "key": "field_5db42d7a2e8f9",
             "label": "Options",
             "name": "",
             "type": "tab",
@@ -77,7 +56,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_5db1b84b82c4e",
+            "key": "field_5db42d7a2e8fe",
             "label": "Block Title",
             "name": "block__title",
             "type": "text",
@@ -113,5 +92,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572091179
+    "modified": 1572091220
 }

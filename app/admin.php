@@ -51,3 +51,8 @@ add_action('acf/save_post', function() {
     $css = ob_get_clean();
     file_put_contents($ss_dir . '/assets/styles/common/_theme-styles.scss', $css, LOCK_EX);
 }, 20);
+
+// Enqueue the script to customize the formats
+add_action( 'after_wp_tiny_mce', function () {
+    printf( "<script type='text/javascript' src='%s/assets/scripts/admin/tinymce.js'></script>", get_stylesheet_directory_uri() );
+});

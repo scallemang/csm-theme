@@ -32,6 +32,9 @@
       @elseif( get_row_layout() == 'flex__divider' )
         @include('partials.blocks.block-divider')
 
+      @elseif( get_row_layout() == 'flex__space' )
+        @include('partials.blocks.block-space')
+
       @endif
 
     @endwhile
