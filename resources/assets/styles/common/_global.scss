@@ -65,6 +65,12 @@ p {
   }
 }
 
+.bg-secondary {
+  h2 {
+    color: white;
+  }
+}
+
 .bg-gradient {
   @include bg-gradient;
 

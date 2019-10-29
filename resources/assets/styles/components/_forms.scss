@@ -22,6 +22,16 @@ form.wpforms-form {
   .wpforms-submit-container {
     text-align: center;
 
+    input,
+    textarea {
+      background-color: theme-color("background");
+      border-color: theme-color("background");
+    }
+
+    label {
+      color: theme-color("secondary");
+    }
+
     button {
       div.wpforms-container-full & {
         @extend .btn;

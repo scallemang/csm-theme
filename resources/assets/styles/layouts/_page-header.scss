@@ -1,0 +1,35 @@
+// Has featured image: start
+.page-header-wrap {
+  display: grid;
+  min-height: 240px;
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom right, theme-color("gradient-one"), theme-color("gradient-two"));
+
+    h1 {
+      color: white;
+      margin-bottom: 0;
+    }
+  }
+}
+
+[data-responsive-background-image] {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  // display: inline-block;
+  // width: 24%;
+  // padding-bottom: 56.25% /* 16:9 ratio */
+}
+
+[data-responsive-background-image] img {
+  display: none;
+}
+// Has featured image: End

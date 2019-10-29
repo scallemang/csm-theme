@@ -56,6 +56,7 @@
                 "id": ""
             },
             "choices": {
+                "default": "--Default--",
                 "primary": "Primary Colour",
                 "secondary": "Secondary Colour",
                 "info": "Info Colour",
@@ -88,5 +89,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567521493
+    "modified": 1572364150
 }

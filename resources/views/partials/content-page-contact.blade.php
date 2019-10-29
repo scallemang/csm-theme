@@ -18,8 +18,10 @@
           <ul>
             @if( $info['address'])<li class="info-address"><i class="fas fa-map-marker-alt"></i><span>{{ $info['address'] }}</span></li>@endif
             @if( $info['hours'])<li class="info-hours"><i class="fas fa-calendar-alt"></i></i><span>{!! $info['hours'] !!}</span></li>@endif
+            @if( $info['phone'] && $info('email'))<div>@endif
             @if( $info['phone'])<li class="info-phone"><i class="fas fa-phone-alt"></i><span><a href="tel:{{ App\strip_phone( $info['phone'] ) }}">{{ $info['phone'] }}</a></span></li>@endif
             @if( $info['email'])<li class="info-email"><i class="fas fa-envelope"></i><span>{{ $info['email'] }}</span></li>@endif
+          @if( $info['phone'] && $info('email'))</div>@endif
           </ul>          
         </div>
       </div>
@@ -30,7 +32,7 @@
     @if( isset($info['map']) )
     <div class="container pt-5 pb-3">
       <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto">
+        <div class="col-sm-12 mx-auto">
           <div class="map">
             {!! $info['map'] !!}
           </div>
@@ -43,7 +45,7 @@
     @if( isset($info['form']) )
     <div class="container py-3">
       <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto">
+        <div class="col-sm-12 mx-auto">
           <div class="form">
             {!! do_shortcode( $info['form'] ) !!}
           </div>

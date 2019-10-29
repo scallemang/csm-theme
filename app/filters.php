@@ -104,7 +104,7 @@ add_filter('acf/fields/flexible_content/layout_title', function( $title, $field,
 }, 10, 4);
 
 add_filter('template_include', function ($template) {
-    if (is_amp_endpoint()) {
+    if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) {
         $amp_template = locate_template(['amp/'.basename($template)]);
 
         return ($amp_template) ? $amp_template : $template;
@@ -135,6 +135,31 @@ add_filter( 'tiny_mce_before_init', function ( $init ) {
     }, $block_formats = '' );
 
     $init['block_formats'] = $block_formats;
+
+    return $init;
+});
+
+add_filter('tiny_mce_before_init', function( $init ) {
+    $hash = '/#\w+\s*/';
+
+    $custom_colours = '
+        "' . ltrim(get_field('colour__primary', 'option'), '#') . '", "Primary brand colour",
+        "' . ltrim(get_field('colour__secondary', 'option'), '#') . '", "Secondary brand colour",
+        "' . ltrim(get_field('colour__info', 'option'), '#') . '", "Brand info colour",
+        "' . ltrim(get_field('colour__text', 'option'), '#') . '", "Brand text colour",
+        "' . ltrim(get_field('colour__background', 'option'), '#') . '", "Brand background colour"
+    ';
+
+    $no_hash_colours =preg_replace($hash, '', $custom_colours);
+
+    print 'COLOURS: ' . $no_hash_colours;
+
+    // build colour grid default+custom colors
+    $init['textcolor_map'] = '['.$no_hash_colours.']';
+
+    // change the number of rows in the grid if the number of colors changes
+    // 8 swatches per row
+    $init['textcolor_rows'] = 1;
 
     return $init;
 });

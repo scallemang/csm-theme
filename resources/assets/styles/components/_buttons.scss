@@ -1,7 +1,15 @@
 .btn {
   border-radius: 0;
   text-transform: uppercase;
-  // font-size: 1rem;
+
+  &.btn-default {
+    background-color: theme-color("secondary");
+
+    &:hover {
+      background-color: theme-color("primary");
+      color: white;
+    }
+  }
 
   &.btn-primary,
   &.btn-secondary,

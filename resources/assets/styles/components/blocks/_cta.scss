@@ -31,4 +31,9 @@ section.block-cta {
       border-radius: 28px;
     }
   }
+
+  body.sidebar-primary & {
+    border-radius: 20px;
+    overflow: hidden;
+  }
 }

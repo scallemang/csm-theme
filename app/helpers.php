@@ -490,3 +490,24 @@ function alter_attr_wpse_102158($attr) {
     return $attr;
 }
 add_filter('wp_get_attachment_image_attributes', __NAMESPACE__ . '\\alter_attr_wpse_102158'); 
+
+function return_featured_image( $post_id, $size = 'image', $class = '' )
+{
+  // $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size )[0];
+    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'medium' )[0];
+  //$thumbnail_2x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size . '-2x' )[0];
+  $thumbnail_2x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' )[0];
+  // $thumbnail_3x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size . '-3x' )[0];
+  $thumbnail_3x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' )[0];
+
+  $image  = '<img src="' . $thumbnail . '"';
+  $image .= ( $thumbnail_2x && $thumbnail_3x ?  ' srcset="' : '' ); // open srcset
+  $image .= ( $thumbnail_2x ? $thumbnail_2x . ' 2x' : '' );
+  $image .= ( $thumbnail_2x && $thumbnail_3x ? ', ' : '' );
+  $image .= ( $thumbnail_3x ? $thumbnail_3x . ' 3x' : '' );
+  $image .= ( $thumbnail_2x && $thumbnail_3x ?  '"' : '' ); // close srcset
+  $image .= ( $class ? ' class="' . esc_attr($class) . '"' : '' );
+  $image .= ' sizes="auto">';
+
+  return $image;
+}
