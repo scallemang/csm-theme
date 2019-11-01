@@ -12,4 +12,12 @@ jQuery( document ).on( 'tinymce-editor-init', function( event, editor ) {
       block : 'p',
       classes : 'l',
   });
+  tinymce.activeEditor.formatter.register('p-s', {
+    block : 'p',
+    classes : 's',
+  });
+  tinymce.activeEditor.formatter.register('p-xs', {
+    block : 'p',
+    classes : 'xs',
+  });
 });

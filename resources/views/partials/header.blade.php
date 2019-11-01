@@ -29,7 +29,7 @@
   <div class="pt-2">
     <nav class="navbar navbar-expand-md nav-primary container">
       <a class="brand" href="{{ home_url('/') }}">
-        @if( $logo )<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="img-fluid header__logo my-1">
+        @if( $logo )<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="img-fluid header__logo my-2">
         @else{{ get_bloginfo('name', 'display') }}@endif
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation--primary" aria-controls="navigation--primary" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
       </button>
       <div class="collapse navbar-collapse align-self-center" id="navigation--primary">
         @if (has_nav_menu('primary_navigation'))
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-nav ml-auto', 'walker' => new \App\wp_bootstrap4_navwalker()]) !!}
+          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-nav ml-auto', 'keep_links_on_parents' => true, 'walker' => new \App\wp_bootstrap4_navwalker()]) !!}
         @endif
       </div>
     </nav>

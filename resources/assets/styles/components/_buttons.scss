@@ -1,4 +1,6 @@
 .btn {
+  @include btn-extras;
+
   border-radius: 0;
   text-transform: uppercase;
 

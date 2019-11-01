@@ -7,13 +7,14 @@
   $background = App\return_background_from_type( get_field('footer__background_background_picker', 'option'), array('prefix' => 'footer__background_', 'option'=>true) );
   $logo = $lightdark == 'light' ? App\return_logo('light') : App\return_logo();
   $menu = get_field('footer__menu', 'option');
+  $googleLink = get_field( 'business__map_link', 'option');
 @endphp
 
 <footer @if($sectionId)id="{{ $sectionId }}"@endif 
   class="content-info py-5 {{ $background['class'] }} {{ $lightdark }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
   @if( $background['type'] == 'color--custom' ) style="background-color: {{ $background['value'] }};" @endif>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row-footer">
       @if( $logo )
         <div class="col-footer text-lg-center">
@@ -26,7 +27,7 @@
         <div class="col-footer">
           @if( $email )<div class="email__wrapper d-flex align-items-center"><i class="fas fa-envelope"></i></i><span class="d-flex flex-column"><a href="mailto:{{ $email }}">{{ $email }}</a></span></div>@endif
           @if( $phone )<div class="phone__wrapper d-flex align-items-center"><i class="fas fa-phone-square-alt"></i><span class="d-flex flex-column"><a href="{{ App\strip_phone( $phone ) }}">{{ $phone }}</a></span></div>@endif
-          @if( $address )<div class="address__wrapper d-flex align-items-center"><i class="fas fa-map-marker-alt"></i></i><span class="d-flex flex-column">{{ $address }}</span></div>@endif
+          @if( $address )<div class="address__wrapper d-flex align-items-center"><i class="fas fa-map-marker-alt"></i></i><span class="d-flex flex-column">@if( $googleLink )<a href="{{ $googleLink }}" target="_blank">@endif{!! $address !!}@if( $googleLink )</a>@endif</span></div>@endif
         </div>
       @endif
 

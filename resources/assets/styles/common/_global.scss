@@ -11,22 +11,28 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 1.2rem;
+  font-weight: 900;
 }
 
 h1,
 .h1 {
   color: theme-color("primary");
   font-weight: bold;
+  margin-bottom: 2.4rem;
 }
 
 h2,
 .h2 {
   color: theme-color("secondary");
+  font-size: 2.2rem;
 }
 
 h3,
 .h3 {
   color: theme-color("info");
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
 }
 
 body,
@@ -45,8 +51,22 @@ p {
     font-size: 1.2em;
   }
 
+  &.s {
+    font-size: 0.875em;
+  }
+
+  &.xs {
+    font-size: 0.75em;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 1.2rem;
+  }
+}
+
+ul {
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -80,5 +100,42 @@ p {
 
   a {
     color: theme-color("info");
+  }
+}
+
+main.main ul {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    color: theme-color("primary");
+    position: relative;
+    margin-left: 40px;
+    font-style: italic;
+
+    &::before {
+      content: "•";
+      padding-right: 1em;
+      font-size: 1.5em;
+      line-height: 1em;
+      position: absolute;
+      margin-left: -30px;
+      color: theme-color("info");
+    }
+
+    // a {
+    //   color: theme-color("primary") !important;
+    // }
+  }
+}
+
+main.main p a:not(.btn),
+main.main ul li a:not(.btn) {
+  color: theme-color("secondary");
+  font-weight: 900;
+  text-decoration: underline;
+
+  &:hover {
+    color: theme-color("primary");
   }
 }

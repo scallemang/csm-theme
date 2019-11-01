@@ -38,7 +38,7 @@
             "placeholder": "",
             "maxlength": "",
             "rows": 4,
-            "new_lines": ""
+            "new_lines": "br"
         },
         {
             "key": "field_5d685ef498d99",
@@ -115,6 +115,24 @@
             "theme": "monokai"
         },
         {
+            "key": "field_5dbb6342cdc72",
+            "label": "Google Map link",
+            "name": "business__map_link",
+            "type": "acf_code_field",
+            "instructions": "Please input your Google Maps link. <strong>Note:<\/strong> this is <em>not<\/em> your iframe code. This is what, e.g., the address links to.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "mode": "htmlmixed",
+            "theme": "monokai"
+        },
+        {
             "key": "field_5d685d5a6306d",
             "label": "Contact Form",
             "name": "business__form",
@@ -151,5 +169,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1570025556
+    "modified": 1572562200
 }

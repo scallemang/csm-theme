@@ -19,14 +19,19 @@ body.template-contact {
       li {
         color: white;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         font-size: 1.2em;
         height: 100%;
         margin-top: 0.5em;
         margin-bottom: 0.5em;
+        margin-left: 0;
+
+        &::before {
+          content: none;
+        }
 
         @include media-breakpoint-up(md) {
-          justify-content: center;
+          justify-content: flex-start;
         }
 
         // &:not(:last-of-type) {
@@ -49,7 +54,7 @@ body.template-contact {
       }
 
       a {
-        color: white;
+        color: white !important;
       }
     }
   }

@@ -23,7 +23,7 @@
             "label": "Heading",
             "name": "services__heading",
             "type": "medium_editor",
-            "instructions": "",
+            "instructions": "Default bold is not applied. Manually apply bold to the words you want to make bold.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -166,7 +166,7 @@
                     },
                     "default_value": "",
                     "tabs": "all",
-                    "toolbar": "basic",
+                    "toolbar": "full",
                     "media_upload": 0,
                     "delay": 0
                 },
@@ -379,5 +379,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571928191
+    "modified": 1572565262
 }

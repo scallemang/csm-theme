@@ -27,27 +27,31 @@ footer {
     }
   }
 
+  iframe {
+    max-width: 300px;
+  }
+
   .menu-item {
     display: block;
 
     a {
       display: inline-block;
-      padding: 0.4em;
+      padding: 0;
 
       @include transition;
 
       &:hover {
-        background-color: darken(theme-color("primary"), 10%);
+        color: darken(theme-color("primary"), 10%);
         text-decoration: none;
       }
     }
 
     &.active {
       a {
-        background-color: theme-color("primary");
+        color: theme-color("primary");
 
         &:hover {
-          background-color: darken(theme-color("primary"), 10%);
+          color: darken(theme-color("primary"), 10%);
           text-decoration: none;
         }
       }

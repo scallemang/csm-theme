@@ -51,7 +51,7 @@
             "key": "field_5d67d40ace54b",
             "label": "Subheading",
             "name": "contact__subheading",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -61,10 +61,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_5d67d417ce54c",
@@ -82,8 +82,9 @@
             "choices": {
                 "map": "Include map?",
                 "form": "Include contact form?",
-                "phone": "Include phone?",
                 "address": "Include address?",
+                "phone": "Include phone?",
+                "email": "Include email?",
                 "hours": "Include hours?"
             },
             "allow_custom": 0,
@@ -238,5 +239,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571928023
+    "modified": 1572562434
 }

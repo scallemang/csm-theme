@@ -17,6 +17,11 @@ section.block-contact {
         display: flex;
         align-items: center;
         font-size: 1.2em;
+        margin-left: 0;
+
+        &::before {
+          content: none;
+        }
 
         span {
           padding-top: 0.5em;
@@ -41,7 +46,12 @@ section.block-contact {
       }
 
       a {
-        color: white;
+        color: white !important;
+        text-decoration: none !important;
+
+        &:hover {
+          color: theme-color("text");
+        }
       }
     }
   }

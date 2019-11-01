@@ -6,14 +6,15 @@ section.block-hero {
   }
 
   h1 {
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-weight: 100;
     line-height: 1.1;
-    font-size: 2.75rem;
+    font-size: 2rem;
 
     b {
-      font-weight: 500;
-      font-size: 0.9em;
+      font-weight: 900;
+      display: block;
+      // font-size: 0.9em;
     }
   }
 
@@ -21,8 +22,12 @@ section.block-hero {
     @include bg-gradient;
 
     padding: 1.8rem;
-    font-size: 2rem;
-    font-weight: 900;
+    font-size: 2.4rem;
+    font-weight: 100;
     line-height: 1.25;
+
+    b {
+      font-weight: 900;
+    }
   }
 }

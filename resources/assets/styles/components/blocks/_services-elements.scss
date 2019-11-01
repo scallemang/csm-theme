@@ -3,33 +3,52 @@ h3 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.4rem;
+    font-weight: 500;
   }
 
   section.block-services.style-2 & {
     font-size: 1.2rem;
-    text-transform: uppercase;
-    color: theme-color("info");
+    // text-transform: uppercase;
+    color: theme-color("primary");
     margin-bottom: 0.3em;
+    margin-top: 0;
+    font-weight: 500;
 
     a {
-      color: theme-color("info");
+      color: theme-color("primary");
     }
   }
 
   section.block-services.style-1 .card.color-primary & {
     color: theme-color("primary");
+
+    a {
+      color: theme-color("primary") !important;
+    }
   }
 
   section.block-services.style-1 .card.color-secondary & {
     color: theme-color("secondary");
+
+    a {
+      color: theme-color("secondary") !important;
+    }
   }
 
   section.block-services.style-1 .card.color-info & {
     color: theme-color("info");
+
+    a {
+      color: theme-color("info") !important;
+    }
   }
 
   section.block-services.style-1 .card.color-text & {
     color: theme-color("text");
+
+    a {
+      color: theme-color("text") !important;
+    }
   }
 }
 

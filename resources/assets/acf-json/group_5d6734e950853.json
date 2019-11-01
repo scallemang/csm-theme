@@ -20,37 +20,10 @@
         },
         {
             "key": "field_5d6736ee6795b",
-            "label": "Heading",
+            "label": "Heading (h1)",
             "name": "hero__heading",
             "type": "medium_editor",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "standard_buttons": [
-                "bold",
-                "italic",
-                "underline",
-                "removeFormat"
-            ],
-            "other_options": [
-                "disableReturn",
-                "disableDoubleReturn",
-                "disableExtraSpaces"
-            ],
-            "placeholder": "",
-            "default_value": ""
-        },
-        {
-            "key": "field_5d6736f76795c",
-            "label": "Subheading",
-            "name": "hero__subheading",
-            "type": "text",
-            "instructions": "",
+            "instructions": "Default bold is not applied. Manually apply bold to the words you want to make bold.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -59,10 +32,78 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
+            "delay": 0
+        },
+        {
+            "key": "field_5dbb78203d2f7",
+            "label": "Heading (p)",
+            "name": "hero__heading_p",
+            "type": "medium_editor",
+            "instructions": "Default bold is not applied. Manually apply bold to the words you want to make bold.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
+            "delay": 0
+        },
+        {
+            "key": "field_5d6736f76795c",
+            "label": "Subheading",
+            "name": "hero__subheading",
+            "type": "medium_editor",
+            "instructions": "Default bold is not applied. Manually apply bold to the words you want to make bold.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
+            "delay": 0
         },
         {
             "key": "field_5d6736ff6795d",
@@ -186,5 +227,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571928175
+    "modified": 1572567089
 }

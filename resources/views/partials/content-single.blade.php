@@ -1,6 +1,6 @@
 <article @php post_class() @endphp>
   <header>
-    <div class="breadcrumbs breadcrumbs-navxt" typeof="BreadcrumbList" vocab="http://schema.org/">
+    <div class="breadcrumbs breadcrumbs-navxt mt-4 mb-5 container" typeof="BreadcrumbList" vocab="http://schema.org/">
       @if(function_exists('bcn_display'))
         {{ bcn_display() }}
       @endif

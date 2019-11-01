@@ -5,6 +5,7 @@
 
   @include media-breakpoint-up(lg) {
     grid-template-columns: 1fr 1fr;
+    min-height: 350px;
   }
 
   .page-header {

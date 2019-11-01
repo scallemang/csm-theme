@@ -1,9 +1,44 @@
+$border-radius: 10px;
+
 aside.sidebar {
   text-align: center;
 
-  img.size-thumbnail {
-    border-radius: 10px;
-    border: 4px solid theme-color("primary");
+  .widget_media_image img {
+    border-radius: $border-radius;
+    border: 8px solid theme-color("primary");
+  }
+
+  .widget_text:not(.widget_custom_html) {
+    padding: 1em;
+    border-radius: $border-radius;
+    background-color: theme-color("background");
+    margin-bottom: 1em;
+    font-size: 1.2em;
+
+    p {
+      font-weight: 700;
+      color: theme-color("info");
+
+      strong {
+        font-weight: 100;
+        text-transform: uppercase;
+        display: block;
+        color: theme-color("text");
+      }
+    }
+  }
+
+  .ig_shortcode_container.trigger_onclick {
+    @extend .btn;
+    @extend .btn-lg;
+    @extend .btn-secondary;
+
+    @include btn-extras;
+
+    &:hover {
+      background-color: theme-color("primary");
+      border-color: theme-color("primary");
+    }
   }
 
   form {

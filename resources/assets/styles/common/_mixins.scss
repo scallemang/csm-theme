@@ -10,4 +10,15 @@
 
 @mixin bg-gradient {
   background-image: linear-gradient(to bottom right, theme-color("primary"), theme-color("secondary"));
+
+  a {
+    &:hover {
+      color: white !important;
+    }
+  }
+}
+
+@mixin btn-extras {
+  font-weight: bold;
+  cursor: pointer;
 }

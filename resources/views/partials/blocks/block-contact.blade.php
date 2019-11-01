@@ -4,6 +4,7 @@
   $hasButton = get_sub_field('contact__button');
   $contactCheckbox = get_sub_field('contact__info');
   $info = App\return_contact_info($contactCheckbox, array('strip-hours' => true));
+  $googleLink = get_field( 'business__map_link', 'option');
   $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
 @endphp
 
@@ -26,9 +27,10 @@
           @if( isset($info['phone']) || isset($info['address']) || isset($info['hours']))
           <div class="col-info">
             <ul>
-              @if( $info['address'])<li class="info-address"><i class="fas fa-map-marker-alt"></i><span>{{ $info['address'] }}</span></li>@endif
+              @if( $info['address'])<li class="info-address"><i class="fas fa-map-marker-alt"></i><span>@if( $googleLink )<a href="{{ $googleLink }}" target="_blank">@endif{!! $info['address'] !!}@if( $googleLink )</a>@endif</span></li>@endif
               @if( $info['phone'])<li class="info-phone"><i class="fas fa-phone-alt"></i><span><a href="tel:{{ App\strip_phone( $info['phone'] ) }}">{{ $info['phone'] }}</a></span></li>@endif
-              @if( $info['hours'])<li class="info-hours"><i class="fas fa-calendar-alt"></i></i><span>{{ $info['hours'] }}</span></li>@endif
+              @if( $info['email'])<li class="info-email"><i class="fas fa-envelope"></i></i><span><a href="mailto:{{ $info['email'] }}">{{ $info['email'] }}</a></span></li>@endif
+              @if( $info['hours'])<li class="info-hours"><i class="fas fa-calendar-alt"></i></i><span>{!! $info['hours'] !!}</span></li>@endif
             </ul>
           </div>
           @endif

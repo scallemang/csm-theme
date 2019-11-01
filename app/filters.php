@@ -127,6 +127,8 @@ add_filter( 'tiny_mce_before_init', function ( $init ) {
         'p-xxl' => __( 'XXL Paragraph', 'text-domain' ),
         'p-xl' => __( 'XL Paragraph', 'text-domain' ),
         'p-l' => __( 'L Paragraph', 'text-domain' ),
+        'p-s' => __( 'S Paragraph', 'text-domain' ),
+        'p-xs' => __( 'XS Paragraph', 'text-domain' ),
     );
     
     // concat array elements to string
@@ -151,8 +153,6 @@ add_filter('tiny_mce_before_init', function( $init ) {
     ';
 
     $no_hash_colours =preg_replace($hash, '', $custom_colours);
-
-    print 'COLOURS: ' . $no_hash_colours;
 
     // build colour grid default+custom colors
     $init['textcolor_map'] = '['.$no_hash_colours.']';

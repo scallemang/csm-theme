@@ -7,10 +7,17 @@
   @extend .nav-link;
 
   font-family: $font-family-condensed;
-  padding: 0.6rem 0.8rem;
   color: theme-color("primary");
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-weight: 500;
+
+  &.dropdown-item {
+    font-size: 1rem;
+
+    &.active {
+      color: white;
+    }
+  }
 }
 
 .navbar-toggler-icon {
@@ -74,7 +81,9 @@ header {
             }
 
             a {
-              font-size: 0.9em;
+              font-size: 1.1em;
+              font-weight: 700;
+              font-family: $font-family-condensed;
             }
           }
         }
@@ -118,7 +127,7 @@ header {
     li {
       a {
         display: inline-block;
-        padding: 0.4em;
+        padding: 0.4rem 0.6rem;
 
         @include transition;
 
@@ -130,7 +139,7 @@ header {
       }
 
       &.active {
-        a {
+        > a {
           background-color: theme-color("primary");
           color: #fff;
 
@@ -140,6 +149,21 @@ header {
           }
         }
       }
+    }
+  }
+}
+
+.dropdown-toggle {
+  &::after {
+    border-top-color: theme-color("secondary");
+    border-bottom-color: theme-color("secondary");
+  }
+
+  &:hover,
+  .current-menu-item & {
+    &::after {
+      border-top-color: white;
+      border-bottom-color: white;
     }
   }
 }
