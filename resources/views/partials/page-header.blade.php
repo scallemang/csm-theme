@@ -3,8 +3,8 @@
   <div data-responsive-background-image>
     {!! App\return_featured_image( $post->ID ) !!}
   </div>
-  <div class="page-header container text-center">
-    <h1 class="page-title">@if(get_field('page__alternate_title')){!! get_field('page__alternate_title') !!}@else{!! App::title() !!}@endif</h1>
+  <div class="page-header text-center">
+      <h1 class="page-title">@if(get_field('page__alternate_title')){!! get_field('page__alternate_title') !!}@else{!! App::title() !!}@endif</h1>
   </div>
 </div>
   @if(function_exists('bcn_display'))

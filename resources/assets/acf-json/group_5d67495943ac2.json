@@ -37,6 +37,10 @@
                 "bold",
                 "italic",
                 "underline",
+                "justifyLeft",
+                "justifyCenter",
+                "justifyRight",
+                "justifyFull",
                 "removeFormat"
             ],
             "custom_buttons": "",
@@ -379,5 +383,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572565262
+    "modified": 1572968418
 }

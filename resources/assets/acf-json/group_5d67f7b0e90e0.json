@@ -163,6 +163,74 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5dc190d5d19ff",
+            "label": "Position: X axis",
+            "name": "fiftyfifty__image--x",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d67f7ccaf33e",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5dc190fad1a00",
+            "label": "Position: Y axis",
+            "name": "fiftyfifty__image--y",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d67f7ccaf33e",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Top",
+                "center": "Center",
+                "bottom": "Bottom"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -182,5 +250,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572565221
+    "modified": 1572967062
 }

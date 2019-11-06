@@ -14,11 +14,12 @@
     $the_query = new WP_Query( $args );
     // The Loop
   @endphp
+  <div class="container">
   @if ( $the_query->have_posts() )
     <div class="row row--blog">
     @while ( $the_query->have_posts() )
         {!! $the_query->the_post() !!}
-        <div class="col-md-6">
+        <div class="col-md-6 mb-4">
           <a href="{{ get_the_permalink() }}">{{ the_post_thumbnail() }}</a>
           <h4 class="text-center post-title"><a href="{{ get_the_permalink() }}">{!! get_the_title() !!}</a></h4>
         </div>
@@ -27,6 +28,7 @@
   @else
     {{-- no posts found --}}
   @endif
+  </div>
   @php
     /* Restore original Post Data */
     wp_reset_postdata();

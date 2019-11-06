@@ -20,4 +20,10 @@ section.block-copy {
       }
     }
   }
+
+  &.copy--rounded,
+  body.sidebar-primary & {
+    border-radius: 20px;
+    overflow: hidden;
+  }
 }

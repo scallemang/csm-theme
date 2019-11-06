@@ -1,6 +1,8 @@
 export default {
   init() {
     // JavaScript to be fired on all pages
+
+    // Get responsive hero images; cut/paste them on background of parent section.
     class ResponsiveBackgroundImage {
 
       constructor(element) {
@@ -32,11 +34,54 @@ export default {
       new ResponsiveBackgroundImage(elements[i]);
     }
 
+    /*
+    * Replace all SVG images with inline SVG
+    */
+    jQuery('img').filter(function() {
+      return this.src.match(/.*\.svg$/);
+    }).each(function(){
+      var $img = jQuery(this);
+      var imgID = $img.attr('id');
+      var imgClass = $img.attr('class');
+      var imgURL = $img.attr('src');
+
+      jQuery.get(imgURL, function(data) {
+          // Get the SVG tag, ignore the rest
+          var $svg = jQuery(data).find('svg');
+
+          // Add replaced image's ID to the new SVG
+          if(typeof imgID !== 'undefined') {
+              $svg = $svg.attr('id', imgID);
+          }
+          // Add replaced image's classes to the new SVG
+          if(typeof imgClass !== 'undefined') {
+              $svg = $svg.attr('class', imgClass+' replaced-svg');
+          }
+
+          // Remove any invalid XML tags as per http://validator.w3.org
+          $svg = $svg.removeAttr('xmlns:a');
+
+          // Replace image with new SVG
+          $img.replaceWith($svg);
+
+          if(!$svg.attr('viewBox')){
+            $svg.attr('viewBox', ('0 0 '
+              + $svg.attr('width').match(/[0-9]+\.[0-9]*/) + ' '
+              + $svg.attr('height').match(/[0-9]+\.[0-9]*/)));
+          }
+
+      }, 'xml');
+
+    });
+
+    // Dropdowns redirect on click
     $('.dropdown-toggle').click(function() {
       if( $(this).parent().hasClass('show') ) {
         var location = $(this).attr('href'); 
-        window.location.href = location; 
-        return false; 
+        if( '#' != location ) {
+          window.location.href = location; 
+          return false; 
+        }
       }
     });
   },

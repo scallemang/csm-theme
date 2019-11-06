@@ -1,17 +1,17 @@
 <article @php post_class() @endphp>
   <header>
-    <div class="breadcrumbs breadcrumbs-navxt mt-4 mb-5 container" typeof="BreadcrumbList" vocab="http://schema.org/">
+    <div class="breadcrumbs breadcrumbs-navxt mt-4 mb-5" typeof="BreadcrumbList" vocab="http://schema.org/">
       @if(function_exists('bcn_display'))
         {{ bcn_display() }}
       @endif
     </div>
     <h1 class="entry-title">{!! get_the_title() !!}</h1>
     {{-- @include('partials/entry-meta') --}}
-    <div class="row">
+    {{-- <div class="row">
       <div class="col-md-10 col-lg-8">
         {{ the_post_thumbnail() }}
       </div>
-    </div>
+    </div> --}}
   </header>
   <div class="entry-content">
     @php the_content() @endphp

@@ -14,22 +14,19 @@
   @if($sectionId)id="{{ $sectionId }}"@endif 
   class="block-services @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif  {{ $style }} {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
+  @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
 > 
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         @if( $heading || $subheading)
-        <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            @if( $heading )<h2>{!! $heading !!}</h2>@endif
-            @if( $subheading ){!! $subheading !!}@endif
-          </div>
-        </div>
+          @if( $heading )<h2>{!! $heading !!}</h2>@endif
+          @if( $subheading ){!! $subheading !!}@endif
         @endif
 
         {{--  Repeater --}}
         @if( have_rows('services__repeater') )
-          <div class="row-services my-4">
+          <div class="row-services mb-5">
           @while( have_rows('services__repeater') ) @php the_row(); @endphp
             @php
 
@@ -52,7 +49,9 @@
             $buttonGroup = get_sub_field( 'services__button' ); 
             $button = App\return_button($buttonGroup);
           @endphp
-          @include('partials.components.button', ['button' => $button])
+          <div class="my-5">
+            @include('partials.components.button', ['button' => $button])
+          </div>
         @endif
       </div>
     </div>

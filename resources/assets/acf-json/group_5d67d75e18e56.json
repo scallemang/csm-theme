@@ -169,6 +169,27 @@
             "prefix_name": 0
         },
         {
+            "key": "field_5dc188e05cded",
+            "label": "Width",
+            "name": "copy__width",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d68299f8084a"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5db051dc789a8",
             "label": "Text Alignment",
             "name": "copy__alignment",
@@ -207,5 +228,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571928076
+    "modified": 1572964628
 }

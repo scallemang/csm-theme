@@ -1,5 +1,6 @@
 @php
   $heading = get_sub_field( 'hero__heading' );
+  $headingP = get_sub_field( 'hero__heading_p' );
   $subheading = get_sub_field( 'hero__subheading' );
   //$sectionId = get_sub_field( 'eden_section_id' );
   $hasButton = get_sub_field( 'hero__has_button' );
@@ -13,11 +14,16 @@
   @if($sectionId)id="{{ $sectionId }}"@endif 
   class="block-hero jumbotron {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['sizes']['large'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
+  @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
 > 
   <div class="container {{-- container-fluid-md-down --}}">
     <div class="row row-hero">
       <div class="col-sm-12 col-lg-6 ml-lg-auto text-lg-right">
-        @if( $heading || $subheading )@if( $subheading )<p class="hero__subheading">{!! $subheading !!}</p>@endif @if( $heading )<h1 class="hero__heading">{!! $heading !!}</h1>@endif @endif
+        @if( $subheading )
+          <p class="hero__subheading">{!! $subheading !!}</p>
+        @endif
+
+        @if( $heading || $headingP ) @if( $heading )<div class="hero__heading">{!! $heading !!}</div>@endif @if( $headingP )<p class="hero__heading_p">{!! $headingP !!}</p>@endif @endif
       
         @if( $hasButton )
           @php 

@@ -1,5 +1,9 @@
-section {
+main.main section {
   position: relative;
+
+  &:not(.cta--full):not(.block-divider):not(.fiftyfifty--full) {
+    margin-bottom: 30px;
+  }
 
   blockquote {
     background-color: theme-color("background");

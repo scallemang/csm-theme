@@ -43,13 +43,13 @@ $theme-colors: (
     left: 0;
     display: block;
     z-index: 0;
-    background-color: rgba(theme-color("gradient-one"), 0.8);
+    background-color: rgba(theme-color("background"), 0.8);
   }
 
   .ig_headline {
     color: white;
   }
 <?php else: ?>
-  background-color: theme-color("gradient-one");
+  background-color: theme-color("background") !important;
 <?php endif; ?>
 }

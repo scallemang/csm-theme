@@ -23,17 +23,17 @@
         </div>
       @endif
 
+      @if( $menu )
+        <div class="col-footer">
+          {!! wp_nav_menu(['menu' => $menu, 'menu_class' => 'navbar-nav ml-auto']) !!}
+        </div>
+      @endif
+
       @if( $phone || $email || $address )
         <div class="col-footer">
           @if( $email )<div class="email__wrapper d-flex align-items-center"><i class="fas fa-envelope"></i></i><span class="d-flex flex-column"><a href="mailto:{{ $email }}">{{ $email }}</a></span></div>@endif
           @if( $phone )<div class="phone__wrapper d-flex align-items-center"><i class="fas fa-phone-square-alt"></i><span class="d-flex flex-column"><a href="{{ App\strip_phone( $phone ) }}">{{ $phone }}</a></span></div>@endif
           @if( $address )<div class="address__wrapper d-flex align-items-center"><i class="fas fa-map-marker-alt"></i></i><span class="d-flex flex-column">@if( $googleLink )<a href="{{ $googleLink }}" target="_blank">@endif{!! $address !!}@if( $googleLink )</a>@endif</span></div>@endif
-        </div>
-      @endif
-
-      @if( $menu )
-        <div class="col-footer">
-          {!! wp_nav_menu(['menu' => $menu, 'menu_class' => 'navbar-nav ml-auto']) !!}
         </div>
       @endif
 

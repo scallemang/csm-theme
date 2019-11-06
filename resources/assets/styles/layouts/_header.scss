@@ -13,6 +13,7 @@
 
   &.dropdown-item {
     font-size: 1rem;
+    color: theme-color("secondary");
 
     &.active {
       color: white;
@@ -151,6 +152,10 @@ header {
       }
     }
   }
+}
+
+.dropdown-menu {
+  background-color: theme-color("background");
 }
 
 .dropdown-toggle {

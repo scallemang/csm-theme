@@ -268,6 +268,27 @@
             "prefix_name": 0
         },
         {
+            "key": "field_5dc18918caa5e",
+            "label": "Width",
+            "name": "cta__width",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d68299f8084a"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5db05906bb9b3",
             "label": "Overrides",
             "name": "",
@@ -357,5 +378,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571928128
+    "modified": 1572964795
 }

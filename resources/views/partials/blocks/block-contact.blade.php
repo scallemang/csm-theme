@@ -15,6 +15,7 @@
   @if($sectionId)id="{{ $sectionId }}"@endif 
   class="block-contact @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif  text-center {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
+  @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
 > 
   <div class="container">
     <div class="row">
@@ -23,7 +24,7 @@
         @if( $subheading ){!! $subheading !!}@endif
 
         @if(!empty( $info ))
-        <div class="row-contact my-5">
+        <div class="row-contact mb-5">
           @if( isset($info['phone']) || isset($info['address']) || isset($info['hours']))
           <div class="col-info">
             <ul>
@@ -52,7 +53,9 @@
             $buttonGroup = get_sub_field( 'contact__button' ); 
             $button = App\return_button($buttonGroup);
           @endphp
-          @include('partials.components.button', ['button' => $button])
+          <div class="mb-5">
+            @include('partials.components.button', ['button' => $button])
+          </div>
         @endif
       </div>
     </div>

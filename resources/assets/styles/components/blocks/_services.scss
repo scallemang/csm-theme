@@ -6,7 +6,8 @@ section.block-services {
   }
 
   .row-services {
-    img {
+    img,
+    svg {
       max-height: 60px;
       width: auto;
     }
@@ -80,6 +81,10 @@ section.block-services {
       .card {
         border: none;
         border-radius: 0;
+
+        .card-body {
+          padding: 0 1.25rem;
+        }
 
         .card-header__wrapper {
           display: flex;

@@ -3,25 +3,29 @@
   display: grid;
   min-height: 240px;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
     min-height: 350px;
   }
 
   .page-header {
+    background-image: linear-gradient(to bottom right, theme-color("gradient-one"), theme-color("gradient-two"));
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to bottom right, theme-color("gradient-one"), theme-color("gradient-two"));
 
     h1 {
       color: white;
       margin-bottom: 0;
+      padding: 2rem;
+      border: 2px solid white;
     }
   }
 }
 
 [data-responsive-background-image] {
+  min-height: 240px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

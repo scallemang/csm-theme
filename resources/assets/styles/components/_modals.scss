@@ -3,4 +3,9 @@
   .ig_clear_fix {
     z-index: 1;
   }
+
+  p {
+    text-align: center;
+    color: theme-color("secondary");
+  }
 }

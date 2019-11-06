@@ -199,7 +199,8 @@ function return_link( $group = null )
         'onclick' => null,
         'target' => null,
         'url' => null,
-        'title' => null
+        'title' => null,
+        'rel' => null
     );
     if( $group ) {
         switch( $group['link__type'] ) {
@@ -214,6 +215,7 @@ function return_link( $group = null )
                 $link['url'] = $group['link__site_url'];
                 $link['title'] = $group['button__text'];
                 $link['target'] = "_blank";
+                $link['rel'] = "noopener noreferrer nofollow";
                 break;
             case 'email':
                 $link['url'] = 'mailto:' . $group['link__email_address'];
@@ -248,7 +250,9 @@ function return_fiftyfifty_col( $group = null )
                 $col['image'] = array(
                     'id'  => $group['fiftyfifty__image']['id'],
                     'url' => $group['fiftyfifty__image']['sizes']['large'],
-                    'alt' => $group['fiftyfifty__image']['alt']
+                    'alt' => $group['fiftyfifty__image']['alt'],
+                    'x'   => $group['fiftyfifty__image--x'],
+                    'y'   => $group['fiftyfifty__image--y'],
                 );
                 break;
             case 'text':
@@ -315,7 +319,11 @@ function return_background_from_type( $type = null, $args = null )
                     $value = get_field($args['prefix'] . 'background_picker--custom');
                 endif;
             else: 
-                $value = get_field('background_picker--custom');
+                if( isset( $args['block'] ) ):
+                    $value = get_sub_field('background_picker--custom');
+                else:
+                    $value = get_field('background_picker--custom');
+                endif;
             endif;
             $background['type'] = 'color--custom';
             $background['value'] = $value;
@@ -394,7 +402,8 @@ function return_contact_info($checkbox = null, $args = array('strip-hours' => fa
         'email' => get_field('business__email', 'option'),
         'phone' => get_field('business__phone', 'option'),
         'address' => get_field('business__address', 'option'),
-        'hours' => $args['strip-hours'] ? get_field('business__hours', 'option', false) : get_field('business__hours', 'option'),
+        // 'hours' => $args['strip-hours'] ? get_field('business__hours', 'option', false) : get_field('business__hours', 'option'),
+        'hours' => $args['strip-hours'] ? str_replace( array('<p>','</p>'),'',get_field('business__hours', 'option') ) : get_field('business__hours', 'option'),
     );
     if( $checkbox ) {
         $info['name'] = null;

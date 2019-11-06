@@ -3,6 +3,10 @@ section.block-faq {
     border-radius: 0;
     border-color: darken(theme-color("primary"), 10%);
 
+    h3 {
+      margin-top: 0;
+    }
+
     p {
       &:last-child {
         margin-bottom: 0;
@@ -32,5 +36,10 @@ section.block-faq {
         }
       }
     }
+  }
+
+  body.sidebar-primary & {
+    border-radius: 20px;
+    overflow: hidden;
   }
 }

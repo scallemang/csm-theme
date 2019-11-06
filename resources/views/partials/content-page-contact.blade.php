@@ -1,6 +1,6 @@
 {{-- {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!} --}}
 @php
-  $info = App\return_contact_info('', array('strip-hours' => false));
+  $info = App\return_contact_info('', array('strip-hours' => true));
   $googleLink = get_field( 'business__map_link', 'option');
 @endphp
 
@@ -17,12 +17,12 @@
       <div class="container py-4">
         <div class="info">
           <ul>
-            @if( $info['address'])<li class="info-address"><i class="fas fa-map-marker-alt"></i><span>@if( $googleLink )<a href="{{ $googleLink }}" target="_blank">@endif{!! $info['address'] !!}@if( $googleLink )</a>@endif</span></li>@endif
-            @if( $info['hours'])<li class="info-hours"><i class="fas fa-calendar-alt"></i></i><span>{!! $info['hours'] !!}</span></li>@endif
             @if( $info['phone'] && $info['email'] )<div> @endif
               @if( $info['phone'])<li class="info-phone"><i class="fas fa-phone-alt"></i><span><a href="tel:{{ App\strip_phone( $info['phone'] ) }}">{{ $info['phone'] }}</a></span></li>@endif
               @if( $info['email'])<li class="info-email"><i class="fas fa-envelope"></i><span><a href="mailto:{{ $info['email'] }}" target="_blank">{{ $info['email'] }}</a></span></li>@endif
             @if( $info['phone'] && $info['email'] )</div> @endif
+            @if( $info['address'])<li class="info-address"><i class="fas fa-map-marker-alt"></i><span>@if( $googleLink )<a href="{{ $googleLink }}" target="_blank">@endif{!! $info['address'] !!}@if( $googleLink )</a>@endif</span></li>@endif
+            @if( $info['hours'])<li class="info-hours"><i class="fas fa-calendar-alt"></i></i><span>{!! $info['hours'] !!}</span></li>@endif
           </ul>          
         </div>
       </div>
