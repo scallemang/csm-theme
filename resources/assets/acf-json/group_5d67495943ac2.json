@@ -52,25 +52,6 @@
             "delay": 0
         },
         {
-            "key": "field_5d67f2f882b20",
-            "label": "Subheading",
-            "name": "services__subheading",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
-        },
-        {
             "key": "field_5d674997b0b51",
             "label": "Services & Solutions repeater",
             "name": "services__repeater",
@@ -345,6 +326,32 @@
             "placeholder": ""
         },
         {
+            "key": "field_5dd2e9d3f8c05",
+            "label": "Columns",
+            "name": "services__columns",
+            "type": "select",
+            "instructions": "How many columns do you want in this row (on large screens)?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "4": "4",
+                "3": "3",
+                "2": "2"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_5d674fd1b0b5a",
             "label": "Background",
             "name": "services__background",
@@ -383,5 +390,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572968418
+    "modified": 1574190400
 }

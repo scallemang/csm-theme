@@ -1,9 +1,10 @@
 @php
   $heading = get_sub_field( 'services__heading' );
-  $subheading = get_sub_field( 'services__subheading' );
+  // $subheading = get_sub_field( 'services__subheading' );
   $hasButton = get_sub_field( 'services__has_button' );
   $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
   $style = get_sub_field('services__style');
+  $columns = get_sub_field('services__columns');
 @endphp
 
 {{-- @if( get_sub_field( 'eden_block_image' ) )
@@ -19,14 +20,14 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        @if( $heading || $subheading)
+        {{-- @if( $heading || $subheading) --}}
           @if( $heading )<h2>{!! $heading !!}</h2>@endif
-          @if( $subheading ){!! $subheading !!}@endif
-        @endif
+          {{-- @if( $subheading ){!! $subheading !!}@endif --}}
+        {{-- @endif --}}
 
         {{--  Repeater --}}
         @if( have_rows('services__repeater') )
-          <div class="row-services mb-5">
+          <div class="row-services @if( $columns )grid--{{ $columns }}@endif mb-5">
           @while( have_rows('services__repeater') ) @php the_row(); @endphp
             @php
 
