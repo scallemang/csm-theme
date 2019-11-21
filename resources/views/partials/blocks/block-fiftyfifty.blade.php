@@ -11,12 +11,12 @@
 
 <section 
   @if($sectionId)id="{{ $sectionId }}"@endif 
-  class="block-fiftyfifty {{ $style }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
+  class="block-fiftyfifty {{ $style }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif @if( $width != "container" )fiftyfifty--full @endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
   @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
 > 
   <div class="{{ $width }}">
-    <div class="row-fiftyfifty {{ $background['class'] }} @if( $width == "container" )fiftyfifty--rounded @else fiftyfifty--full @endif">
+    <div class="row-fiftyfifty {{ $background['class'] }} @if( $width == "container" )fiftyfifty--rounded @endif">
       @include('partials.components.column', ['column' => $leftCol])
       @include('partials.components.column', ['column' => $rightCol])
     </div>
