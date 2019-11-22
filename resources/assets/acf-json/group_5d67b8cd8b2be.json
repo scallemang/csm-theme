@@ -48,25 +48,6 @@
             "delay": 0
         },
         {
-            "key": "field_5d680351e9d20",
-            "label": "Description",
-            "name": "faq__subheading",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 1
-        },
-        {
             "key": "field_5d67baa1746db",
             "label": "FAQ repeater",
             "name": "faqs__repeater",
@@ -261,5 +242,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571928156
+    "modified": 1574438476
 }
