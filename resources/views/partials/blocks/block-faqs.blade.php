@@ -1,6 +1,6 @@
 @php
   $heading = get_sub_field('faqs__heading');
-  $body = get_sub_field('faq__subheading');
+  //$body = get_sub_field('faq__subheading');
   $hasButton = get_sub_field('faqs__has_button');
   $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
 @endphp
