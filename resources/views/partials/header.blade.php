@@ -6,7 +6,7 @@
 @endphp
 
 <header class="banner">
-  <section class="header-secondary py-2 d-md-flex {{ $background['class'] }}">
+  <section class="header-secondary d-md-flex {{ $background['class'] }}">
     <div class="container d-flex align-items-center flex-column flex-md-row">
       {!! App\social_list() !!}
       <div class="header-secondary__right d-md-flex ml-md-auto">

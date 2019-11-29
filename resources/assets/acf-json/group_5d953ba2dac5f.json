@@ -11,7 +11,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -20,6 +20,31 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5de15e79eced9",
+            "label": "Hero style",
+            "name": "page__hero_style",
+            "type": "select",
+            "instructions": "If you assign a featured image, you can pick the style of layout.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "fiftyfifty": "Fifty\/Fifty",
+                "full": "Full Width"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -44,5 +69,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570061410
+    "modified": 1575051142
 }

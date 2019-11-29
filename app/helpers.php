@@ -432,8 +432,8 @@ function return_cta()
             $id = get_sub_field('cta__picker')[0]->ID;
             // Apparently, get_post_meta is good for speed per https://support.advancedcustomfields.com/forums/topic/whats-faster/
             $ctaMeta = get_post_meta($id);
-            $cta['heading'] = get_field('cta__heading', $id);
-            $cta['subheading'] = get_field('cta__subheading', $id);
+            $cta['heading'] = str_replace( array('<p>','</p>'),'', get_field('cta__heading', $id) );
+            $cta['subheading'] = str_replace( array('<p>','</p>'),'', get_field('cta__subheading', $id) );
             $backgroundType = get_field('background_picker', $id);
             $cta['background'] = return_background_from_type( $backgroundType, array( 'id' => $id ) );
             $cta['alignment'] = get_field('alignment__text', $id);
@@ -444,8 +444,8 @@ function return_cta()
             endif;
             break;
         case 'custom':
-            $cta['heading'] = get_sub_field('cta__heading');
-            $cta['subheading'] = get_sub_field('cta__subheading');
+            $cta['heading'] = str_replace( array('<p>','</p>'),'', get_sub_field('cta__heading') );
+            $cta['subheading'] = str_replace( array('<p>','</p>'),'', get_sub_field('cta__subheading') );
             $backgroundType = get_sub_field('cta__background')['background_picker'];
             $cta['background'] = return_background_from_type( $backgroundType );
             $cta['alignment'] = get_sub_field('alignment__text');
@@ -503,20 +503,22 @@ add_filter('wp_get_attachment_image_attributes', __NAMESPACE__ . '\\alter_attr_w
 function return_featured_image( $post_id, $size = 'image', $class = '' )
 {
   // $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size )[0];
-    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'medium' )[0];
+  $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'medium' )[0];
   //$thumbnail_2x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size . '-2x' )[0];
   $thumbnail_2x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' )[0];
   // $thumbnail_3x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size . '-3x' )[0];
   $thumbnail_3x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' )[0];
 
-  $image  = '<img src="' . $thumbnail . '"';
+  $image  = '<img src="' . $thumbnail_2x . '"';
   $image .= ( $thumbnail_2x && $thumbnail_3x ?  ' srcset="' : '' ); // open srcset
-  $image .= ( $thumbnail_2x ? $thumbnail_2x . ' 2x' : '' );
+  $image .= ( $thumbnail ? $thumbnail . ' 320w' : '' );
+  $image .= ( $thumbnail && $thumbnail_2x ? ', ' : '' );
+  $image .= ( $thumbnail_2x ? $thumbnail_2x . ' 640w' : '' );
   $image .= ( $thumbnail_2x && $thumbnail_3x ? ', ' : '' );
-  $image .= ( $thumbnail_3x ? $thumbnail_3x . ' 3x' : '' );
+  $image .= ( $thumbnail_3x ? $thumbnail_3x . ' 1024w' : '' );
   $image .= ( $thumbnail_2x && $thumbnail_3x ?  '"' : '' ); // close srcset
   $image .= ( $class ? ' class="' . esc_attr($class) . '"' : '' );
-  $image .= ' sizes="auto">';
+  $image .= ' sizes="(max-width: 320px) 320px, (max-width: 1024px) 1024px, 1200px">';
 
   return $image;
 }

@@ -54,9 +54,10 @@ h3 {
 
 svg {
   section.block-services .card & {
-    height: 2rem;
+    height: 60px;
     width: auto;
     color: theme-color("black");
+    fill: transparent;
   }
 
   section.block-services.style-2 & {
