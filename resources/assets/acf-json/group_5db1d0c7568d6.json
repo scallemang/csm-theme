@@ -37,6 +37,42 @@
             "placeholder": "GTM-000000",
             "mode": "htmlmixed",
             "theme": "monokai"
+        },
+        {
+            "key": "field_5de15320fafd5",
+            "label": "Google Search Console snippet",
+            "name": "scipts__search-console",
+            "type": "acf_code_field",
+            "instructions": "Please paste your full Search Console code snippet to output in the head.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "<meta name=\"google-site-verification\" content=\"xxxxxxxxxxxxxxxxxxxxxxx\" \/>",
+            "mode": "htmlmixed",
+            "theme": "monokai"
+        },
+        {
+            "key": "field_5de15344fafd6",
+            "label": "Bing snippet",
+            "name": "scripts__bing",
+            "type": "acf_code_field",
+            "instructions": "Please paste in your Bing verification snippet to output in the head.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "<meta name=\"msvalidate.01\" content=\"xxxxxxxxxxxxxxxxxxxx\" \/>",
+            "mode": "htmlmixed",
+            "theme": "monokai"
         }
     ],
     "location": [
@@ -56,5 +92,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1571934862
+    "modified": 1575048069
 }

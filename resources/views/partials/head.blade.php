@@ -19,6 +19,12 @@
   })(window,document,'script','dataLayer','{{ get_field('scripts__gtm', 'option') }}');</script>
   <!-- End Google Tag Manager -->
   @endif
+  @if( get_field('scripts__search-console', 'option') )
+    {!! get_field('scripts__search-console', 'option') !!}
+  @endif
+  @if( get_field('scripts__bing', 'option') )
+    {!! get_field('scripts__bing', 'option') !!}
+  @endif
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
