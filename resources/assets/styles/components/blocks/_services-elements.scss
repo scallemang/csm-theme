@@ -62,21 +62,26 @@ svg {
 
   section.block-services.style-2 & {
     color: theme-color("info");
+    fill: theme-color("info");
   }
 
   section.block-services.style-1 .card.color-primary & {
     color: theme-color("primary");
+    fill: theme-color("primary");
   }
 
   section.block-services.style-1 .card.color-secondary & {
     color: theme-color("secondary");
+    fill: theme-color("secondary");
   }
 
   section.block-services.style-1 .card.color-info & {
     color: theme-color("info");
+    fill: theme-color("info");
   }
 
   section.block-services.style-1 .card.color-text & {
     color: theme-color("text");
+    fill: theme-color("text");
   }
 }

@@ -1,12 +1,12 @@
 // Has featured image: start
 .page-header-wrap {
-  [data-responsive-background-image] {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
   &.full {
+    &[data-responsive-background-image] {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
     h1 {
       text-align: center;
       color: white;
@@ -40,6 +40,9 @@
 
     [data-responsive-background-image] {
       min-height: 240px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
     }
   }
 }

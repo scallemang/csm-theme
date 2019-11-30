@@ -507,7 +507,7 @@ function return_featured_image( $post_id, $size = 'image', $class = '' )
   //$thumbnail_2x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size . '-2x' )[0];
   $thumbnail_2x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' )[0];
   // $thumbnail_3x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), $size . '-3x' )[0];
-  $thumbnail_3x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' )[0];
+  $thumbnail_3x = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'large' )[0];
 
   $image  = '<img src="' . $thumbnail_2x . '"';
   $image .= ( $thumbnail_2x && $thumbnail_3x ?  ' srcset="' : '' ); // open srcset
