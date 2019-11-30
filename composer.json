@@ -34,8 +34,8 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "git@github.com:scallemang/csm-cpt.git"
-    },
+      "url": "git@github.com:scallemang/csm-navwalker.git"
+    }
   ],
   "require": {
     "php": ">=7.1",
@@ -45,7 +45,7 @@
     "soberwp/controller": "~2.1.0",
     "mwdelaney/sage-advanced-custom-fields": "^1.4",
 
-    "scallemang/csm-navwalker": "^1.0"
+    "scallemang/csm-navwalker": "^1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.8.0",
