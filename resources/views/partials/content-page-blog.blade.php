@@ -2,13 +2,17 @@
 @php
   $args = isset( $args ) ? $args : array(
     'post_type' => 'post',
+    'paged' => get_query_var('paged'),
   );
 @endphp
 
-<section class="content-contact">
+<section class="content-blog">
+  @if( basename(get_page_template()) == "template-blog.blade.php" )
   <div class="container py-3 text-center">
     @php the_content() @endphp
   </div>
+  @endif
+
   @php
     // The Query
     $the_query = new WP_Query( $args );
@@ -25,6 +29,7 @@
         </div>
     @endwhile
     </ul>
+    @if( function_exists( wp_pagenavi) ){!! wp_pagenavi( array( 'query' => $the_query ) ) !!}@endif
   @else
     {{-- no posts found --}}
   @endif
