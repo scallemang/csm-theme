@@ -163,3 +163,19 @@ add_filter('tiny_mce_before_init', function( $init ) {
 
     return $init;
 });
+
+//WP PageNavi
+add_filter( 'wp_pagenavi', __NAMESPACE__ . '\\gc_pagination', 10, 2 );
+function gc_pagination($html) {
+    $out = '';
+    $out = str_replace('<div','',$html);
+    $out = str_replace('class=\'wp-pagenavi\' role=\'navigation\'>','',$out);
+    $out = str_replace('<a','<li class="page-item"><a class="page-link"',$out);
+    $out = str_replace('</a>','</a></li>',$out);
+    $out = str_replace('<span aria-current=\'page\' class=\'current\'','<li aria-current="page" class="page-item active"><span class="page-link current"',$out);
+    $out = str_replace('<span class=\'pages\'','<li class="page-item"><span class="page-link pages"',$out);
+    $out = str_replace('<span class=\'extend\'','<li class="page-item"><span class="page-link extend"',$out);  
+    $out = str_replace('</span>','</span></li>',$out);
+    $out = str_replace('</div>','',$out);
+    return '<ul class="pagination" role="navigation">'.$out.'</ul>';
+}

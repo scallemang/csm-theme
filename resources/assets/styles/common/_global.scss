@@ -151,7 +151,7 @@ ul {
   }
 }
 
-main.main ul {
+main.main ul:not(.pagination) {
   list-style: none;
   padding-left: 0;
 
