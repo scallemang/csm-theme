@@ -27,7 +27,7 @@
   </section>
 
   <div class="pt-2">
-    <nav class="navbar navbar-expand-md nav-primary container">
+    <nav class="navbar navbar-expand-lg nav-primary container">
       <a class="brand" href="{{ home_url('/') }}">
         @if( $logo )<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="img-fluid header__logo my-2">
         @else{{ get_bloginfo('name', 'display') }}@endif

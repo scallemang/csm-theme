@@ -1,4 +1,4 @@
-@if( has_post_thumbnail() && !is_archive() )
+@if( has_post_thumbnail() && !is_archive() && !is_home() )
 @php
   $style = get_field('page__hero_style');
 @endphp
