@@ -123,6 +123,98 @@
                     "default_value": ""
                 }
             ]
+        },
+        {
+            "key": "field_5de69407021e4",
+            "label": "Typography",
+            "name": "colour__typography",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5de69484021e5",
+                    "label": "H1 colour",
+                    "name": "colour__h1",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5de694c1021e6",
+                    "label": "H2 colour",
+                    "name": "colour__h2",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5de694cb021e7",
+                    "label": "H3 colour",
+                    "name": "colour__h3",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5de694df021e8",
+                    "label": "H4 colour",
+                    "name": "colour__h4",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5de69519021e9",
+                    "label": "CTA (dark) colour",
+                    "name": "colour__cta",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -142,5 +234,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1571926406
+    "modified": 1575392992
 }

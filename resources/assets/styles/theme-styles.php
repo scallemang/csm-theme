@@ -28,6 +28,62 @@ $theme-colors: (
 <?php endif; ?>
 );
 
+h1,
+.h1 {
+<?php if( get_field('colour__typography', 'option')['colour__h1'] ): ?>
+  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h1'] );?>;
+<?php else: ?>
+  color: theme-color("primary");
+<?php endif; ?>
+}
+
+h2,
+.h2 {
+<?php if( get_field('colour__typography', 'option')['colour__h2'] ): ?>
+  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h2'] );?>;
+<?php else: ?>
+  color: theme-color("secondary");
+<?php endif; ?>
+}
+
+h3,
+.h3 {
+<?php if( get_field('colour__typography', 'option')['colour__h3'] ): ?>
+  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h3'] );?>;
+<?php else: ?>
+  color: theme-color("info");
+<?php endif; ?>
+}
+
+h4,
+.h4 {
+<?php if( get_field('colour__typography', 'option')['colour__h4'] ): ?>
+  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h4'] );?>;
+<?php else: ?>
+  color: theme-color("secondary");
+<?php endif; ?>
+}
+
+section.block-cta {
+  h2 {
+    &.line-bottom {
+<?php if( get_field('colour__typography', 'option')['colour__cta'] ): ?>
+      border-bottom: 4px solid <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] );?>;
+<?php else: ?>
+      border-bottom: 4px solid theme-color("primary");
+<?php endif; ?>
+    }
+  }
+
+  h3 {
+<?php if( get_field('colour__typography', 'option')['colour__cta'] ): ?>
+    color: lighten(<?= strtolower( get_field('colour__typography', 'option')['colour__cta'] );?>, 15%);
+<?php else: ?>
+    color: lighten(theme-color("info"), 15%);
+<?php endif; ?>
+  }
+}
+
 .icegram.ig_popup,
 .ig_popup.ig_inspire.ig_popup {
 <?php if( get_field('branding__popup_background', 'option')): ?>

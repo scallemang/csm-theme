@@ -6,9 +6,10 @@
 
   &.btn-default {
     background-color: theme-color("secondary");
+    color: white;
 
     &:hover {
-      background-color: theme-color("primary");
+      background-color: darken(theme-color("secondary"), 10%);
       color: white;
     }
   }

@@ -16,20 +16,20 @@ h6,
 
 h1,
 .h1 {
-  color: theme-color("primary");
+  // Color set in theme-styles
   font-weight: bold;
   margin-bottom: 2.4rem;
 }
 
 h2,
 .h2 {
-  color: theme-color("secondary");
+  // Color set in theme-styles
   font-size: 2.2rem;
 }
 
 h3,
 .h3 {
-  color: theme-color("info");
+  // Color set in theme-styles
   font-size: 1.4rem;
   margin-top: 1.2rem;
   margin-bottom: 0.6rem;
@@ -37,6 +37,7 @@ h3,
 
 h4,
 .h4 {
+  // Color set in theme-styles
   font-size: 1rem;
   margin-bottom: 0.6rem;
 }

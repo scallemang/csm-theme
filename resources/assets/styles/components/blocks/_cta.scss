@@ -6,7 +6,7 @@ section.block-cta {
 
     &.line-bottom {
       padding-bottom: 0.5rem;
-      border-bottom: 4px solid theme-color("primary");
+      // border-bottom set in theme-styles
     }
   }
 
@@ -14,7 +14,7 @@ section.block-cta {
     font-weight: 900;
     margin-bottom: 1rem;
     font-size: 1.6em;
-    color: lighten(theme-color("info"), 15%);
+    // Color set in theme-styles
   }
 
   &.light {

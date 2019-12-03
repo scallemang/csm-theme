@@ -9,7 +9,7 @@
 }
 
 @mixin bg-gradient {
-  background-image: linear-gradient(to bottom right, theme-color("primary"), theme-color("secondary"));
+  background-image: linear-gradient(to bottom right, theme-color("gradient-one"), theme-color("gradient-two"));
 
   a {
     &:hover {
