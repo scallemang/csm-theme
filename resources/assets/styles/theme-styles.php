@@ -1,4 +1,5 @@
 :root {
+  --site: <?= strtolower( get_field('colour__site', 'option') );?>;
   --primary: <?= strtolower( get_field('colour__primary', 'option') );?>;
   --secondary: <?= strtolower( get_field('colour__secondary', 'option') );?>;
   --info: <?= strtolower( get_field('colour__info', 'option') );?>;
@@ -14,6 +15,7 @@
 }
 
 $theme-colors: (
+  site: <?= strtolower( get_field('colour__site', 'option') );?>,
   primary: <?= strtolower( get_field('colour__primary', 'option') );?>,
   secondary: <?= strtolower( get_field('colour__secondary', 'option') );?>,
   info: <?= strtolower( get_field('colour__info', 'option') );?>,
@@ -31,7 +33,7 @@ $theme-colors: (
 h1,
 .h1 {
 <?php if( get_field('colour__typography', 'option')['colour__h1'] ): ?>
-  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h1'] );?>;
+  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h1'] ); ?>;
 <?php else: ?>
   color: theme-color("primary");
 <?php endif; ?>
@@ -40,7 +42,7 @@ h1,
 h2,
 .h2 {
 <?php if( get_field('colour__typography', 'option')['colour__h2'] ): ?>
-  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h2'] );?>;
+  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h2'] ); ?>;
 <?php else: ?>
   color: theme-color("secondary");
 <?php endif; ?>
@@ -49,7 +51,7 @@ h2,
 h3,
 .h3 {
 <?php if( get_field('colour__typography', 'option')['colour__h3'] ): ?>
-  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h3'] );?>;
+  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h3'] ); ?>;
 <?php else: ?>
   color: theme-color("info");
 <?php endif; ?>
@@ -58,7 +60,7 @@ h3,
 h4,
 .h4 {
 <?php if( get_field('colour__typography', 'option')['colour__h4'] ): ?>
-  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h4'] );?>;
+  color: <?= strtolower( get_field('colour__typography', 'option')['colour__h4'] ); ?>;
 <?php else: ?>
   color: theme-color("secondary");
 <?php endif; ?>
@@ -68,7 +70,7 @@ section.block-cta {
   h2 {
     &.line-bottom {
 <?php if( get_field('colour__typography', 'option')['colour__cta'] ): ?>
-      border-bottom: 4px solid <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] );?>;
+      border-bottom: 4px solid <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>;
 <?php else: ?>
       border-bottom: 4px solid theme-color("primary");
 <?php endif; ?>
@@ -77,7 +79,7 @@ section.block-cta {
 
   h3 {
 <?php if( get_field('colour__typography', 'option')['colour__cta'] ): ?>
-    color: lighten(<?= strtolower( get_field('colour__typography', 'option')['colour__cta'] );?>, 15%);
+    color: lighten(<?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>, 15%);
 <?php else: ?>
     color: lighten(theme-color("info"), 15%);
 <?php endif; ?>

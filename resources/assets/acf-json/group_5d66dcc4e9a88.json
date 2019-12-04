@@ -3,6 +3,21 @@
     "title": "Options: Colour",
     "fields": [
         {
+            "key": "field_5de8030440c12",
+            "label": "Site Background",
+            "name": "colour__site",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFFFFF"
+        },
+        {
             "key": "field_5d66dcd30c90b",
             "label": "Primary Colour",
             "name": "colour__primary",
@@ -234,5 +249,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1575392992
+    "modified": 1575486232
 }
