@@ -81,6 +81,38 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5de95e1aba68d",
+            "label": "Pinterest",
+            "name": "social__pinterest",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5de95e1cba68e",
+            "label": "Yelp",
+            "name": "social__yelp",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -100,5 +132,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1567022268
+    "modified": 1575575092
 }

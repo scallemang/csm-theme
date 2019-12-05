@@ -32,4 +32,14 @@ section.block-hero {
       font-weight: 900;
     }
   }
+
+  &.light {
+    h1,
+    h2,
+    h3,
+    p {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
 }

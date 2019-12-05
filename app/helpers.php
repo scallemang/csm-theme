@@ -479,6 +479,8 @@ function social_list()
     $instagram = get_field('social__instagram', 'option');
     $youtube = get_field('social__youtube', 'option');
     $linkedin = get_field('social__linkedin', 'option');
+    $pinterest = get_field('social__pinterest', 'option');
+    $yelp = get_field('social__yelp', 'option');
     $html = '';
     
     if( $facebook || $twitter || $instagram || $youtube || $linkedin ) {
@@ -488,6 +490,8 @@ function social_list()
         if( $instagram): $html.= '<li><a href="' . $instagram . '" target=_"blank"><i class="fab fa-instagram"></i></a></li>'; endif;
         if( $youtube): $html.= '<li><a href="' . $youtube . '" target=_"blank"><i class="fab fa-youtube"></i></a></li>'; endif;
         if( $linkedin): $html.= '<li><a href="' . $linkedin . '" target=_"blank"><i class="fab fa-linkedin"></i></a></li>'; endif;
+        if( $pinterest): $html.= '<li><a href="' . $pinterest . '" target=_"blank"><i class="fab fa-pinterest"></i></a></li>'; endif;
+        if( $yelp): $html.= '<li><a href="' . $yelp . '" target=_"blank"><i class="fab fa-yelp"></i></a></li>'; endif;
         $html .= '</ul>';
     }
     return $html;

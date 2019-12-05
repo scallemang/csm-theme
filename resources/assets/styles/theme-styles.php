@@ -70,8 +70,10 @@ section.block-cta {
   h2 {
     &.line-bottom {
 <?php if( get_field('colour__typography', 'option')['colour__cta'] ): ?>
+      color: <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>;
       border-bottom: 4px solid <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>;
 <?php else: ?>
+      color: theme-color("primary");
       border-bottom: 4px solid theme-color("primary");
 <?php endif; ?>
     }
@@ -79,9 +81,9 @@ section.block-cta {
 
   h3 {
 <?php if( get_field('colour__typography', 'option')['colour__cta'] ): ?>
-    color: lighten(<?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>, 15%);
+    color: <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>;
 <?php else: ?>
-    color: lighten(theme-color("info"), 15%);
+    color: theme-color("info");
 <?php endif; ?>
   }
 }

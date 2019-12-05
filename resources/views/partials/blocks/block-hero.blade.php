@@ -5,6 +5,7 @@
   //$sectionId = get_sub_field( 'eden_section_id' );
   $hasButton = get_sub_field( 'hero__has_button' );
   $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
+  $lightdark = get_sub_field('lightdark__picker');
 @endphp
 
 {{-- @if( get_sub_field( 'eden_block_image' ) )
@@ -12,7 +13,7 @@
 @endif --}}
 <section 
   @if($sectionId)id="{{ $sectionId }}"@endif 
-  class="block-hero jumbotron {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
+  class="block-hero jumbotron {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif @if( $lightdark ){{ $lightdark }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['sizes']['large'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
   @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
 > 

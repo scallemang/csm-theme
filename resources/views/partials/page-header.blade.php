@@ -3,7 +3,11 @@
   $style = get_field('page__hero_style');
 @endphp
   @if( $style == 'full')
-    <div class="page-header-wrap py-5 full" data-responsive-background-image>
+    @php
+      $x = get_field('background__image--x');
+      $y = get_field('background__image--y');
+    @endphp
+    <div class="page-header-wrap py-5 full @if($x)background__x--{{ $x }}@endif @if($y)background__y--{{ $y }}@endif" data-responsive-background-image>
       {!! App\return_featured_image( $post->ID ) !!}
       <h1 class="page-title py-5 mb-0">@if(get_field('page__alternate_title')){!! get_field('page__alternate_title') !!}@else{!! App::title() !!}@endif</h1>
     </div>

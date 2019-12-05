@@ -3,8 +3,43 @@
   &.full {
     &[data-responsive-background-image] {
       background-size: cover;
-      background-position: center center;
       background-repeat: no-repeat;
+    }
+
+    &.background__x--left.background__y--top {
+      background-position: left top;
+    }
+
+    &.background__x--center.background__y--top {
+      background-position: center top;
+    }
+
+    &.background__x--right.background__y--top {
+      background-position: right top;
+    }
+
+    &.background__x--left.background__y--center {
+      background-position: right center;
+    }
+
+    &.background__x--center.background__y--center {
+      background-position: center center;
+    }
+
+    &.background__x--right.background__y--center {
+      background-position: right center;
+    }
+
+    &.background__x--left.background__y--bottom {
+      background-position: left bottom;
+    }
+
+    &.background__x--center.background__y--bottom {
+      background-position: center bottom;
+    }
+
+    &.background__x--right.background__y--bottom {
+      background-position: right bottom;
     }
 
     h1 {
