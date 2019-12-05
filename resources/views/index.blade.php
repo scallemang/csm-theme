@@ -20,5 +20,5 @@
   </div>
 
   {{-- {!! get_the_posts_navigation() !!} --}}
-  @if( function_exists( wp_pagenavi) ){!! wp_pagenavi( ) !!}@endif
+  @if( function_exists( 'wp_pagenavi' ) ){!! wp_pagenavi( ) !!}@endif
 @endsection
