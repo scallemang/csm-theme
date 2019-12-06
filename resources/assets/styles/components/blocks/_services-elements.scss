@@ -43,6 +43,14 @@ h3 {
     }
   }
 
+  section.block-services.style-1 .card.color-background & {
+    color: theme-color("background");
+
+    a {
+      color: theme-color("background") !important;
+    }
+  }
+
   section.block-services.style-1 .card.color-text & {
     color: theme-color("text");
 
@@ -78,6 +86,11 @@ svg {
   section.block-services.style-1 .card.color-info & {
     color: theme-color("info");
     fill: theme-color("info");
+  }
+
+  section.block-services.style-1 .card.color-background & {
+    color: theme-color("background");
+    fill: theme-color("background");
   }
 
   section.block-services.style-1 .card.color-text & {

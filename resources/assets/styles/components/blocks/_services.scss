@@ -65,6 +65,10 @@ section.block-services {
           border-color: theme-color("info");
         }
 
+        &.color-background {
+          border-color: theme-color("background");
+        }
+
         &.color-text {
           border-color: theme-color("text");
         }

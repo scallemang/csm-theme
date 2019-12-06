@@ -10,7 +10,7 @@
     <div class="container d-flex align-items-center flex-column flex-md-row">
       {!! App\social_list() !!}
       <div class="header-secondary__right d-md-flex ml-md-auto">
-        @if( $phone )<div class="phone__wrapper d-flex align-items-center"><i class="fas fa-phone-square-alt"></i><span class="d-flex flex-column">{{--<span>Contact</span>--}}<a href="{{ App\strip_phone( $phone ) }}">{{ $phone }}</a></span></div>@endif
+        @if( $phone )<div class="phone__wrapper d-flex align-items-center"><i class="fas fa-phone-square-alt"></i><span class="d-flex flex-column">{{--<span>Contact</span>--}}<a href="tel:{{ App\strip_phone( $phone ) }}">{{ $phone }}</a></span></div>@endif
         @if( $email )<div class="email__wrapper d-flex align-items-center"><i class="fas fa-envelope"></i></i><span class="d-flex flex-column">{{--<span>Email</span>--}}<a href="mailto:{{ $email }}">{{ $email }}</a></span></div>@endif
         @php 
           $buttonGroup = get_field( 'header_secondary__cta', 'option' ); 

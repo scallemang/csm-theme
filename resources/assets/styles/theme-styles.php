@@ -1,3 +1,4 @@
+// stylelint-disable
 :root {
   --site: <?= strtolower( get_field('colour__site', 'option') );?>;
   --primary: <?= strtolower( get_field('colour__primary', 'option') );?>;
@@ -114,3 +115,4 @@ section.block-cta {
   background-color: theme-color("background") !important;
 <?php endif; ?>
 }
+// stylelint-enable
