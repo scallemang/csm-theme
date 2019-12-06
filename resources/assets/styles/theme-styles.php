@@ -93,6 +93,7 @@ section.block-cta {
 <?php if( get_field('branding__popup_background', 'option')): ?>
   background: url("<?= get_field('branding__popup_background', 'option')['sizes']['large']; ?>");
   position: relative;
+  background-size: cover;
 
   &::before {
     position: absolute;
