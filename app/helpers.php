@@ -343,7 +343,7 @@ function return_background_from_type( $type = null, $args = null )
                 $background['type'] = 'image';
                 $background['value'] = isset($args['prefix']) 
                     ? get_sub_field($args['prefix'] . 'background__image') 
-                    : get_sub_field('background__image');
+                    : get_sub_field('cta__background')['background__image'];
                 // $background['position'] = array(
                 //     'x' => get_sub_field('background__image--x'),
                 //     'y' => get_sub_field('background__image--y')
@@ -424,7 +424,8 @@ function return_cta()
         'subheading' => null,
         'button' => null,
         'background' => null,
-        'alignment' => null
+        'alignment' => null,
+        'style' => null
     );
     $type = get_sub_field('cta__type');
     switch($type) {
@@ -438,6 +439,7 @@ function return_cta()
             $cta['background'] = return_background_from_type( $backgroundType, array( 'id' => $id ) );
             $cta['alignment'] = get_field('alignment__text', $id);
             $cta['lightdark'] = get_field('lightdark__picker', $id);
+            $cta['style'] = get_field('cta__style', $id);
             $hasButton = get_field('cta__has_button', $id);
             if( $hasButton ):
                 $cta['button'] = return_button( get_field('cta__button', $id) );
@@ -447,9 +449,10 @@ function return_cta()
             $cta['heading'] = str_replace( array('<p>','</p>'),'', get_sub_field('cta__heading') );
             $cta['subheading'] = str_replace( array('<p>','</p>'),'', get_sub_field('cta__subheading') );
             $backgroundType = get_sub_field('cta__background')['background_picker'];
-            $cta['background'] = return_background_from_type( $backgroundType );
+            $cta['background'] = return_background_from_type( $backgroundType, array( 'block' => true ) );
             $cta['alignment'] = get_sub_field('alignment__text');
-            $cta['lightdark'] = get_sub_field('lightdark__picker');
+            $cta['lightdark'] = get_sub_field('cta__lightdark')['lightdark__picker'];
+            $cta['style'] = get_sub_field('cta__style', $id);
             $hasButton = get_sub_field('cta__has_button');
             if( $hasButton ):
                 $cta['button'] = return_button( get_sub_field('cta__button') );
@@ -525,4 +528,44 @@ function return_featured_image( $post_id, $size = 'image', $class = '' )
   $image .= ' sizes="(max-width: 320px) 320px, (max-width: 1024px) 1024px, 1200px">';
 
   return $image;
+}
+
+/* Convert hexdec color string to rgb(a) string */
+ 
+function hex2rgba($color, $opacity = false) {
+ 
+  $default = 'rgb(0,0,0)';
+ 
+  //Return default if no color provided
+  if(empty($color))
+    return $default; 
+ 
+  //Sanitize $color if "#" is provided 
+  if ($color[0] == '#' ) {
+    $color = substr( $color, 1 );
+  }
+
+  //Check if color has 6 or 3 characters and get values
+  if (strlen($color) == 6) {
+          $hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+  } elseif ( strlen( $color ) == 3 ) {
+          $hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+  } else {
+          return $default;
+  }
+ 
+  //Convert hexadec to rgb
+  $rgb =  array_map('hexdec', $hex);
+
+  //Check if opacity is set(rgba or rgb)
+  if($opacity){
+    if(abs($opacity) > 1)
+      $opacity = 1.0;
+    $output = 'rgba('.implode(",",$rgb).','.$opacity.')';
+  } else {
+    $output = 'rgb('.implode(",",$rgb).')';
+  }
+
+  //Return rgb(a) color string
+  return $output;
 }

@@ -188,7 +188,15 @@
             "type": "clone",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6736ff6795d",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -201,6 +209,36 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_5deed8539d35d",
+            "label": "Text Colour: Heading",
+            "name": "hero__colour--heading",
+            "type": "color_picker",
+            "instructions": "Will only work if “Light\/Dark” set to dark.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_5deed8739d35e",
+            "label": "Text Colour: Subheading",
+            "name": "hero__colour--subheading",
+            "type": "color_picker",
+            "instructions": "Will only work if “Light\/Dark” set to dark.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
         }
     ],
     "location": [
@@ -220,5 +258,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1575570087
+    "modified": 1575934755
 }

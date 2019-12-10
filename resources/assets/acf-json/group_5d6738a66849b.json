@@ -239,6 +239,35 @@
             "maxlength": ""
         },
         {
+            "key": "field_5deede3f710a6",
+            "label": "Light\/Dark",
+            "name": "cta__lightdark",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d673971b257e",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d6fdc4c0c611"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5d6743b0b2585",
             "label": "Background",
             "name": "cta__background",
@@ -378,5 +407,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572964795
+    "modified": 1575935615
 }
