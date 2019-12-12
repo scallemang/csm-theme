@@ -22,3 +22,8 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@mixin rounded-section {
+  border-radius: 20px;
+  overflow: hidden;
+}

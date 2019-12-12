@@ -343,7 +343,7 @@ function return_background_from_type( $type = null, $args = null )
                 $background['type'] = 'image';
                 $background['value'] = isset($args['prefix']) 
                     ? get_sub_field($args['prefix'] . 'background__image') 
-                    : get_sub_field('cta__background')['background__image'];
+                    : get_sub_field('background__image');
                 // $background['position'] = array(
                 //     'x' => get_sub_field('background__image--x'),
                 //     'y' => get_sub_field('background__image--y')
@@ -449,9 +449,9 @@ function return_cta()
             $cta['heading'] = str_replace( array('<p>','</p>'),'', get_sub_field('cta__heading') );
             $cta['subheading'] = str_replace( array('<p>','</p>'),'', get_sub_field('cta__subheading') );
             $backgroundType = get_sub_field('cta__background')['background_picker'];
-            $cta['background'] = return_background_from_type( $backgroundType, array( 'block' => true ) );
+            $cta['background'] = return_background_from_type( $backgroundType, array( 'type' => 'block') );
             $cta['alignment'] = get_sub_field('alignment__text');
-            $cta['lightdark'] = get_sub_field('cta__lightdark')['lightdark__picker'];
+            $cta['lightdark'] = get_sub_field('lightdark__picker');
             $cta['style'] = get_sub_field('cta__style', $id);
             $hasButton = get_sub_field('cta__has_button');
             if( $hasButton ):

@@ -35,7 +35,6 @@ section.block-cta {
 
   &.cta--rounded,
   body.sidebar-primary & {
-    border-radius: 20px;
-    overflow: hidden;
+    @include rounded-section();
   }
 }

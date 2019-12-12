@@ -121,15 +121,6 @@ ul {
   }
 }
 
-.bg-primary,
-.bg-secondary,
-.bg-info,
-.bg-image {
-  :not(a):not(i):not(h2):not(h3):not(b) {
-    color: #fff;
-  }
-}
-
 .bg-primary {
   a {
     color: white;
@@ -152,6 +143,15 @@ ul {
 
   a:not(.btn) {
     color: theme-color("info");
+  }
+}
+
+.bg-primary:not(.block-hero),
+.bg-secondary:not(.block-hero),
+.bg-info:not(.block-hero),
+.bg-image:not(.block-hero) {
+  :not(a):not(i):not(h2):not(h3):not(b) {
+    color: #fff;
   }
 }
 

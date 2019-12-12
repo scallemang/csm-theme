@@ -51,11 +51,13 @@ section.block-fiftyfifty {
     }
   }
 
-  &.fiftyfifty--rounded,
+  .fiftyfifty--rounded {
+    @include rounded-section();
+  }
+
   body.sidebar-primary & {
     [class*="bg-"] {
-      border-radius: 20px;
-      overflow: hidden;
+      @include rounded-section();
     }
   }
 }
