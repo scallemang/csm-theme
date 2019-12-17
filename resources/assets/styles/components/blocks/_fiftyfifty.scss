@@ -3,7 +3,11 @@ section.block-fiftyfifty {
     // margin-right: -15px;
     // margin-left: -15px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 240px;
+
+    @include media-breakpoint-up(md) {
+      grid-template-rows: 1fr 1fr;
+    }
 
     @include media-breakpoint-up(lg) {
       grid-template-columns: 1fr 1fr;

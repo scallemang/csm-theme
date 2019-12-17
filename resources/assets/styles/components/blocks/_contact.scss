@@ -16,8 +16,12 @@ section.block-contact {
         color: white;
         display: flex;
         align-items: center;
-        font-size: 1.2em;
+        font-size: 0.9em;
         margin-left: 0;
+
+        @include media-breakpoint-up(lg) {
+          font-size: 1.2em;
+        }
 
         &::before {
           content: none;
