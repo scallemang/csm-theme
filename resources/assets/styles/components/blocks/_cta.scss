@@ -1,5 +1,6 @@
 section.block-cta {
-  h2 {
+  h2,
+  .h2 {
     font-weight: 100;
     margin-bottom: 0.5rem;
     font-size: 1.8em;
@@ -10,7 +11,8 @@ section.block-cta {
     }
   }
 
-  h3 {
+  h3,
+  .h3 {
     font-weight: 900;
     margin-bottom: 1rem;
     font-size: 1.6em;
@@ -19,7 +21,9 @@ section.block-cta {
 
   &.light {
     h2,
-    h3 {
+    .h2,
+    h3,
+    .h3 {
       color: #fff;
       border-color: #fff;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);

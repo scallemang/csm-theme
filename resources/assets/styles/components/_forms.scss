@@ -21,8 +21,8 @@
 form.wpforms-form {
   input,
   textarea {
-    background-color: darken(theme-color("background"), 10%) !important;
-    border-color: darken(theme-color("background"), 10%) !important;
+    background-color: theme-color("background") !important;
+    border-color: theme-color("background") !important;
   }
 
   label,

@@ -39,8 +39,8 @@
     <div class="row">
       <div class="text-{{ $alignment }} {{ $colClass }}">
         <div class="text-wrapper my-5">
-          @if( $heading )<h2 @if($subheading)class="line-bottom"@endif>{!! $heading !!}</h2>@endif
-          @if( $subheading )<h3>{!! $subheading !!}</h3>@endif
+          @if( $heading )<p class="h2 @if($subheading)line-bottom @endif">{!! $heading !!}</p>@endif
+          @if( $subheading )<p class="h2">{!! $subheading !!}</p>@endif
         </div>
         @if( $hasButton )
           @php 
