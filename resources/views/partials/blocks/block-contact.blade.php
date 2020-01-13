@@ -37,7 +37,7 @@
             @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
             @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif>
             @if( 'style-2' == $style)<div class="container">@endif
-            <ul>
+            <ul class="text-left">
               @if( 'style-2' == $style)
                 @if( $info['phone'] && $info['email'] )<div> @endif
                   @if( $info['phone'])<li class="info-phone"><i class="fas fa-phone-alt"></i><span><a href="tel:{{ App\strip_phone( $info['phone'] ) }}">{{ $info['phone'] }}</a></span></li>@endif
