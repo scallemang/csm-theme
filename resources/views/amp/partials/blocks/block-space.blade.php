@@ -7,6 +7,6 @@
 @endif --}}
 
 @if($size)
-<section class="block-space mb-0" style="height:{{ $size }}px">
+<section class="block-space" style="height:{{ $size }}px">
 </section>
 @endif

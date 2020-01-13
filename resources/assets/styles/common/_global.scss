@@ -163,7 +163,7 @@ main.main ul:not(.pagination) {
     color: theme-color("primary");
     position: relative;
     margin-left: 40px;
-    font-style: italic;
+    // font-style: italic;
 
     &::before {
       content: "•";

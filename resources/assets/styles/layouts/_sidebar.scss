@@ -16,14 +16,14 @@ aside.sidebar {
     font-size: 1.2em;
 
     p {
-      font-weight: 700;
-      color: theme-color("info");
+      font-weight: 100;
+      // text-transform: uppercase;
+      display: block;
+      color: theme-color("text");
 
       strong {
-        font-weight: 100;
-        text-transform: uppercase;
-        display: block;
-        color: theme-color("text");
+        font-weight: 700;
+        color: theme-color("info");
       }
     }
   }
@@ -31,7 +31,7 @@ aside.sidebar {
   .ig_shortcode_container.trigger_onclick {
     @extend .btn;
     @extend .btn-lg;
-    @extend .btn-secondary;
+    @extend .btn-info;
 
     @include btn-extras;
 

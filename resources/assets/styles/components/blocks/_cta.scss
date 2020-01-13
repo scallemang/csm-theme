@@ -30,13 +30,6 @@ section.block-cta {
     }
   }
 
-  a,
-  button {
-    &.btn-lg {
-      border-radius: 28px;
-    }
-  }
-
   &.cta--rounded,
   body.sidebar-primary & {
     @include rounded-section();

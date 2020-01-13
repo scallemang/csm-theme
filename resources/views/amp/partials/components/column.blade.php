@@ -8,7 +8,7 @@
 @endphp
 
 <div class="col-{{ $column['type'] }}" 
-    @if( $image ) style="background-image:url('{{ $image['url'] }}'); background-size: cover;" @endif>
+    @if( $image ) style="background-image:url('{{ $image['url'] }}'); background-size: cover; background-position: {{ $image['x'] }} {{ $image['y'] }}" @endif>
     @if( !$image )
         @if( $heading || $subheading || $copy )
             @if($heading)<h2>{!! $heading !!}</h2>@endif

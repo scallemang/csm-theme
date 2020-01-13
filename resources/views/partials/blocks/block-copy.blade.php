@@ -13,7 +13,6 @@
 
 @if( !$width )<div class="container">@endif
 <section 
-  @if($sectionId)id="{{ $sectionId }}"@endif 
   class="block-copy @if( !$width )copy--rounded @else copy--full @endif @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif @if( $align )text-{{ $align }} @endif{{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
   @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif

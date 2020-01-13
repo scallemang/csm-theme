@@ -1,5 +1,6 @@
 @php
   $cta = App\return_cta();
+  $background = $cta['background'];
   $backgroundClass = null;
   $heading = $cta['heading'];
   $subheading = $cta['subheading'];
@@ -30,7 +31,6 @@
 @endif --}}
 @if( !$width )<div class="container">@endif
 <section 
-  @if($sectionId)id="{{ $sectionId }}"@endif 
   class="block-cta @if( !$width )cta--rounded @else cta--full @endif @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif  {{ $cta['background']['class'] }} {{ $lightdark }} @if( $cta['background']['overlay'] )overlay-{{ $cta['background']['overlay']['color'] }}@endif" 
   @if( $cta['background']['type'] == 'image' ) style="background-image: url('{{ $cta['background']['value']['sizes']['large'] }}'); background-size: cover; background-position: {{ $cta['background']['position'] }};" @endif
   @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
@@ -39,8 +39,8 @@
     <div class="row">
       <div class="text-{{ $alignment }} {{ $colClass }}">
         <div class="text-wrapper my-5">
-          @if( $heading )<p class="h2 @if($subheading)line-bottom @endif">{!! $heading !!}</p>@endif
-          @if( $subheading )<p class="h2">{!! $subheading !!}</p>@endif
+          @if( $heading )<div class="@if($subheading)line-bottom @endif">{!! $heading !!}</div>@endif
+          @if( $subheading ){!! $subheading !!}@endif
         </div>
         @if( $hasButton )
           @php 

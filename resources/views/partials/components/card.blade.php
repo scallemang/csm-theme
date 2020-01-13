@@ -11,7 +11,7 @@
 
 <div class="card @if($class){{ $class }}@endif">
     <div class="card-body">
-        <div class="card-header__wrapper">
+        <div class="card-header__wrapper @if( $title )line-bottom @endif">
             @if( $icon ){!! $icon !!}@endif
             @if( $title )
                 @if( $link )<h3><a href="{{ $link }}">{!! $title !!}</a></h3>

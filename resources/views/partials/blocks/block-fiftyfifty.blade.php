@@ -9,8 +9,7 @@
   @php $image = get_sub_field( 'eden_block_image' ); @endphp
 @endif --}}
 
-<section 
-  @if($sectionId)id="{{ $sectionId }}"@endif 
+<section
   class="block-fiftyfifty {{ $style }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif @if( $width != "container" )fiftyfifty--full @endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
   @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif

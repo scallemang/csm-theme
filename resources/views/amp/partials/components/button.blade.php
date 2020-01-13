@@ -9,9 +9,8 @@
         <{{ $el }} id="" class="btn @if( $button['class'] ){{ $button['class'] }}@else btn-lg @endif @if ($button['colour']) btn-{{ $button['colour'] }} @endif" 
             @if ($button['link']['url']) href="{{ $button['link']['url'] }}" @endif
             @if ($button['link']['target']) target="{{ $button['link']['target'] }}" @endif
+            @if ($button['link']['rel']) rel="{{ $button['link']['rel'] }}" @endif
             @if ($button['link']['onclick']) onclick="{{ $button['link']['onclick'] }}" @endif
-            @if ($button['link']['title']) title="{{ $button['link']['title'] }}" @endif>
-            {{ $button['text'] }}
-        </{{ $el }}>
+            @if ($button['link']['title']) title="{{ $button['link']['title'] }}" @endif>{{ $button['text'] }}</{{ $el }}>
     @endif
 </div>

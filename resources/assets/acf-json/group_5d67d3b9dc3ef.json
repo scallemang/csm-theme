@@ -182,6 +182,31 @@
             "maxlength": ""
         },
         {
+            "key": "field_5e1ca0c0cbbeb",
+            "label": "Style",
+            "name": "contact__style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "style-1": "Style 1 (two column)",
+                "style-2": "Style 2 (one column, stacked)"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_5d67d6f85bd48",
             "label": "Background",
             "name": "contact__background",
@@ -220,5 +245,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572966482
+    "modified": 1578936091
 }

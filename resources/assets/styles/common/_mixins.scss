@@ -27,3 +27,129 @@
   border-radius: 20px;
   overflow: hidden;
 }
+
+@mixin contact-styles__one--info {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+
+    li {
+      color: white;
+      display: flex;
+      align-items: center;
+      font-size: 0.9em;
+      margin-left: 0;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.2em;
+      }
+
+      &::before {
+        content: none;
+      }
+
+      span {
+        padding-top: 0.5em;
+        display: block;
+        width: 100%;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 0.5em;
+
+        span {
+          padding-bottom: 0.5em;
+          border-bottom: 1px solid white;
+        }
+      }
+
+      svg {
+        height: auto;
+        width: 1.5em;
+        margin-right: 0.8em;
+      }
+    }
+
+    a {
+      color: white !important;
+      text-decoration: none !important;
+
+      &:hover {
+        color: theme-color("text");
+      }
+    }
+  }
+}
+
+@mixin contact-styles__two--info {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    width: 100%;
+    display: grid;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1em;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    li {
+      color: white;
+      display: flex;
+      align-items: flex-start;
+      font-size: 1.2em;
+      // height: 100%;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: 0;
+
+      &::before {
+        content: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        justify-content: flex-start;
+      }
+
+      // &:not(:last-of-type) {
+      //   margin-bottom: 0.5em;
+
+      //   @include media-breakpoint-up(lg) {
+      //     margin-bottom: 0;
+      //   }
+      // }
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      svg {
+        height: auto;
+        width: 1.5em;
+        margin-right: 0.8em;
+      }
+    }
+
+    a {
+      color: white !important;
+      text-decoration: none !important;
+    }
+  }
+}
+
+@mixin contact-styles__two--map {
+  @include media-breakpoint-up(md) {
+    height: 300px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 400px;
+  }
+}
