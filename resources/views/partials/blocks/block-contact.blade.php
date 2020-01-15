@@ -10,7 +10,7 @@
 @endphp
 
 <section 
-  class="block-contact text-center"
+  class="block-contact text-center @if($style){{ $style }}@endif"
 > 
   <div class="@if( 'style-2' != $style)container @endif">
     <div class="row">
@@ -61,9 +61,11 @@
             @if( 'style-2' == $style)</div>@endif
           @endif
           @if( isset($info['form']) )
-          <div class="col-form">
-            {!! $info['form'] !!}
-          </div>
+            @if( 'style-2' == $style)<div class="container pt-5 pb-3">@endif
+            <div class="col-form">
+              {!! do_shortcode( $info['form'] ) !!}
+            </div>
+            @if( 'style-2' == $style)</div>@endif
           @endif
         </div>
         @endif
