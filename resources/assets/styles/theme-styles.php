@@ -92,7 +92,7 @@ section.block-cta {
 .icegram.ig_popup,
 .ig_popup.ig_inspire.ig_popup {
 <?php if( get_field('branding__popup_background', 'option')): ?>
-  background: url("<?= get_field('branding__popup_background', 'option')['sizes']['large']; ?>");
+  background: url("<?= App\force_relative_url( get_field('branding__popup_background', 'option')['sizes']['large'] ); ?>");
   position: relative;
   background-size: cover;
 
@@ -112,7 +112,12 @@ section.block-cta {
     color: white;
   }
 <?php else: ?>
-  background-color: theme-color("background") !important;
+  background-color: theme-color("primary") !important;
+  color: white;
+
+  .ig_headline {
+    color: white;
+  }
 <?php endif; ?>
 }
 // stylelint-enable

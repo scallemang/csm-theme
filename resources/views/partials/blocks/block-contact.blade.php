@@ -10,9 +10,7 @@
 @endphp
 
 <section 
-  class="block-contact {{-- @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif  text-center {{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif  --}}@if( $style ){{ $style }}@endif"
-  {{-- @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
-  @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif --}}
+  class="block-contact text-center"
 > 
   <div class="@if( 'style-2' != $style)container @endif">
     <div class="row">

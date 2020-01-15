@@ -577,3 +577,7 @@ function hex2rgba($color, $opacity = false) {
   //Return rgb(a) color string
   return $output;
 }
+
+function force_relative_url ($url) {
+  return str_replace('app', 'wp-content', preg_replace ('/^(http)?s?:?\/\/[^\/]*(\/?.*)$/i', '$2', '' . $url) );
+}
