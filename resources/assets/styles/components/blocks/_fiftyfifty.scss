@@ -39,7 +39,11 @@ section.block-fiftyfifty {
   }
 
   .col-image {
-    min-height: 240px;
+    height: 240px;
+
+    @include media-breakpoint-up(md) {
+      min-height: 240px;
+    }
   }
 
   .container-fluid {
