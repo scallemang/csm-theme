@@ -2,10 +2,10 @@ section.block-fiftyfifty {
   .row-fiftyfifty {
     // margin-right: -15px;
     // margin-left: -15px;
-    display: grid;
-    grid-template-rows: 1fr 240px;
+    display: block;
 
     @include media-breakpoint-up(md) {
+      display: grid;
       grid-template-rows: 1fr 1fr;
     }
 
