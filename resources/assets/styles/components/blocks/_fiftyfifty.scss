@@ -43,6 +43,7 @@ section.block-fiftyfifty {
 
     @include media-breakpoint-up(md) {
       min-height: 240px;
+      height: auto;
     }
   }
 
