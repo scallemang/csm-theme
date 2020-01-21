@@ -14,6 +14,9 @@
       @elseif( get_row_layout() == 'flex__fiftyfifty' )
         @include('partials.blocks.block-fiftyfifty')
 
+      @elseif( get_row_layout() == 'flex__dynamic' )
+        @include('partials.blocks.block-dynamic')
+
       @elseif( get_row_layout() == 'flex__services' )
       	@include('partials.blocks.block-services')
 

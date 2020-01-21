@@ -472,6 +472,42 @@ function return_cta()
     return $cta;
 }
 
+function return_card( $type = null )
+{
+    $card = array();
+    $card['title'] = get_the_title();
+
+    if( 'post' == $type ) { 
+        $card['excerpt'] = get_the_excerpt();
+        $card['image'] = get_the_post_thumbnail();
+        $card['permalink'] = get_the_permalink();
+        
+    } elseif( 'team-member' == $type ) {
+        $card['image'] = array(
+            'url' => get_field('team__photo')['sizes']['thumbnail'],
+        );
+        $card['jobtitle'] = get_field('team__title');
+        $card['permalink'] = get_the_permalink();
+        $card['bio'] = array(
+            'short' => get_field('team__short_bio'),
+            'long' => get_field('team__full_bio'),
+        );
+        $card['links'] = array(
+            'email' => get_field('team__links')['team__email'],
+            'twitter' => get_field('team__links')['team__twitter'],
+            'facebook' => get_field('team__links')['team__facebook'],
+            'instagram' => get_field('team__links')['team__instagram'],
+            'website' => get_field('team__links')['team__website'],
+        );
+        if( get_field('team__button') ) {
+            $card['button'] = return_button( get_field( 'team__button' ) );
+        }
+    } elseif( 'testimonial' == $type ) {
+        $card['testimonial'] = get_field('testimonial__message');
+    }
+    return $card;
+}
+
 function return_logo( $light = null )
 {
     if( !$light ) {

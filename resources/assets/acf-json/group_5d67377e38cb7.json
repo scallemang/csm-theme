@@ -109,6 +109,37 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5e270cb48698e": {
+                    "key": "layout_5e270cb48698e",
+                    "name": "flex__dynamic",
+                    "label": "Dynamic Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e270cb48698f",
+                            "label": "Dynamic Content",
+                            "name": "block__dynamic",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5e270b475f1e4"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5d6750f25e9ce": {
                     "key": "layout_5d6750f25e9ce",
                     "name": "flex__services",
@@ -361,5 +392,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1572091133
+    "modified": 1579617494
 }
