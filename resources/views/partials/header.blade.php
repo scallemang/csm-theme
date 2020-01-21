@@ -38,7 +38,7 @@
       </button>
       <div class="collapse navbar-collapse align-self-center" id="navigation--primary">
         @if (has_nav_menu('primary_navigation'))
-          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-nav ml-auto', 'keep_links_on_parents' => true, 'walker' => new \App\wp_bootstrap4_navwalker()]) !!}
+          {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navbar-nav ml-auto', 'keep_links_on_parents' => true, 'container' => false, 'walker' => new \App\wp_bootstrap4_navwalker()]) !!}
         @endif
       </div>
     </nav>

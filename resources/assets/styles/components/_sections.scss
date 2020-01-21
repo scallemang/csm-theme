@@ -1,7 +1,7 @@
 main.main section {
   position: relative;
 
-  &:not(.cta--full):not(.block-divider):not(.fiftyfifty--full) {
+  &:not(.cta--full):not(.block-divider):not(.fiftyfifty--full):not([class*="bg-"]) {
     margin-bottom: 30px;
   }
 

@@ -126,7 +126,12 @@ header {
     width: auto;
   }
 
-  ul#menu-main-menu {
+  #navigation--primary > div[class*="container"] {
+    display: flex;
+    width: 100%;
+  }
+
+  #navigation--primary ul.navbar-nav {
     li {
       a {
         display: inline-block;
