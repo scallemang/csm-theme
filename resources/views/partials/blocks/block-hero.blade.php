@@ -27,7 +27,7 @@
     <div class="row row-hero">
       <div class="col-sm-12 col-lg-6 ml-lg-auto text-lg-right">
         @if( $subheading )
-          <p class="hero__subheading" @if( $subheadingColour )style="color:{{ $subheadingColour }} !important;" @endif>{!! $subheading !!}</p>
+          <div class="hero__subheading" @if( $subheadingColour )style="color:{{ $subheadingColour }} !important;" @endif>{!! $subheading !!}</div>
         @endif
 
         @if( $heading || $headingP ) @if( $heading )<div class="hero__heading" @if( $headingColour )style="color: {{ $headingColour }} !important;" @endif>{!! $heading !!}</div>@endif @if( $headingP )<p class="hero__heading_p" @if( $headingColour )style="color: {{ $headingColour }}" @endif>{!! $headingP !!}</p>@endif @endif

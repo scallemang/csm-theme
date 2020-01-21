@@ -46,7 +46,10 @@ section.block-hero {
     h1,
     h2,
     h3,
-    p {
+    p,
+    b,
+    .hero__heading,
+    .hero__subheading {
       color: inherit;
     }
   }
@@ -55,7 +58,10 @@ section.block-hero {
     h1,
     h2,
     h3,
-    p {
+    p,
+    b,
+    .hero__heading,
+    .hero__subheading {
       color: #fff !important;
       border-color: #fff !important;
     }
