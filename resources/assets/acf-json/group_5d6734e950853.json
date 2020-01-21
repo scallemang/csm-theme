@@ -49,6 +49,38 @@
             "delay": 0
         },
         {
+            "key": "field_5d6736f76795c",
+            "label": "Subheading",
+            "name": "hero__subheading",
+            "type": "medium_editor",
+            "instructions": "Default bold is not applied. Manually apply bold to the words you want to make bold.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "standard_buttons": [
+                "bold",
+                "italic",
+                "underline",
+                "h1",
+                "h2",
+                "h3",
+                "removeFormat"
+            ],
+            "custom_buttons": "",
+            "other_options": [
+                "disableReturn",
+                "disableDoubleReturn",
+                "disableExtraSpaces"
+            ],
+            "delay": 0
+        },
+        {
             "key": "field_5d6736ff6795d",
             "label": "Has button?",
             "name": "hero__has_button",
@@ -210,38 +242,6 @@
                 "id": ""
             },
             "default_value": ""
-        },
-        {
-            "key": "field_5d6736f76795c",
-            "label": "Subheading",
-            "name": "hero__subheading",
-            "type": "medium_editor",
-            "instructions": "Default bold is not applied. Manually apply bold to the words you want to make bold.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "standard_buttons": [
-                "bold",
-                "italic",
-                "underline",
-                "h1",
-                "h2",
-                "h3",
-                "removeFormat"
-            ],
-            "custom_buttons": "",
-            "other_options": [
-                "disableReturn",
-                "disableDoubleReturn",
-                "disableExtraSpaces"
-            ],
-            "delay": 0
         }
     ],
     "location": [
@@ -261,5 +261,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1579626627
+    "modified": 1579631754
 }
