@@ -65,6 +65,7 @@ section.block-services {
         box-shadow: 0 6px 10px -6px rgba(black, 0.5);
         border-top: 6px solid black;
         border-radius: 0;
+        margin: 10px;
 
         &.color-primary {
           border-color: theme-color("primary");
@@ -105,10 +106,6 @@ section.block-services {
         margin-right: 0.4em;
       }
 
-      .card {
-        margin: 10px;
-      }
-
       @include media-breakpoint-up(md) {
         // grid-template-columns: 1fr 1fr;
         // column-gap: 0.8em;
@@ -127,14 +124,14 @@ section.block-services {
         &.grid--3 {
           // grid-template-columns: repeat(3, 1fr);
           .card {
-            flex: 0 0 calc(33.33% - 20px;)
+            flex: 0 0 calc(33.33% - 20px);
           }
         }
 
         &.grid--4 {
           // grid-template-columns: repeat(4, 1fr);
           .card {
-            flex: 0 0 calc(25% - 20px;)
+            flex: 0 0 calc(25% - 20px);
           }
         }
       }
@@ -142,6 +139,7 @@ section.block-services {
       .card {
         border: none;
         border-radius: 0;
+        margin: 10px;
 
         .card-body {
           padding: 0 1.25rem;
