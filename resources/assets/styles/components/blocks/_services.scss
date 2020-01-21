@@ -21,29 +21,42 @@ section.block-services {
 
   &.style-1 {
     .row-services {
-      display: grid;
-      row-gap: 0.8em;
-      grid-template-rows: auto;
-      grid-auto-flow: row;
+      // display: grid;
+      // row-gap: 0.8em;
+      // grid-template-rows: auto;
+      // grid-auto-flow: row;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -10px;
 
       @include media-breakpoint-up(md) {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 0.8em;
+        // grid-template-columns: 1fr 1fr;
+        // column-gap: 0.8em;
       }
 
       @include media-breakpoint-up(lg) {
-        grid-auto-flow: row;
+        // grid-auto-flow: row;
 
         &.grid--2 {
-          grid-template-columns: repeat(2, 1fr);
+          // grid-template-columns: repeat(2, 1fr);
+          .card {
+            flex: 0 0 calc(50% - 20px);
+          }
         }
 
         &.grid--3 {
-          grid-template-columns: repeat(3, 1fr);
+          // grid-template-columns: repeat(3, 1fr);
+          .card {
+            flex: 0 0 calc(33.33% - 20px);
+          }
         }
 
         &.grid--4 {
-          grid-template-columns: repeat(4, 1fr);
+          // grid-template-columns: repeat(4, 1fr);
+          .card {
+            flex: 0 0 calc(25% - 20px);
+          }
         }
       }
 
@@ -78,34 +91,51 @@ section.block-services {
 
   &.style-2 {
     .row-services {
-      display: grid;
-      row-gap: 0.8em;
-      grid-template-rows: auto;
-      grid-auto-flow: row;
+      // display: grid;
+      // row-gap: 0.8em;
+      // grid-template-rows: auto;
+      // grid-auto-flow: row;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -10px;
 
       img,
       svg {
         margin-right: 0.4em;
       }
 
+      .card {
+        margin: 10px;
+      }
+
       @include media-breakpoint-up(md) {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 0.8em;
+        // grid-template-columns: 1fr 1fr;
+        // column-gap: 0.8em;
       }
 
       @include media-breakpoint-up(lg) {
-        grid-auto-flow: row;
+        // grid-auto-flow: row;
 
         &.grid--2 {
-          grid-template-columns: repeat(2, 1fr);
+          // grid-template-columns: repeat(2, 1fr);
+          .card {
+            flex: 0 0 calc(50% - 20px);
+          }
         }
 
         &.grid--3 {
-          grid-template-columns: repeat(3, 1fr);
+          // grid-template-columns: repeat(3, 1fr);
+          .card {
+            flex: 0 0 calc(33.33% - 20px;)
+          }
         }
 
         &.grid--4 {
-          grid-template-columns: repeat(4, 1fr);
+          // grid-template-columns: repeat(4, 1fr);
+          .card {
+            flex: 0 0 calc(25% - 20px;)
+          }
         }
       }
 
