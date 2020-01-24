@@ -3,11 +3,11 @@
 
 @endphp
 
-<div class="card card shadow-sm border-0">
+<div class="card card shadow-sm border-0 text-center">
     <div class="card-body">
         <div class="card-header__wrapper">
             @if( $card['image'] )
-              <div class="text-center">@if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif<img src="{!! $card['image']['url'] !!}" class="rounded-circle">@if( $card['permalink'] )</a>@endif</div>
+              @if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif<img src="{!! $card['image']['url'] !!}" class="rounded-circle">@if( $card['permalink'] )</a>@endif
             @endif
             @if( $card['title'] )
                 <h3>@if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif{!! $card['title'] !!}@if( $card['permalink'] )</a>@endif</h3>

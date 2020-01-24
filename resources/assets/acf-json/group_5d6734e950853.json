@@ -74,8 +74,6 @@
             ],
             "custom_buttons": "",
             "other_options": [
-                "disableReturn",
-                "disableDoubleReturn",
                 "disableExtraSpaces"
             ],
             "delay": 0
@@ -261,5 +259,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1579631754
+    "modified": 1579887650
 }

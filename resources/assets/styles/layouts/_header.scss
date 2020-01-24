@@ -120,10 +120,17 @@ header {
     }
   }
 
-  svg.header__logo,
+  ,
   img.header__logo {
-    height: 80px;
     width: auto;
+  }
+
+  svg.header__logo {
+    height: 80px;
+  }
+
+  img.header__logo {
+    max-height: 80px;
   }
 
   #navigation--primary > div[class*="container"] {

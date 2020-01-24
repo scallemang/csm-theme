@@ -146,10 +146,10 @@ ul {
   }
 }
 
-.bg-primary:not(.block-hero),
-.bg-secondary:not(.block-hero),
-.bg-info:not(.block-hero),
-.bg-image:not(.block-hero) {
+.bg-primary:not(.block-hero):not(.dark),
+.bg-secondary:not(.block-hero):not(.dark),
+.bg-info:not(.block-hero):not(.dark),
+.bg-image:not(.block-hero):not(.dark) {
   :not(a):not(i):not(h2):not(h3):not(b) {
     color: #fff;
   }
