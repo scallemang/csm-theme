@@ -4,34 +4,10 @@
     "fields": [
         {
             "key": "field_5d6e9f4d51dbf",
-            "label": "Logo",
+            "label": "Header Logo",
             "name": "branding__logo",
             "type": "image",
             "instructions": "Primary logo.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5d6e9f6951dc0",
-            "label": "Light Logo",
-            "name": "branding__logo_light",
-            "type": "image",
-            "instructions": "Variant logo for sections with dark backgrounds.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -94,6 +70,30 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5d6e9f6951dc0",
+            "label": "Footer Logo",
+            "name": "branding__logo_light",
+            "type": "image",
+            "instructions": "Variant logo for sections with dark backgrounds.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -113,5 +113,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1571928033
+    "modified": 1580158137
 }
