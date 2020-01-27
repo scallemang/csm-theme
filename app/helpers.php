@@ -472,7 +472,7 @@ function return_cta()
     return $cta;
 }
 
-function return_card( $type = null )
+function return_card( $type = null, $args = array() )
 {
     $card = array();
     $card['title'] = get_the_title();
@@ -503,7 +503,8 @@ function return_card( $type = null )
             $card['button'] = return_button( get_field( 'team__button' ) );
         }
     } elseif( 'testimonial' == $type ) {
-        $card['testimonial'] = get_field('testimonial__message');
+        $card['testimonial__excerpt'] = get_field('testimonial__excerpt');
+        $card['testimonial__full'] = $args['show_full_testimonial'] ? get_field('testimonial__message') : null;;
     }
     return $card;
 }
