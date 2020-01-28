@@ -1,6 +1,6 @@
 @if( $card )
 
-<div class="{{ $cols }}">
+<div class="{{ $cols }} mb-5">
   <div class="card color-{{ $color }}">
       <div class="card-body">
           <div class="card-header__wrapper">

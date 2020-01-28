@@ -4,6 +4,7 @@ section.block-dynamic {
     box-shadow: 0 6px 10px -6px rgba(black, 0.5);
     border-top: 6px solid black;
     border-radius: 0;
+    height: 100%;
 
     &.color-primary {
       border-color: theme-color("primary");

@@ -1,6 +1,6 @@
 @if( $card )
 
-<div class={{ $cols }}>
+<div class="{{ $cols }} mb-5">
   {{-- <div class="card color-{{ $color }}"> --}}
       @if( $card['image'] )<a href="{{ $card['permalink'] }}">{!! $card['image'] !!}</a>@endif
       {{-- <div class="card-body">
