@@ -41,7 +41,7 @@
         {
             "key": "field_5de15320fafd5",
             "label": "Google Search Console snippet",
-            "name": "scipts__search-console",
+            "name": "scripts__search-console",
             "type": "acf_code_field",
             "instructions": "Please paste your full Search Console code snippet to output in the head.",
             "required": 0,
