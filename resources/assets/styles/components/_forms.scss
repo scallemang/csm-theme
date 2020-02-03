@@ -19,16 +19,16 @@
 }
 
 form.wpforms-form {
-  input,
-  textarea {
-    background-color: theme-color("background") !important;
-    border-color: theme-color("background") !important;
-  }
+  // input,
+  // textarea {
+  //   background-color: theme-color("background") !important;
+  //   border-color: theme-color("background") !important;
+  // }
 
-  label,
-  .wpforms-required-label {
-    color: theme-color("secondary") !important;
-  }
+  // label,
+  // .wpforms-required-label {
+  //   color: theme-color("secondary") !important;
+  // }
 
   .wpforms-submit-container {
     text-align: center;

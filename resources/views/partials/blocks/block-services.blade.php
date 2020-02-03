@@ -33,7 +33,7 @@
               $service = array(
                 'title'   => get_sub_field( 'service__heading' ),
                 'link'    => get_sub_field( 'service__link' ),
-                'colour'  => get_sub_field( 'service__colour' ),
+                'colour'  => App\return_color(),
                 'body'    => get_sub_field( 'service__summary' ),
                 'icon'    => App\return_icon(),
                 'class'   => 'color-' . get_sub_field( 'colour_picker' )

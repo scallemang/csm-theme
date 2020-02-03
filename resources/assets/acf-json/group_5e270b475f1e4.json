@@ -208,6 +208,27 @@
             "endpoint": 0
         },
         {
+            "key": "field_5e38287616f4c",
+            "label": "Background",
+            "name": "dynamic__background",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d66dead25f02"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5e2f38e2b7db6",
             "label": "Columns",
             "name": "dynamic__columns",
@@ -272,5 +293,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1580156490
+    "modified": 1580738711
 }

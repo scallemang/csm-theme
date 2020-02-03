@@ -230,6 +230,53 @@
                     "default_value": ""
                 }
             ]
+        },
+        {
+            "key": "field_5e3824b74608b",
+            "label": "Forms",
+            "name": "colour__forms",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e3824c64608c",
+                    "label": "Labels",
+                    "name": "colour__form_labels",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5e3824e24608d",
+                    "label": "Inputs",
+                    "name": "colour__form_inputs",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -249,5 +296,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1575490336
+    "modified": 1580737787
 }

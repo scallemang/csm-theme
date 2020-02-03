@@ -143,29 +143,38 @@ header {
       a {
         display: inline-block;
         padding: 0.4rem 0.6rem;
-        margin: 0 3px;
 
         @include transition;
-
-        &:hover {
-          background-color: darken(theme-color("primary"), 10%);
-          border-radius: 5px;
-          color: #fff;
-          text-decoration: none;
-        }
       }
 
       &.active {
         > a {
           background-color: theme-color("primary");
-          border-radius: 5px;
           color: #fff;
-
-          &:hover {
-            background-color: darken(theme-color("primary"), 10%);
-            text-decoration: none;
-          }
         }
+      }
+
+      a:hover {
+        background-color: darken(theme-color("primary"), 10%);
+        color: #fff;
+        text-decoration: none;
+      }
+
+      a:not(.dropdown-item) {
+        margin: 0 3px;
+
+        &:hover {
+          border-radius: 5px;
+        }
+      }
+
+      &.active > a:not(.dropdown-item) {
+        border-radius: 5px;
+      }
+
+      &.active > a:hover {
+        background-color: darken(theme-color("primary"), 10%);
+        text-decoration: none;
       }
     }
   }

@@ -120,4 +120,26 @@ section.block-cta {
   }
 <?php endif; ?>
 }
+
+input,
+textarea {
+  <?php if( get_field('colour__forms', 'option')['colour__form_inputs']): ?>
+  background-color: <?= strtolower( get_field('colour__forms', 'option')['colour__form_inputs']) ;?> !important;
+  border-color: <?= strtolower( get_field('colour__forms', 'option')['colour__form_inputs'] ) ;?>  !important;
+  <?php else: ?>
+  background-color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
+  <?php endif; ?>
+}
+
+label,
+.wpforms-required-label {
+  <?php if( get_field('colour__forms', 'option')['colour__form_labels']): ?>
+  color: <?= strtolower( get_field('colour__forms', 'option')['colour__form_labels'] ) ;?> !important;
+  <?php else: ?>
+  color: <?= strtolower( get_field('colour__text', 'option') ) ;?>;
+  <?php endif; ?>
+}
+
+
 // stylelint-enable

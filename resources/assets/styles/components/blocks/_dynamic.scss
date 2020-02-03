@@ -92,9 +92,14 @@ section.block-dynamic {
     .card {
       // margin: 10px;
       // flex: 0 1 calc(50% - 20px);
+      border-top: none;
 
       .card-body {
         // padding-left: 3rem;
+      }
+
+      .full {
+        font-size: 0.75em;
       }
 
       .lead {

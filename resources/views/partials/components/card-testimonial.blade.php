@@ -8,7 +8,7 @@
                 <div class="lead font-weight-bold h3 display-5 mt-0 mb-4">{!! $card['testimonial__excerpt'] !!}</div>
               @endif
               @if( $card['testimonial__full'] )
-                {!! $card['testimonial__full'] !!}
+                <div class="full">{!! $card['testimonial__full'] !!}</div>
               @endif
               @if( $card['title'] )
                 <p class="h6">{!! $card['title'] !!}</p>

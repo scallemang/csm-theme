@@ -3,6 +3,7 @@
   $num = get_sub_field('dynamic__number');
   $orderby = get_sub_field('dynamic__order');
   $cardColor = get_sub_field('colour_picker');
+  $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
   $postCategories = ( $type == 'post' && get_sub_field('dynamic__post_options')['posts__category_picker'] ) ? get_sub_field('dynamic__post_options')['posts__category_picker'] : null;
 
   switch( get_sub_field('dynamic__columns' ) ) {
@@ -38,9 +39,11 @@
 
   $dynamic_query = new WP_Query( $args );
 @endphp
-
-<section
-  class="block-dynamic"
+ 
+<section 
+  class="block-dynamic @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif @if( $align )text-{{ $align }} @endif{{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
+  @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
+  @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
 > 
   @if( $dynamic_query->have_posts() )
     <div class="container">

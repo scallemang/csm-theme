@@ -391,9 +391,17 @@ function return_background_from_type( $type = null, $args = null )
     return $background;
 }
 
-function return_color()
+function return_color($args = null)
 {
-
+    switch( get_sub_field('colour_picker') ) {
+        case 'custom':
+            $color = get_sub_field('colour_picker__custom');
+            break;
+        default:
+            $color = null;
+            break;
+    }
+    return $color;
 }
 
 function strip_phone( $phone )
