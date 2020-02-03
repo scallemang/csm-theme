@@ -146,10 +146,10 @@ ul {
   }
 }
 
-.bg-primary:not(.block-hero):not(.dark),
-.bg-secondary:not(.block-hero):not(.dark),
-.bg-info:not(.block-hero):not(.dark),
-.bg-image:not(.block-hero):not(.dark) {
+.bg-primary:not(.block-hero):not(.block-dynamic):not(.dark),
+.bg-secondary:not(.block-hero):not(.block-dynamic):not(.dark),
+.bg-info:not(.block-hero):not(.block-dynamic):not(.dark),
+.bg-image:not(.block-hero):not(.block-dynamic):not(.dark) {
   :not(a):not(i):not(h2):not(h3):not(b) {
     color: #fff;
   }

@@ -2,7 +2,7 @@
 @php
 
 @endphp
-<div class="{{ $cols }} mb-5">
+<div class="{{ $cols }} my-3">
     <div class="card color-{{ $color }} text-center">
         <div class="card-body">
             <div class="card-header__wrapper">
@@ -10,7 +10,7 @@
                 @if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif<img src="{!! $card['image']['url'] !!}" class="rounded-circle">@if( $card['permalink'] )</a>@endif
                 @endif
                 @if( $card['title'] )
-                    <h3>@if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif{!! $card['title'] !!}@if( $card['permalink'] )</a>@endif</h3>
+                    <h3 class="post-title">@if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif{!! $card['title'] !!}@if( $card['permalink'] )</a>@endif</h3>
                 @endif
                 @if( $card['jobtitle'] )
                     <h4>{!! $card['jobtitle'] !!}</h4>

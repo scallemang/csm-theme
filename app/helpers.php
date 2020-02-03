@@ -513,6 +513,12 @@ function return_card( $type = null, $args = array() )
     } elseif( 'testimonial' == $type ) {
         $card['testimonial__excerpt'] = get_field('testimonial__excerpt');
         $card['testimonial__full'] = $args['show_full_testimonial'] ? get_field('testimonial__message') : null;;
+    } elseif( 'portfolio' == $type ) {
+        $size = $args['img_size'];
+        $card['image'] = array(
+            'url' => get_field('portfolio__photo')['sizes'][$size],
+        );
+        $card['description'] = get_field('portfolio__description');
     }
     return $card;
 }

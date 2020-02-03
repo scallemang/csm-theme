@@ -9,6 +9,7 @@ section.block-dynamic {
     &.color-primary {
       border-color: theme-color("primary");
 
+      .post-title,
       .lead,
       .lead * {
         color: theme-color("primary");
@@ -18,6 +19,7 @@ section.block-dynamic {
     &.color-secondary {
       border-color: theme-color("secondary");
 
+      .post-title,
       .lead,
       .lead p {
         color: theme-color("secondary");
@@ -27,6 +29,7 @@ section.block-dynamic {
     &.color-info {
       border-color: theme-color("info");
 
+      .post-title,
       .lead,
       .lead p {
         color: theme-color("info");
@@ -36,6 +39,7 @@ section.block-dynamic {
     &.color-background {
       border-color: theme-color("background");
 
+      .post-title,
       .lead,
       .lead p {
         color: theme-color("background");
@@ -45,6 +49,7 @@ section.block-dynamic {
     &.color-text {
       border-color: theme-color("text");
 
+      .post-title,
       .lead,
       .lead p {
         color: theme-color("text");
@@ -99,7 +104,7 @@ section.block-dynamic {
       }
 
       .full {
-        font-size: 0.75em;
+        font-size: 0.875em;
       }
 
       .lead {

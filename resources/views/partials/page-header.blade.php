@@ -26,6 +26,15 @@
     {{ bcn_display() }}
   </div>
   @endif
+@elseif(is_home())
+  @if(function_exists('bcn_display'))
+  <div class="breadcrumbs breadcrumbs-navxt mt-4 mb-5 container" typeof="BreadcrumbList" vocab="http://schema.org/">
+    {{ bcn_display() }}
+  </div>
+  @endif
+  <div class="page-header container text-center my-4">
+        <h1 class="page-title">@if(get_field('page__alternate_title', get_option( 'page_for_posts' ) )){!! get_field('page__alternate_title', get_option( 'page_for_posts' )) !!}@else{!! App::title() !!}@endif</h1>
+  </div>
 @else
   @if(function_exists('bcn_display'))
   <div class="breadcrumbs breadcrumbs-navxt mt-4 mb-5 container" typeof="BreadcrumbList" vocab="http://schema.org/">

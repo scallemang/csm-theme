@@ -1,25 +1,27 @@
 @php
-  $heading = get_sub_field( 'eden_block_heading' );
-  $subheading = get_sub_field( 'eden_block_subheading' );
+  $heading = get_sub_field('reviews__heading');
+  $hasButton = get_sub_field('copy__has_button');
+  $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
+  $width = 'fluid' == get_sub_field( 'width__picker' ) ? 'container-fluid' : null;
+  $align = App\return_alignment( array('block'=>true) );
+  $reviewsShortcode = get_sub_field('reviews__shortcode');
 @endphp
 
 @if( get_sub_field( 'eden_block_image' ) )
   @php $image = get_sub_field( 'eden_block_image' ); @endphp
 @endif
-<section class="block-hero py-lg-5 pt-5 @if( !($heading && $subheading) ) block-hero--image-only @endif" @if( $image ) style="background-image: url('{{ $image['url'] }}'); background-size: cover; background-position: center;" @endif> 
+<section 
+  class="block-reviews @if( !$width )copy--rounded @else copy--full @endif @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif @if( $align )text-{{ $align }} @endif{{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
+  @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
+  @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
+> 
   <div class="container pb-lg-5 {{-- container-fluid-md-down --}}">
-    <div class="row row-hero">
-      <div class="col-sm-8 offset-sm-2 col-lg-6 offset-md-2 offset-lg-0 col-lg-5 col-xl-4">
-        @if( $heading || $subheading )<div class="container">@if( $heading )<h1 class="eden-display-1">{{ $heading }}</h1>@endif @if( $subheading )<h3 class="eden-display-3 mt-5">{{ $subheading }}</h3>@endif</div>@endif
-      
-        @if( get_sub_field( 'eden_block_has_button' ) )
-          <div class="container my-4">
-          @if( get_sub_field( 'eden_block_button_group' )[ 'eden_button_text' ] && get_sub_field( 'eden_block_button_group' )['eden_button_link'] )
-            <a id="" class="btn btn-primary" href="{{ get_sub_field( 'eden_block_button_group' )['eden_button_link']['url'] }}">{{ get_sub_field( 'eden_block_button_group' )['eden_button_text'] }}</a>
-          @endif
-          </div>
-        @endif
-      </div>
+    <div class="text-center">
+      @if( $heading )<div class="container"><h2 class="mt-5">{{ $heading }}</h1></div>@endif
+    
+      @if( $reviewsShortcode )
+        {!! do_shortcode($reviewsShortcode) !!}
+      @endif
     </div>
   </div>
   <div class="bg-pattern"></div>
