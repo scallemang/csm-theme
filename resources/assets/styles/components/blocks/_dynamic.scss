@@ -21,7 +21,8 @@ section.block-dynamic {
 
       .post-title,
       .lead,
-      .lead p {
+      .lead p,
+      a.link {
         color: theme-color("secondary");
       }
     }
@@ -31,7 +32,8 @@ section.block-dynamic {
 
       .post-title,
       .lead,
-      .lead p {
+      .lead p,
+      a.link {
         color: theme-color("info");
       }
     }
@@ -41,7 +43,8 @@ section.block-dynamic {
 
       .post-title,
       .lead,
-      .lead p {
+      .lead p,
+      a.link {
         color: theme-color("background");
       }
     }
@@ -51,7 +54,8 @@ section.block-dynamic {
 
       .post-title,
       .lead,
-      .lead p {
+      .lead p,
+      a.link {
         color: theme-color("text");
       }
     }

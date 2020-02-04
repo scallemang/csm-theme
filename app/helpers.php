@@ -512,13 +512,15 @@ function return_card( $type = null, $args = array() )
         }
     } elseif( 'testimonial' == $type ) {
         $card['testimonial__excerpt'] = get_field('testimonial__excerpt');
-        $card['testimonial__full'] = $args['show_full_testimonial'] ? get_field('testimonial__message') : null;;
+        $card['testimonial__full'] = $args['show_full_testimonial'] ? get_field('testimonial__message') : null;
     } elseif( 'portfolio' == $type ) {
         $size = $args['img_size'];
+        $card['title'] = $args['show_portfolio_title'] ? $card['title'] : null;
         $card['image'] = array(
-            'url' => get_field('portfolio__photo')['sizes'][$size],
+            'url' => get_field('portfolio__photo')['url'],
         );
-        $card['description'] = get_field('portfolio__description');
+        $card['description'] = $args['show_portfolio_description'] ? get_field('portfolio__description') : null;
+        $card['link'] = $args['link_portfolio'] ? get_the_permalink() : null;;
     }
     return $card;
 }

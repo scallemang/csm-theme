@@ -11,25 +11,28 @@
   switch( get_sub_field('dynamic__columns' ) ) {
     case 'three':
       $colClass = 'col-md-4';
-      $cardArgs['img_size'] = 'medium';
+      //$cardArgs['img_size'] = 'medium';
       break;
     case 'two':
       $colClass = 'col-md-6';
-      $cardArgs['img_size'] = 'large';
+      //$cardArgs['img_size'] = 'large';
       break;
     case 'one':
       $colClass = 'col-md-10 col-lg-8 mx-md-auto';
-      $cardArgs['img_size'] = 'large';
+      //$cardArgs['img_size'] = 'large';
       break;
     default:
       $colClass = 'col-md-6';
-      $cardArgs['img_size'] = 'large';
+      //$cardArgs['img_size'] = 'large';
       break;
   }
 
   $template = 'partials/components/card-' . $type;
   
   $cardArgs['show_full_testimonial'] = ($type == 'testimonial' && get_sub_field('dynamic__testimonial_options')['testimonial__show_full_message'] );
+  $cardArgs['show_portfolio_title'] = ($type == 'portfolio' && get_sub_field('dynamic__portfolio_options')['portfolio__show_title'] );
+  $cardArgs['show_portfolio_description'] = ($type == 'portfolio' && get_sub_field('dynamic__portfolio_options')['portfolio__show_description'] );
+  $cardArgs['link_portfolio'] = ($type == 'portfolio' && get_sub_field('dynamic__portfolio_options')['portfolio__link_item'] );
 
   $args = array(
     'post_type' => $type,

@@ -9,7 +9,7 @@ h3 {
   section.block-services.style-2 & {
     font-size: 1.2rem;
     // text-transform: uppercase;
-    color: theme-color("primary");
+    // color: theme-color("primary");
     margin-bottom: 0.3em;
     margin-top: 0;
     font-weight: 500;
@@ -19,7 +19,7 @@ h3 {
     }
   }
 
-  section.block-services.style-1 .card.color-primary & {
+  section.block-services .card.color-primary & {
     color: theme-color("primary");
 
     a {
@@ -27,7 +27,7 @@ h3 {
     }
   }
 
-  section.block-services.style-1 .card.color-secondary & {
+  section.block-services .card.color-secondary & {
     color: theme-color("secondary");
 
     a {
@@ -35,7 +35,7 @@ h3 {
     }
   }
 
-  section.block-services.style-1 .card.color-info & {
+  section.block-services .card.color-info & {
     color: theme-color("info");
 
     a {
@@ -43,7 +43,7 @@ h3 {
     }
   }
 
-  section.block-services.style-1 .card.color-background & {
+  section.block-services .card.color-background & {
     color: theme-color("background");
 
     a {
@@ -51,7 +51,7 @@ h3 {
     }
   }
 
-  section.block-services.style-1 .card.color-text & {
+  section.block-services .card.color-text & {
     color: theme-color("text");
 
     a {
@@ -97,5 +97,10 @@ svg * {
   section.block-services .card.color-text & {
     color: theme-color("text") !important;
     fill: theme-color("text") !important;
+  }
+
+  section.block-services .card.color-custom & {
+    color: currentColor !important;
+    fill: currentColor !important;
   }
 }

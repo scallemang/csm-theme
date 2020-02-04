@@ -193,6 +193,88 @@
             ]
         },
         {
+            "key": "field_5e38ce7dbd022",
+            "label": "Portfolio Options",
+            "name": "dynamic__portfolio_options",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e270b6f6aa10",
+                        "operator": "==",
+                        "value": "portfolio"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e38ce9abd024",
+                    "label": "Show title?",
+                    "name": "portfolio__show_title",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5e38cebbbd025",
+                    "label": "Show description?",
+                    "name": "portfolio__show_description",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5e38cecabd026",
+                    "label": "Link item?",
+                    "name": "portfolio__link_item",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
+        },
+        {
             "key": "field_5e270b616aa0f",
             "label": "Options",
             "name": "",
@@ -294,5 +376,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1580746206
+    "modified": 1580782386
 }
