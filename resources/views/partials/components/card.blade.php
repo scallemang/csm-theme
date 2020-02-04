@@ -11,8 +11,8 @@
 
 <div class="card @if($class){{ $class }}@endif" style="@if($color)border-color:{{$color}};@endif">
     <div class="card-body">
-        <div class="card-header__wrapper @if( $title )line-bottom @endif">
-            @if( $icon )@if($color)<div style="color:{{ $color }};">@endif{!! $icon !!}@if($color)@endif @endif
+        <div class="card-header__wrapper @if( $title )line-bottom @endif" @if($color)style="color:{{ $color }};"@endif>
+            @if( $icon ){!! $icon !!}@if($color)@endif @endif
             @if( $title )
                 @if( $link )<h3><a href="{{ $link }}" style="@if($color)color: {{ $color }};@endif">{!! $title !!}</a></h3>
                 @else<h3 style="@if($color)color: {{ $color }};@endif">{!! $title !!}</h3>@endif 
