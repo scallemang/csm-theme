@@ -3,6 +3,7 @@
   $num = get_sub_field('dynamic__number');
   $orderby = get_sub_field('dynamic__order');
   $cardColor = get_sub_field('colour_picker');
+  $hasButton = get_sub_field('dynamic__has_button');
   $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
   $postCategories = ( $type == 'post' && get_sub_field('dynamic__post_options')['posts__category_picker'] ) ? get_sub_field('dynamic__post_options')['posts__category_picker'] : null;
   $cardArgs = array();
@@ -61,6 +62,15 @@
           @include($template, ['card' => $card, 'color' => $cardColor, 'cols' => $colClass])
         @endwhile
       </div>
+      @if( $hasButton )
+        @php 
+          $buttonGroup = get_sub_field( 'dynamic__button' ); 
+          $button = App\return_button($buttonGroup);
+        @endphp
+        <div class="mb-5 text-center">
+          @include('partials.components.button', ['button' => $button])
+        </div>
+      @endif
     </div>
 @endif
 

@@ -19,27 +19,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_5d7005c5672e5",
-            "label": "Colour",
-            "name": "divider__colour",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_5d67f094d95e9"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
             "key": "field_5db42d3ee6486",
             "label": "Height",
             "name": "divider__height",
@@ -59,6 +38,27 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_5d7005c5672e5",
+            "label": "Colour",
+            "name": "divider__colour",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d67f094d67d7"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         },
         {
             "key": "field_5db1b84482c4d",
@@ -113,5 +113,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1572091179
+    "modified": 1581092458
 }

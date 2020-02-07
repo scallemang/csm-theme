@@ -275,6 +275,54 @@
             ]
         },
         {
+            "key": "field_5e3d90ec9c9f3",
+            "label": "Has button?",
+            "name": "dynamic__has_button",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e3d90e09c9f2",
+            "label": "Button",
+            "name": "dynamic__button",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e3d90ec9c9f3",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5d66e262be84f"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_5e270b616aa0f",
             "label": "Options",
             "name": "",
@@ -289,6 +337,25 @@
             },
             "placement": "top",
             "endpoint": 0
+        },
+        {
+            "key": "field_5e3d909c9c9f1",
+            "label": "Block Title",
+            "name": "block__title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5e2f38e2b7db6",
@@ -376,5 +443,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1580782386
+    "modified": 1581093541
 }

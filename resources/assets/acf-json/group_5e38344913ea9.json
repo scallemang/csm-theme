@@ -51,7 +51,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "portfolio"
             }
         ]
     ],
@@ -70,5 +70,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1580783464
+    "modified": 1581092164
 }
