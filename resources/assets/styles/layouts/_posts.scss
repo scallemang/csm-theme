@@ -11,4 +11,9 @@ body.single-post {
   h3 {
     margin-top: 1.8rem;
   }
+
+  article img {
+    max-width: 100%;
+    height: auto;
+  }
 }
