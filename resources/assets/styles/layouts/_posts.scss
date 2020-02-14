@@ -1,7 +1,7 @@
 body.single-post {
   // Google Map
   iframe {
-    max-width: 400px;
+    max-width: 100%;
   }
 
   h2 {
@@ -15,5 +15,9 @@ body.single-post {
   article img {
     max-width: 100%;
     height: auto;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 400px;
   }
 }
