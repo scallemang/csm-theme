@@ -31,6 +31,7 @@
   $template = 'partials/components/card-' . $type;
   
   $cardArgs['show_full_testimonial'] = ($type == 'testimonial' && get_sub_field('dynamic__testimonial_options')['testimonial__show_full_message'] );
+  $cardArgs['show_testimonial_image'] = ($type == 'testimonial' && get_sub_field('dynamic__testimonial_options')['testimonial__show_image'] );
   $cardArgs['show_portfolio_title'] = ($type == 'portfolio' && get_sub_field('dynamic__portfolio_options')['portfolio__show_title'] );
   $cardArgs['show_portfolio_description'] = ($type == 'portfolio' && get_sub_field('dynamic__portfolio_options')['portfolio__show_description'] );
   $cardArgs['link_portfolio'] = ($type == 'portfolio' && get_sub_field('dynamic__portfolio_options')['portfolio__link_item'] );

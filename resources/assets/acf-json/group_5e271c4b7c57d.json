@@ -3,6 +3,30 @@
     "title": "Post Type: Testimonial",
     "fields": [
         {
+            "key": "field_5e481f61b3ab2",
+            "label": "Image (Logo)",
+            "name": "testimonial__image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_5e2f3b71f0784",
             "label": "Testimonial Excerpt",
             "name": "testimonial__excerpt",
@@ -58,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1580153724
+    "modified": 1581784952
 }

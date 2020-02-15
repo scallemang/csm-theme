@@ -13,6 +13,11 @@
               @if( $card['title'] )
                 <p class="h6">{!! $card['title'] !!}</p>
               @endif
+              @if( $card['testimonial__image'] )
+                <div class="text-center">
+                  <img src="{{ $card['testimonial__image']['url'] }}" class="logo">
+                </div>
+              @endif
 
           </div>
       </div>
