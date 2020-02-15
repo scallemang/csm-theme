@@ -103,15 +103,15 @@ add_filter('acf/fields/flexible_content/layout_title', function( $title, $field,
     return $title;
 }, 10, 4);
 
-add_filter('template_include', function ($template) {
-    if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) {
-        $amp_template = locate_template(['amp/'.basename($template)]);
+// add_filter('template_include', function ($template) {
+//     if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint()) {
+//         $amp_template = locate_template(['amp/'.basename($template)]);
 
-        return ($amp_template) ? $amp_template : $template;
-    }
+//         return ($amp_template) ? $amp_template : $template;
+//     }
 
-    return $template;
-}, 100);
+//     return $template;
+// }, 100);
 
 add_filter( 'tiny_mce_before_init', function ( $init ) {
 

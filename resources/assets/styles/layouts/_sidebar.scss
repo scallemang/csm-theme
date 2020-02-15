@@ -8,6 +8,7 @@ aside.sidebar {
     border: 8px solid theme-color("primary");
   }
 
+  .widget_newsletter,
   .widget_text:not(.widget_custom_html) {
     padding: 1em;
     border-radius: $border-radius;
@@ -43,7 +44,33 @@ aside.sidebar {
 
   form {
     .wpforms-one-half {
-      width: 100%;
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+  }
+
+  .widget_newsletter {
+    input {
+      background-color: white !important;
+    }
+
+    div.wpforms-container-full {
+      margin-bottom: 10px !important;
+    }
+
+    div.wpforms-container-full .wpforms-form .wpforms-one-half,
+    div.wpforms-container-full .wpforms-form .wpforms-three-sixths,
+    div.wpforms-container-full .wpforms-form .wpforms-two-fourths {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+
+    div.wpforms-container-full .wpforms-form .wpforms-field {
+      padding: 5px 0 !important;
+    }
+
+    div.wpforms-container-full .wpforms-form .wpforms-first {
+      padding-bottom: 10px !important;
     }
   }
 }

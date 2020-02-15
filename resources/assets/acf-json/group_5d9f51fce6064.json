@@ -19,6 +19,44 @@
             "placeholder": "",
             "mode": "htmlmixed",
             "theme": "monokai"
+        },
+        {
+            "key": "field_5e480d71323df",
+            "label": "Newsletter Form Title",
+            "name": "blog__newsletter_title",
+            "type": "text",
+            "instructions": "Please add a title to go above the newsletter form.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e480bb896aa3",
+            "label": "Newsletter Form",
+            "name": "blog__newsletter",
+            "type": "text",
+            "instructions": "Please enter the shortcode for the newsletter signup WPForms form to be used for people to subscribe.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -38,5 +76,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1570722414
+    "modified": 1581780357
 }
