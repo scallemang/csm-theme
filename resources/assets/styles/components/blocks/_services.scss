@@ -31,7 +31,32 @@ section.block-services {
       margin: 0 -10px;
 
       .card {
+        border: none;
+        box-shadow: 0 6px 10px -6px rgba(black, 0.5);
+        border-top: 6px solid black;
+        border-radius: 0;
+        margin: 10px;
         flex: 0 0 calc(100% - 20px);
+
+        &.color-primary {
+          border-color: theme-color("primary");
+        }
+
+        &.color-secondary {
+          border-color: theme-color("secondary");
+        }
+
+        &.color-info {
+          border-color: theme-color("info");
+        }
+
+        &.color-background {
+          border-color: theme-color("background");
+        }
+
+        &.color-text {
+          border-color: theme-color("text");
+        }
       }
 
       @include media-breakpoint-up(md) {
@@ -64,34 +89,6 @@ section.block-services {
           .card {
             flex: 0 0 calc(25% - 20px);
           }
-        }
-      }
-
-      .card {
-        border: none;
-        box-shadow: 0 6px 10px -6px rgba(black, 0.5);
-        border-top: 6px solid black;
-        border-radius: 0;
-        margin: 10px;
-
-        &.color-primary {
-          border-color: theme-color("primary");
-        }
-
-        &.color-secondary {
-          border-color: theme-color("secondary");
-        }
-
-        &.color-info {
-          border-color: theme-color("info");
-        }
-
-        &.color-background {
-          border-color: theme-color("background");
-        }
-
-        &.color-text {
-          border-color: theme-color("text");
         }
       }
     }
