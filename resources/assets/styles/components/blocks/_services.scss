@@ -29,12 +29,17 @@ section.block-services {
       flex-wrap: wrap;
       justify-content: center;
       margin: 0 -10px;
-      flex: 0 0 calc(100% - 20px);
+
+      .card {
+        flex: 0 0 calc(100% - 20px);
+      }
 
       @include media-breakpoint-up(md) {
         // grid-template-columns: 1fr 1fr;
         // column-gap: 0.8em;
-        flex: 0 0 calc(50% - 20px);
+        .card {
+          flex: 0 0 calc(50% - 20px);
+        }
       }
 
       @include media-breakpoint-up(lg) {
