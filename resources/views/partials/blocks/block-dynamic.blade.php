@@ -68,7 +68,7 @@
           $buttonGroup = get_sub_field( 'dynamic__button' ); 
           $button = App\return_button($buttonGroup);
         @endphp
-        <div class="mb-5 text-center">
+        <div class="my-3 text-center">
           @include('partials.components.button', ['button' => $button])
         </div>
       @endif
