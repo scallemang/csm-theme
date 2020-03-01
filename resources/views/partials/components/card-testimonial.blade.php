@@ -15,7 +15,7 @@
               @endif
               @if( $card['testimonial__image'] )
                 <div class="text-center">
-                  <img src="{{ $card['testimonial__image']['url'] }}" class="logo">
+                  <img src="{{ $card['testimonial__image']['url'] }}" class="logo img-fluid">
                 </div>
               @endif
 

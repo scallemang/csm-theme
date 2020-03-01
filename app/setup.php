@@ -147,6 +147,10 @@ if( function_exists('acf_add_options_page') ) {
 	
 }
 
+if ( function_exists( 'add_image_size' ) ) { 
+    add_image_size( 'people-img', 360, 360, true ); //(cropped)
+}
+
 add_filter('sage/display_sidebar', function ($display) {
     static $display;
 

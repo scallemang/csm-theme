@@ -7,7 +7,7 @@
         <div class="card-body">
             <div class="card-header__wrapper">
                 @if( $card['image'] )
-                @if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif<img src="{!! $card['image']['url'] !!}" class="rounded-circle">@if( $card['permalink'] )</a>@endif
+                @if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif<img src="{!! $card['image']['url'] !!}" class="rounded-circle img-fluid">@if( $card['permalink'] )</a>@endif
                 @endif
                 @if( $card['title'] )
                     <h3 class="post-title">@if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif{!! $card['title'] !!}@if( $card['permalink'] )</a>@endif</h3>

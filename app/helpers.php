@@ -491,8 +491,12 @@ function return_card( $type = null, $args = array() )
         $card['permalink'] = get_the_permalink();
         
     } elseif( 'team-member' == $type ) {
+        $attachment_id = get_field('team__photo')['id'];
+        $size = 'people-img';
+        $image = wp_get_attachment_image_src( $attachment_id, $size );
+
         $card['image'] = array(
-            'url' => get_field('team__photo')['sizes']['thumbnail'],
+            'url' => $image ? $image[0] : get_field('team__photo')['sizes']['thumbnail'],
         );
         $card['jobtitle'] = get_field('team__title');
         $card['permalink'] = get_the_permalink();

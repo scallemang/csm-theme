@@ -67,6 +67,12 @@ section.block-dynamic {
     // margin: 0 -10px;
     // justify-content: center;
 
+    .card-header__wrapper {
+      img {
+        width: 150px;
+      }
+    }
+
     .card {
       // margin: 10px;
       // flex: 0 1 calc(25% - 20px);
