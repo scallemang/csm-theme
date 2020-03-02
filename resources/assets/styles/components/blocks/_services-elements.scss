@@ -60,11 +60,14 @@ h3 {
   }
 }
 
+svg {
+  height: 60px;
+  width: auto;
+}
+
 svg,
 svg * {
   section.block-services .card & {
-    height: 60px;
-    width: auto;
     color: theme-color("black") !important;
     fill: transparent !important;
   }
