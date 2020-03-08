@@ -1,7 +1,7 @@
 @php
   $type = get_sub_field('dynamic__post_type');
   $num = get_sub_field('dynamic__number');
-  $orderby = get_sub_field('dynamic__order');
+  $orderby = get_sub_field('dynamic__orderby');
   $cardColor = get_sub_field('colour_picker');
   $hasButton = get_sub_field('dynamic__has_button');
   $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
