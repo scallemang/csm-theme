@@ -6,13 +6,13 @@ main.main section {
   }
 
   blockquote {
-    background-color: var(--background);
+    background-color: theme-color("background");
     padding: 2rem;
     font-size: 1.4em;
     font-weight: 400;
 
     p {
-      color: var(--info);
+      color: theme-color("info");
 
       &:last-of-type {
         margin-bottom: 0;
@@ -33,31 +33,31 @@ main.main section {
 
     &.overlay-primary {
       &::before {
-        background-color: rgba(var(--primary), 0.5);
+        background-color: rgba(theme-color("primary"), 0.5);
       }
     }
 
     &.overlay-secondary {
       &::before {
-        background-color: rgba(var(--secondary), 0.5);
+        background-color: rgba(theme-color("secondary"), 0.5);
       }
     }
 
     &.overlay-info {
       &::before {
-        background-color: rgba(var(--info), 0.5);
+        background-color: rgba(theme-color("info"), 0.5);
       }
     }
 
     &.overlay-text {
       &::before {
-        background-color: rgba(var(--text), 0.5);
+        background-color: rgba(theme-color("text"), 0.5);
       }
     }
 
     &.overlay-background {
       &::before {
-        background-color: rgba(var(--background), 0.5);
+        background-color: rgba(theme-color("background"), 0.5);
       }
     }
   }

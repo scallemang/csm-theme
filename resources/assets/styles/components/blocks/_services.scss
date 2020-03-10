@@ -39,23 +39,23 @@ section.block-services {
         flex: 0 0 calc(100% - 20px);
 
         &.color-primary {
-          border-color: var(--primary);
+          border-color: theme-color("primary");
         }
 
         &.color-secondary {
-          border-color: var(--secondary);
+          border-color: theme-color("secondary");
         }
 
         &.color-info {
-          border-color: var(--info);
+          border-color: theme-color("info");
         }
 
         &.color-background {
-          border-color: var(--background);
+          border-color: theme-color("background");
         }
 
         &.color-text {
-          border-color: var(--text);
+          border-color: theme-color("text");
         }
       }
 
@@ -156,7 +156,7 @@ section.block-services {
 
           &.line-bottom {
             margin-bottom: 0.5rem;
-            border-bottom: 1px solid var(--secondary);
+            border-bottom: 1px solid theme-color("secondary");
           }
         }
       }

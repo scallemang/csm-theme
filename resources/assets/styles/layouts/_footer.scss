@@ -9,7 +9,7 @@ footer {
 
     i,
     svg {
-      color: var(--primary);
+      color: theme-color("primary");
     }
   }
 
@@ -23,7 +23,7 @@ footer {
 
     i,
     svg {
-      color: var(--info);
+      color: theme-color("info");
     }
   }
 
@@ -41,18 +41,18 @@ footer {
       @include transition;
 
       &:hover {
-        color: var(--primary);
+        color: darken(theme-color("primary"), 10%);
         text-decoration: none;
       }
     }
 
     &.active {
       a {
-        // color: var(--primary);
+        // color: theme-color("primary");
         color: white;
 
         &:hover {
-          color: var(--secondary);
+          color: theme-color("secondary");
           text-decoration: none;
         }
       }

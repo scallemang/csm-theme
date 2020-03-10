@@ -6,31 +6,31 @@ section.block-divider {
 
   &.primary {
     hr {
-      border-color: var(--primary);
+      border-color: theme-color("primary");
     }
   }
 
   &.secondary {
     hr {
-      border-color: var(--secondary);
+      border-color: theme-color("secondary");
     }
   }
 
   &.info {
     hr {
-      border-color: var(--info);
+      border-color: theme-color("info");
     }
   }
 
   &.text {
     hr {
-      border-color: var(--text);
+      border-color: theme-color("text");
     }
   }
 
   &.background {
     hr {
-      border-color: var(--background);
+      border-color: theme-color("background");
     }
   }
 }

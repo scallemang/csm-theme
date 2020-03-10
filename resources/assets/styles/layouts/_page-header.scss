@@ -59,7 +59,7 @@
     }
 
     .page-header {
-      background-image: linear-gradient(to bottom right, var(--gradient-one), var(--gradient-two));
+      background-image: linear-gradient(to bottom right, theme-color("gradient-one"), theme-color("gradient-two"));
       padding: 1rem;
       display: flex;
       align-items: center;

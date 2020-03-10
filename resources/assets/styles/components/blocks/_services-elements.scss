@@ -9,53 +9,53 @@ h3 {
   section.block-services.style-2 & {
     font-size: 1.2rem;
     // text-transform: uppercase;
-    // color: var(--primary);
+    // color: theme-color("primary");
     margin-bottom: 0.3em;
     margin-top: 0;
     font-weight: 500;
 
     a {
-      color: var(--primary);
+      color: theme-color("primary");
     }
   }
 
   section.block-services .card.color-primary & {
-    color: var(--primary);
+    color: theme-color("primary");
 
     a {
-      color: var(--primary) !important;
+      color: theme-color("primary") !important;
     }
   }
 
   section.block-services .card.color-secondary & {
-    color: var(--secondary);
+    color: theme-color("secondary");
 
     a {
-      color: var(--secondary) !important;
+      color: theme-color("secondary") !important;
     }
   }
 
   section.block-services .card.color-info & {
-    color: var(--info);
+    color: theme-color("info");
 
     a {
-      color: var(--info) !important;
+      color: theme-color("info") !important;
     }
   }
 
   section.block-services .card.color-background & {
-    color: var(--background);
+    color: theme-color("background");
 
     a {
-      color: var(--background) !important;
+      color: theme-color("background") !important;
     }
   }
 
   section.block-services .card.color-text & {
-    color: var(--text);
+    color: theme-color("text");
 
     a {
-      color: var(--text) !important;
+      color: theme-color("text") !important;
     }
   }
 }
@@ -68,38 +68,38 @@ svg {
 svg,
 svg * {
   section.block-services .card & {
-    color: var(--black) !important;
+    color: theme-color("black") !important;
     fill: transparent !important;
   }
 
   section.block-services:not(.style-2):not(.style-1) & {
-    color: var(--info) !important;
-    fill: var(--info) !important;
+    color: theme-color("info") !important;
+    fill: theme-color("info") !important;
   }
 
   section.block-services .card.color-primary & {
-    color: var(--primary) !important;
-    fill: var(--primary) !important;
+    color: theme-color("primary") !important;
+    fill: theme-color("primary") !important;
   }
 
   section.block-services .card.color-secondary & {
-    color: var(--secondary) !important;
-    fill: var(--secondary) !important;
+    color: theme-color("secondary") !important;
+    fill: theme-color("secondary") !important;
   }
 
   section.block-services .card.color-info & {
-    color: var(--info) !important;
-    fill: var(--info) !important;
+    color: theme-color("info") !important;
+    fill: theme-color("info") !important;
   }
 
   section.block-services .card.color-background & {
-    color: var(--background) !important;
-    fill: var(--background) !important;
+    color: theme-color("background") !important;
+    fill: theme-color("background") !important;
   }
 
   section.block-services .card.color-text & {
-    color: var(--text) !important;
-    fill: var(--text) !important;
+    color: theme-color("text") !important;
+    fill: theme-color("text") !important;
   }
 
   section.block-services .card.color-custom & {
