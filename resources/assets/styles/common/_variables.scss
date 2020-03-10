@@ -1,11 +1,13 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
-@import "common/theme-styles";
+//@import "common/theme-styles";
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400,400i,900,900i&display=swap");
 
 $jumbotron-padding: 12rem;
 $jumbotron-bg: transparent;
-$font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
 $font-family-condensed: "Roboto Condensed", $font-family-sans-serif;
 $spacer: 10px;
 

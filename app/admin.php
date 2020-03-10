@@ -49,6 +49,7 @@ add_action('acf/save_post', function() {
     ob_start();
     require($ss_dir . '/assets/styles/theme-styles.php');
     $css = ob_get_clean();
+    file_put_contents($ss_dir . '/theme-vars.css', $css, LOCK_EX);
     file_put_contents($ss_dir . '/assets/styles/common/_theme-styles.scss', $css, LOCK_EX);
 }, 20);
 

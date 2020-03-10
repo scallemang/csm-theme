@@ -21,13 +21,13 @@
 form.wpforms-form {
   // input,
   // textarea {
-  //   background-color: theme-color("background") !important;
-  //   border-color: theme-color("background") !important;
+  //   background-color: var(--background) !important;
+  //   border-color: var(--background) !important;
   // }
 
   // label,
   // .wpforms-required-label {
-  //   color: theme-color("secondary") !important;
+  //   color: var(--secondary) !important;
   // }
 
   .wpforms-submit-container {

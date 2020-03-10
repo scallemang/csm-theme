@@ -5,14 +5,14 @@ aside.sidebar {
 
   .widget_media_image img {
     border-radius: $border-radius;
-    border: 8px solid theme-color("primary");
+    border: 8px solid var(--primary);
   }
 
   .widget_newsletter,
   .widget_text:not(.widget_custom_html) {
     padding: 1em;
     border-radius: $border-radius;
-    background-color: theme-color("background");
+    background-color: var(--background);
     margin-bottom: 1em;
     font-size: 1.2em;
 
@@ -20,11 +20,11 @@ aside.sidebar {
       font-weight: 100;
       // text-transform: uppercase;
       display: block;
-      color: theme-color("text");
+      color: var(--text);
 
       strong {
         font-weight: 700;
-        color: theme-color("info");
+        color: var(--info);
       }
     }
   }
@@ -37,8 +37,8 @@ aside.sidebar {
     @include btn-extras;
 
     &:hover {
-      background-color: theme-color("primary");
-      border-color: theme-color("primary");
+      background-color: var(--primary);
+      border-color: var(--primary);
     }
   }
 
