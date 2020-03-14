@@ -3,6 +3,22 @@
     "title": "Options: Footer",
     "fields": [
         {
+            "key": "field_5e6cf57fa933c",
+            "label": "Logo Link",
+            "name": "footer__logo_link",
+            "type": "url",
+            "instructions": "If you have included a footer image, you can use this to give it a link.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5d7115e72777c",
             "label": "Background",
             "name": "footer__background",
@@ -77,5 +93,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1567692310
+    "modified": 1584199097
 }

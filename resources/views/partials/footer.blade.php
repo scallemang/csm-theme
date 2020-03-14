@@ -6,6 +6,7 @@
   $lightdark = get_field('footer__lightdark_lightdark__picker', 'option');
   $background = App\return_background_from_type( get_field('footer__background_background_picker', 'option'), array('prefix' => 'footer__background_', 'option'=>true) );
   $logo = $lightdark == 'light' ? App\return_logo('light') : App\return_logo();
+  $logoLink = get_field( 'footer__logo_link', 'option' );
   $menu = get_field('footer__menu', 'option');
   $googleLink = get_field( 'business__map_link', 'option');
 @endphp
@@ -16,12 +17,13 @@
   @if( $background['type'] == 'color--custom' ) style="background-color: {{ $background['value'] }};" @endif>
   <div class="container-fluid">
     <div class="row-footer">
-      @if( $logo )
+      
         <div class="col-footer text-lg-center">
-          <img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="img-fluid footer__logo mb-3">
-          {!! App\social_list() !!}
+          @if( $logo )@if( $logoLink )<a href="{{ $logoLink }}">@endif<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="img-fluid footer__logo mb-3">@if( $logoLink )</a>@endif @endif
+          @if( !get_field('options__social_media_show_hide', 'option')['social_media__disable_footer'] )
+            {!! App\social_list() !!}
+          @endif
         </div>
-      @endif
 
       @if( $menu )
         <div class="col-footer">

@@ -5,6 +5,10 @@ main.main section {
     margin-bottom: 30px;
   }
 
+  img {
+    max-width: 100%;
+  }
+
   blockquote {
     background-color: theme-color("background");
     padding: 2rem;

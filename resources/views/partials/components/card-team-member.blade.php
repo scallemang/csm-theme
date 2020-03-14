@@ -20,6 +20,8 @@
             @if( $card['links']['twitter'] )<a href="{{ $card['links']['twitter'] }}"><i class="fab fa-twitter"></i></a>@endif
             @if( $card['links']['facebook'] )<a href="{{ $card['links']['facebook'] }}"><i class="fab fa-facebook"></i></a>@endif
             @if( $card['links']['instagram'] )<a href="{{ $card['links']['instagram'] }}"><i class="fab fa-instagram"></i></a>@endif
+            @if( $card['links']['youtube'] )<a href="{{ $card['links']['youtube'] }}"><i class="fab fa-youtube"></i></a>@endif
+            @if( $card['links']['pinterest'] )<a href="{{ $card['links']['pinterest'] }}"><i class="fab fa-pinterest"></i></a>@endif
             @if( $card['links']['website'] )<a href="{{ $card['links']['website'] }}"><i class="fas fa-link"></i></a>@endif
             @if( $card['bio']['short'] )<p>{!! $card['bio']['short'] !!}</p>@endif
             @if( $card['button'] )@include('partials/components/button', ['button' => $card['button']])@endif

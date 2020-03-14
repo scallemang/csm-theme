@@ -91,9 +91,11 @@ header {
 
         &.btn-wrapper {
           margin-top: 0.8em;
+          margin-bottom: 0.8em;
 
           @include media-breakpoint-up(md) {
             margin-top: 0;
+            margin-bottom: 0;
           }
         }
       }

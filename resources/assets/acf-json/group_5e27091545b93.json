@@ -181,9 +181,41 @@
                     "placeholder": ""
                 },
                 {
+                    "key": "field_5e6d04f858bcc",
+                    "label": "YouTube",
+                    "name": "team__youtube",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
                     "key": "field_5e2709a5789dc",
                     "label": "Website",
                     "name": "team__website",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e6d05105f492",
+                    "label": "Pinterest",
+                    "name": "team__pinterest",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
@@ -271,5 +303,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1580743813
+    "modified": 1584203036
 }

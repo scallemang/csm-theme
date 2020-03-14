@@ -8,7 +8,9 @@
 <header class="banner">
   <section class="header-secondary d-md-flex {{ $background['class'] }}" @if( 'color--custom' == $background['type'])style="background-color:{{ $background['value'] }}; color: white;"@endif>
     <div class="container d-flex align-items-center flex-column flex-md-row">
-      {!! App\social_list() !!}
+      @if( !get_field('options__social_media_show_hide', 'option')['social_media__disable_header'] )
+        {!! App\social_list() !!}
+      @endif
       <div class="header-secondary__right d-md-flex ml-md-auto">
         @if( $phone )<div class="phone__wrapper d-flex align-items-center"><i class="fas fa-phone-square-alt"></i><span class="d-flex flex-column">{{--<span>Contact</span>--}}<a href="tel:{{ App\strip_phone( $phone ) }}" @if( 'color--custom' == $background['type'])style="color: white;"@endif>{{ $phone }}</a></span></div>@endif
         @if( $email )<div class="email__wrapper d-flex align-items-center"><i class="fas fa-envelope"></i><span class="d-flex flex-column">{{--<span>Email</span>--}}<a href="mailto:{{ $email }}" @if( 'color--custom' == $background['type'])style="color: white;"@endif>{{ $email }}</a></span></div>@endif
