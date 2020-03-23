@@ -1,7 +1,7 @@
 body.single-post,
 body.sidebar-primary {
   // Google Map
-  iframe {
+  iframe[src*="google.com/maps"] {
     max-width: 100%;
 
     @include media-breakpoint-up(md) {
@@ -20,5 +20,14 @@ body.sidebar-primary {
   article img {
     max-width: 100%;
     height: auto;
+  }
+}
+
+body.single-team-member {
+  article.team-member {
+    h2,
+    .h2 {
+      font-size: 1.5rem;
+    }
   }
 }

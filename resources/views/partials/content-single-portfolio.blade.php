@@ -23,13 +23,13 @@ $portfolio['links'] = array(
     <h1 class="entry-title my-1">{!! get_the_title() !!}</h1>
 
     <div class="portfolio__links mt-2 mb-4">
-      @if( $portfolio['links']['twitter'] )<a href="{{ $portfolio['links']['twitter'] }}"><i class="fab fa-twitter"></i></a>@endif
-      @if( $portfolio['links']['facebook'] )<a href="{{ $portfolio['links']['facebook'] }}"><i class="fab fa-facebook"></i></a>@endif
-      @if( $portfolio['links']['instagram'] )<a href="{{ $portfolio['links']['instagram'] }}"><i class="fab fa-instagram"></i></a>@endif
-      @if( $portfolio['links']['youtube'] )<a href="{{ $portfolio['links']['youtube'] }}"><i class="fab fa-youtube"></i></a>@endif
-      @if( $portfolio['links']['pinterest'] )<a href="{{ $portfolio['links']['pinterest'] }}"><i class="fab fa-pinterest"></i></a>@endif
-      @if( $portfolio['links']['houzz'] )<a href="{{ $portfolio['links']['houzz'] }}"><i class="fab fa-houzz"></i></a>@endif
-      @if( $portfolio['links']['website'] )<a href="{{ $portfolio['links']['website'] }}"><i class="fas fa-link"></i></a>@endif
+      @if( $portfolio['links']['twitter'] )<a href="{{ $portfolio['links']['twitter'] }}" target="_blank"><i class="fab fa-twitter"></i></a>@endif
+      @if( $portfolio['links']['facebook'] )<a href="{{ $portfolio['links']['facebook'] }}" target="_blank"><i class="fab fa-facebook"></i></a>@endif
+      @if( $portfolio['links']['instagram'] )<a href="{{ $portfolio['links']['instagram'] }}" target="_blank"><i class="fab fa-instagram"></i></a>@endif
+      @if( $portfolio['links']['youtube'] )<a href="{{ $portfolio['links']['youtube'] }}" target="_blank"><i class="fab fa-youtube"></i></a>@endif
+      @if( $portfolio['links']['pinterest'] )<a href="{{ $portfolio['links']['pinterest'] }}" target="_blank"><i class="fab fa-pinterest"></i></a>@endif
+      @if( $portfolio['links']['houzz'] )<a href="{{ $portfolio['links']['houzz'] }}" target="_blank"><i class="fab fa-houzz"></i></a>@endif
+      @if( $portfolio['links']['website'] )<a href="{{ $portfolio['links']['website'] }}" target="_blank"><i class="fas fa-link"></i></a>@endif
     </div>
 
     @if( get_field('portfolio__description') )

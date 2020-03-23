@@ -294,6 +294,88 @@
             ]
         },
         {
+            "key": "field_5e7913435c23d",
+            "label": "Team Member Options",
+            "name": "dynamic__team_member_options",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e270b6f6aa10",
+                        "operator": "==",
+                        "value": "team-member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e7913435c23e",
+                    "label": "Show bio?",
+                    "name": "portfolio__show_bio",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5e7913435c23f",
+                    "label": "Show social links?",
+                    "name": "portfolio__show_social",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5e7913435c240",
+                    "label": "Show button?",
+                    "name": "portfolio__show_button",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
+        },
+        {
             "key": "field_5e3d90ec9c9f3",
             "label": "Has button?",
             "name": "dynamic__has_button",
@@ -462,5 +544,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1581784986
+    "modified": 1584993174
 }
