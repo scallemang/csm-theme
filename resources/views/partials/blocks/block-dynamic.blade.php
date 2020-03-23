@@ -37,9 +37,9 @@
   $cardArgs['show_portfolio_description'] = ($type == 'portfolio' && get_sub_field('dynamic__portfolio_options')['portfolio__show_description'] );
   $cardArgs['link_portfolio'] = ($type == 'portfolio' && get_sub_field('dynamic__portfolio_options')['portfolio__link_item'] );
 
-  $cardArgs['show_team_bio'] = ($type == 'portfolio' && get_sub_field('dynamic__team_member_options')['portfolio__show_bio'] );
-  $cardArgs['show_team_social'] = ($type == 'portfolio' && get_sub_field('dynamic__team_member_options')['portfolio__show_social'] );
-  $cardArgs['show_team_button'] = ($type == 'portfolio' && get_sub_field('dynamic__team_member_options')['portfolio__show_button'] );
+  $cardArgs['show_team_bio'] = ($type == 'team-member' && get_sub_field('dynamic__team_member_options')['portfolio__show_bio'] );
+  $cardArgs['show_team_social'] = ($type == 'team-member' && get_sub_field('dynamic__team_member_options')['portfolio__show_social'] );
+  $cardArgs['show_team_button'] = ($type == 'team-member' && get_sub_field('dynamic__team_member_options')['portfolio__show_button'] );
 
   $args = array(
     'post_type' => $type,

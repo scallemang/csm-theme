@@ -496,26 +496,34 @@ function return_card( $type = null, $args = array() )
         $image = wp_get_attachment_image_src( $attachment_id, $size );
 
         $card['image'] = array(
-            'url' => $image ? $image[0] : get_field('team__photo')['sizes']['thumbnail'],
+            'url' => $image 
+                ? $image[0] 
+                : get_field('team__photo')['sizes']['thumbnail'],
         );
         $card['jobtitle'] = get_field('team__title');
         $card['permalink'] = get_the_permalink();
         
         if( get_field('team__button') ) {
-            $card['button'] = $args['show_team_button'] ? return_button( get_field( 'team__button' ) ) : null;
+            $card['button'] = $args['show_team_button'] 
+            ? return_button( get_field( 'team__button' ) ) 
+            : null;
         }
 
-        $card['bio'] = $args['show_team_bio'] ? array(
+        $card['bio'] = $args['show_team_bio'] 
+            ? array(
                 'short' => get_field('team__short_bio'),
                 'long' => get_field('team__full_bio'),
-            ) : null;
-        $card['links'] = $args['show_team_social'] ? array(
+            ) 
+            : null;
+        $card['links'] = $args['show_team_social'] 
+            ? array(
                 'email' => get_field('team__links')['team__email'],
                 'twitter' => get_field('team__links')['team__twitter'],
                 'facebook' => get_field('team__links')['team__facebook'],
                 'instagram' => get_field('team__links')['team__instagram'],
                 'website' => get_field('team__links')['team__website'],
-            ) : null;
+            ) 
+            : null;
         $card['testimonial__full'] = $args['show_full_testimonial'] ? get_field('testimonial__message') : null;
 
     } elseif( 'testimonial' == $type ) {
