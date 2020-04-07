@@ -562,6 +562,7 @@ function social_list()
     $linkedin = get_field('social__linkedin', 'option');
     $pinterest = get_field('social__pinterest', 'option');
     $yelp = get_field('social__yelp', 'option');
+    $houzz = get_field('social__houzz', 'option');
     $html = '';
     
     if( $facebook || $twitter || $instagram || $youtube || $linkedin ) {
@@ -573,6 +574,7 @@ function social_list()
         if( $linkedin): $html.= '<li><a href="' . $linkedin . '" target=_"blank"><i class="fab fa-linkedin"></i></a></li>'; endif;
         if( $pinterest): $html.= '<li><a href="' . $pinterest . '" target=_"blank"><i class="fab fa-pinterest"></i></a></li>'; endif;
         if( $yelp): $html.= '<li><a href="' . $yelp . '" target=_"blank"><i class="fab fa-yelp"></i></a></li>'; endif;
+        if( $houzz): $html.= '<li><a href="' . $houzz . '" target=_"blank"><i class="fab fa-houzz"></i></a></li>'; endif;
         $html .= '</ul>';
     }
     return $html;

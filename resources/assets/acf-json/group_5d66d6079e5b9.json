@@ -113,6 +113,22 @@
             },
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_5e8ce5e1fc47b",
+            "label": "Houzz",
+            "name": "social__houzz",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -132,5 +148,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1575575092
+    "modified": 1586292205
 }
