@@ -36,6 +36,10 @@ header {
     }
   }
 
+  img {
+    max-width: 100%;
+  }
+
   .header-secondary {
     @include media-breakpoint-up(md) {
       display: flex;
