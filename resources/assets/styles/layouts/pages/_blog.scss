@@ -7,7 +7,7 @@ body.template-blog {
     letter-spacing: 0.5px;
 
     a {
-      color: theme-color("secondary");
+      color: var(--secondary);
     }
   }
 }

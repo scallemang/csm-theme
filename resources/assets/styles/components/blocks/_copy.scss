@@ -5,7 +5,7 @@ section.block-copy {
       padding-left: 0;
 
       li {
-        color: theme-color("secondary");
+        color: var(--secondary);
         // &::before {
         //   content: "•";
         // }

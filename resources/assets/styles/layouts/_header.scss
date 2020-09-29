@@ -7,13 +7,13 @@
   @extend .nav-link;
 
   font-family: $font-family-condensed;
-  color: theme-color("primary");
+  color: var(--primary);
   font-size: 1.3em;
   font-weight: 500;
 
   &.dropdown-item {
     font-size: 1rem;
-    color: theme-color("secondary");
+    color: var(--secondary);
 
     &.active {
       color: white;
@@ -121,7 +121,7 @@ header {
     &.bg-none {
       i,
       svg {
-        color: theme-color("text");
+        color: var(--text);
       }
     }
   }
@@ -155,13 +155,13 @@ header {
 
       &.active {
         > a {
-          background-color: theme-color("primary");
+          background-color: var(--primary);
           color: #fff;
         }
       }
 
       a:hover {
-        background-color: darken(theme-color("primary"), 10%);
+        background-color: var(--primary-dark);
         color: #fff;
         text-decoration: none;
       }
@@ -179,7 +179,7 @@ header {
       }
 
       &.active > a:hover {
-        background-color: darken(theme-color("primary"), 10%);
+        background-color: var(--primary-dark);
         text-decoration: none;
       }
     }
@@ -187,13 +187,13 @@ header {
 }
 
 .dropdown-menu {
-  background-color: theme-color("background");
+  background-color: var(--background);
 }
 
 .dropdown-toggle {
   &::after {
-    border-top-color: theme-color("secondary");
-    border-bottom-color: theme-color("secondary");
+    border-top-color: var(--secondary);
+    border-bottom-color: var(--secondary);
   }
 
   &:hover,

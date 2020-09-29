@@ -307,7 +307,8 @@
             },
             "choices": {
                 "style-1": "Style 1",
-                "style-2": "Style 2"
+                "style-2": "Style 2",
+                "style-3": "Style 3"
             },
             "default_value": [],
             "allow_null": 0,
@@ -382,5 +383,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1578941797
+    "modified": 1601403858
 }

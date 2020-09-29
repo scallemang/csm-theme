@@ -8,4 +8,5 @@ yarn-error.log
 /vendor
 resources/assets/config-local.json
 resources/assets/styles/common/_theme-styles.scss
+resources/assets/styles/common/theme-styles.css
 .DS_Store

@@ -1,6 +1,6 @@
 .widget_breadcrumb_navxt,
 .breadcrumbs.breadcrumbs-navxt {
-  color: lighten(theme-color("text"), 12%);
+  color: var(--text-light);
   font-size: 0.75em;
   font-weight: bold;
   letter-spacing: 0.3px;

@@ -7,56 +7,56 @@ section.block-dynamic {
     height: 100%;
 
     &.color-primary {
-      border-color: theme-color("primary");
+      border-color: var(--primary);
 
       .post-title,
       .lead,
       .lead * {
-        color: theme-color("primary");
+        color: var(--primary);
       }
     }
 
     &.color-secondary {
-      border-color: theme-color("secondary");
+      border-color: var(--secondary);
 
       .post-title,
       .lead,
       .lead p,
       a.link {
-        color: theme-color("secondary");
+        color: var(--secondary);
       }
     }
 
     &.color-info {
-      border-color: theme-color("info");
+      border-color: var(--info);
 
       .post-title,
       .lead,
       .lead p,
       a.link {
-        color: theme-color("info");
+        color: var(--info);
       }
     }
 
     &.color-background {
-      border-color: theme-color("background");
+      border-color: var(--background);
 
       .post-title,
       .lead,
       .lead p,
       a.link {
-        color: theme-color("background");
+        color: var(--background);
       }
     }
 
     &.color-text {
-      border-color: theme-color("text");
+      border-color: var(--text);
 
       .post-title,
       .lead,
       .lead p,
       a.link {
-        color: theme-color("text");
+        color: var(--text);
       }
     }
   }

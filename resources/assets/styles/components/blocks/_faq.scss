@@ -1,7 +1,7 @@
 section.block-faq {
   .card {
     border-radius: 0;
-    border-color: darken(theme-color("primary"), 10%);
+    border-color: var(--primary-dark);
 
     h3 {
       margin-top: 0;
@@ -18,7 +18,7 @@ section.block-faq {
     }
 
     .card-header {
-      background-color: theme-color("primary");
+      background-color: var(--primary);
       border-radius: 0;
 
       @include transition;
@@ -28,7 +28,7 @@ section.block-faq {
       }
 
       &:hover {
-        background-color: darken(theme-color("primary"), 10%);
+        background-color: var(--primary-dark);
         cursor: pointer;
 
         .btn-link {
