@@ -5,11 +5,11 @@
   text-transform: uppercase;
 
   &.btn-default {
-    background-color: var(--secondary);
+    background-color: var(--csm_secondary);
     color: white;
 
     &:hover {
-      background-color: var(--secondary-dark);
+      background-color: var(--csm_secondary-dark);
       color: white;
     }
   }

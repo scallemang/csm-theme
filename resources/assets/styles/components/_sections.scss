@@ -10,13 +10,13 @@ main.main section {
   }
 
   blockquote {
-    background-color: var(--background);
+    background-color: var(--csm_background);
     padding: 2rem;
     font-size: 1.4em;
     font-weight: 400;
 
     p {
-      color: var(--info);
+      color: var(--csm_info);
 
       &:last-of-type {
         margin-bottom: 0;
@@ -37,31 +37,31 @@ main.main section {
 
     &.overlay-primary {
       &::before {
-        background-color: rgba(var(--primaryRGB), 0.5);
+        background-color: rgba(var(--csm_primaryRGB), 0.5);
       }
     }
 
     &.overlay-secondary {
       &::before {
-        background-color: rgba(var(--secondaryRGB), 0.5);
+        background-color: rgba(var(--csm_secondaryRGB), 0.5);
       }
     }
 
     &.overlay-info {
       &::before {
-        background-color: rgba(var(--infoRGB), 0.5);
+        background-color: rgba(var(--csm_infoRGB), 0.5);
       }
     }
 
     &.overlay-text {
       &::before {
-        background-color: rgba(var(--textRGB), 0.5);
+        background-color: rgba(var(--csm_textRGB), 0.5);
       }
     }
 
     &.overlay-background {
       &::before {
-        background-color: rgba(var(--backgroundRGB), 0.5);
+        background-color: rgba(var(--csm_backgroundRGB), 0.5);
       }
     }
   }

@@ -1,5 +1,5 @@
 body {
-  background-color: var(--site);
+  background-color: var(--csm_site);
 }
 
 h1,
@@ -48,7 +48,7 @@ h4,
 
 body,
 p {
-  color: var(--text);
+  color: var(--csm_text);
 
   &.xxl {
     font-size: 2em;
@@ -80,7 +80,7 @@ p {
 }
 
 .ig_message p {
-  color: var(--text);
+  color: var(--csm_text);
 
   &.xxl {
     font-size: 2em;
@@ -122,12 +122,25 @@ ul {
 }
 
 .bg-primary {
+  background-color: var(--csm_primary) !important;
+
   a {
     color: white;
   }
 }
 
 .bg-secondary {
+  background-color: var(--csm_secondary) !important;
+
+  h2,
+  a {
+    color: white;
+  }
+}
+
+.bg-info {
+  background-color: var(--csm_info) !important;
+
   h2,
   a {
     color: white;
@@ -142,7 +155,7 @@ ul {
   }
 
   a:not(.btn) {
-    color: var(--info);
+    color: var(--csm_info);
   }
 }
 
@@ -160,7 +173,7 @@ main.main ul:not(.pagination) {
   padding-left: 0;
 
   li {
-    color: var(--primary);
+    color: var(--csm_primary);
     position: relative;
     margin-left: 40px;
     // font-style: italic;
@@ -172,7 +185,7 @@ main.main ul:not(.pagination) {
       line-height: 1em;
       position: absolute;
       margin-left: -30px;
-      color: var(--info);
+      color: var(--csm_info);
     }
 
     // a {
@@ -183,12 +196,12 @@ main.main ul:not(.pagination) {
 
 main.main p a:not(.btn),
 main.main ul li a:not(.btn) {
-  color: var(--secondary);
+  color: var(--csm_secondary);
   font-weight: 900;
   text-decoration: underline;
 
   &:hover {
-    color: var(--primary);
+    color: var(--csm_primary);
   }
 }
 

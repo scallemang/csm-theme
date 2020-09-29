@@ -1,0 +1,86 @@
+
+:root {
+  --csm_site: #ffffff;
+  --csm_primary: #1e73be;
+  --csm_primary-dark: #0459a4;
+  --csm_primaryRGB: 30, 115, 190; 
+  --csm_secondary: #dd3333;
+  --csm_secondaryRGB: 221, 51, 51;
+  --csm_secondary-dark: #c31919;
+  --csm_info: #eeee22;
+  --csm_infoRGB: 238, 238, 34;
+  --csm_text: #212121;
+  --csm_textRGB: 33, 33, 33;
+  --csm_text-light: #3f3f3f;
+  --csm_background: #f0f0f0;
+  --csm_backgroundRGB: 240, 240, 240;
+  --csm_gradient-one: #1e73be;
+  --csm_gradient-two: #dd3333;
+}
+
+h1,
+.h1 {
+  color: #3ba823;
+}
+
+h2,
+.h2 {
+  color: #af368f;
+}
+
+h3,
+.h3 {
+  color: #35ccea;
+}
+
+h4,
+.h4 {
+  color: var(--csm_secondary);
+}
+
+section.block-cta {
+  h2 {
+    &.line-bottom {
+      color: var(--csm_primary);
+      border-bottom: 4px solid var(--csm_primary);
+    }
+  }
+
+  h3 {
+    color: var(--csm_info);
+  }
+}
+
+.icegram.ig_popup,
+.ig_popup.ig_inspire.ig_popup {
+  background: url("/wp-content/uploads/2020/01/rhineland-1024x682.jpg");
+  position: relative;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 0;
+    background-color: rgba(var(--csm_backgroundRGB), 0.8);
+  }
+
+  .ig_headline {
+    color: white;
+  }
+}
+
+input,
+textarea {
+    background-color: #f0f0f0 !important;
+  border-color: #f0f0f0 !important;
+  }
+
+label,
+.wpforms-required-label {
+    color: #212121;
+  }

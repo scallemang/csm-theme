@@ -15,47 +15,47 @@ h3 {
     font-weight: 500;
 
     a {
-      color: var(--primary);
+      color: var(--csm_primary);
     }
   }
 
   section.block-services .card.color-primary & {
-    color: var(--primary);
+    color: var(--csm_primary);
 
     a {
-      color: var(--primary) !important;
+      color: var(--csm_primary) !important;
     }
   }
 
   section.block-services .card.color-secondary & {
-    color: var(--secondary);
+    color: var(--csm_secondary);
 
     a {
-      color: var(--secondary) !important;
+      color: var(--csm_secondary) !important;
     }
   }
 
   section.block-services .card.color-info & {
-    color: var(--info);
+    color: var(--csm_info);
 
     a {
-      color: var(--info) !important;
+      color: var(--csm_info) !important;
     }
   }
 
   section.block-services .card.color-background & {
-    color: var(--background);
+    color: var(--csm_background);
 
     a {
-      color: var(--background) !important;
+      color: var(--csm_background) !important;
     }
   }
 
   section.block-services .card.color-text & {
-    color: var(--text);
+    color: var(--csm_text);
 
     a {
-      color: var(--text) !important;
+      color: var(--csm_text) !important;
     }
   }
 }
@@ -68,38 +68,38 @@ svg {
 svg,
 svg * {
   section.block-services .card & {
-    color: var(--black) !important;
+    color: var(--csm_black) !important;
     fill: transparent !important;
   }
 
   section.block-services:not(.style-2):not(.style-1) & {
-    color: var(--info) !important;
-    fill: var(--info) !important;
+    color: var(--csm_info) !important;
+    fill: var(--csm_info) !important;
   }
 
   section.block-services .card.color-primary & {
-    color: var(--primary) !important;
-    fill: var(--primary) !important;
+    color: var(--csm_primary) !important;
+    fill: var(--csm_primary) !important;
   }
 
   section.block-services .card.color-secondary & {
-    color: var(--secondary) !important;
-    fill: var(--secondary) !important;
+    color: var(--csm_secondary) !important;
+    fill: var(--csm_secondary) !important;
   }
 
   section.block-services .card.color-info & {
-    color: var(--info) !important;
-    fill: var(--info) !important;
+    color: var(--csm_info) !important;
+    fill: var(--csm_info) !important;
   }
 
   section.block-services .card.color-background & {
-    color: var(--background) !important;
-    fill: var(--background) !important;
+    color: var(--csm_background) !important;
+    fill: var(--csm_background) !important;
   }
 
   section.block-services .card.color-text & {
-    color: var(--text) !important;
-    fill: var(--text) !important;
+    color: var(--csm_text) !important;
+    fill: var(--csm_text) !important;
   }
 
   section.block-services .card.color-custom & {

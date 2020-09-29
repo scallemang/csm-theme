@@ -49,7 +49,8 @@ add_action('acf/save_post', function() {
     ob_start();
     require($ss_dir . '/assets/styles/theme-styles.php');
     $css = ob_get_clean();
-    file_put_contents($ss_dir . '/assets/styles/common/theme-styles.css', $css, LOCK_EX);
+    // file_put_contents($ss_dir . '/assets/styles/theme-styles.css', $css, LOCK_EX);
+    file_put_contents($ss_dir . '/theme-style.css', $css, LOCK_EX);
 }, 20);
 
 // Enqueue the script to customize the formats

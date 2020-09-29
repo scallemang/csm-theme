@@ -39,23 +39,23 @@ section.block-services {
         flex: 0 0 calc(100% - 20px);
 
         &.color-primary {
-          border-color: var(--primary);
+          border-color: var(--csm_primary);
         }
 
         &.color-secondary {
-          border-color: var(--secondary);
+          border-color: var(--csm_secondary);
         }
 
         &.color-info {
-          border-color: var(--info);
+          border-color: var(--csm_info);
         }
 
         &.color-background {
-          border-color: var(--background);
+          border-color: var(--csm_background);
         }
 
         &.color-text {
-          border-color: var(--text);
+          border-color: var(--csm_text);
         }
       }
 
@@ -156,7 +156,7 @@ section.block-services {
 
           &.line-bottom {
             margin-bottom: 0.5rem;
-            border-bottom: 1px solid var(--secondary);
+            border-bottom: 1px solid var(--csm_secondary);
           }
         }
       }

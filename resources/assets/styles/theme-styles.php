@@ -45,26 +45,26 @@
 ?>
 
 :root {
-  --site: <?= strtolower( $csm_site );?>;
-  --primary: <?= strtolower( $csm_primary );?>;
-  --primary-dark: <?= strtolower( $csm_primaryDark ); ?>;
-  --primaryRGB: <?= strtolower( $csm_primaryRGB ); ?>; 
-  --secondary: <?= strtolower( $csm_secondary );?>;
-  --secondaryRGB: <?= strtolower( $csm_secondaryRGB ); ?>;
-  --secondary-dark: <?= strtolower( $csm_secondaryDark ); ?>;
-  --info: <?= strtolower( $csm_info );?>;
-  --infoRGB: <?= strtolower( $csm_infoRGB ); ?>;
-  --text: <?= strtolower( $csm_text ) ;?>;
-  --textRGB: <?= strtolower( $csm_textRGB ); ?>;
-  --text-light: <?= strtolower( $csm_textLight);?>;
-  --background: <?= strtolower( $csm_background ) ;?>;
-  --backgroundRGB: <?= strtolower( $csm_backgroundRGB ); ?>;
+  --csm_site: <?= strtolower( $csm_site );?>;
+  --csm_primary: <?= strtolower( $csm_primary );?>;
+  --csm_primary-dark: <?= strtolower( $csm_primaryDark ); ?>;
+  --csm_primaryRGB: <?= strtolower( $csm_primaryRGB ); ?>; 
+  --csm_secondary: <?= strtolower( $csm_secondary );?>;
+  --csm_secondaryRGB: <?= strtolower( $csm_secondaryRGB ); ?>;
+  --csm_secondary-dark: <?= strtolower( $csm_secondaryDark ); ?>;
+  --csm_info: <?= strtolower( $csm_info );?>;
+  --csm_infoRGB: <?= strtolower( $csm_infoRGB ); ?>;
+  --csm_text: <?= strtolower( $csm_text ) ;?>;
+  --csm_textRGB: <?= strtolower( $csm_textRGB ); ?>;
+  --csm_text-light: <?= strtolower( $csm_textLight);?>;
+  --csm_background: <?= strtolower( $csm_background ) ;?>;
+  --csm_backgroundRGB: <?= strtolower( $csm_backgroundRGB ); ?>;
 <?php if( get_field('colour__gradient', 'option')['colour__gradient_one'] && get_field('colour__gradient', 'option')['colour__gradient_two'] ): ?>
-  --gradient-one: <?= strtolower( get_field('colour__gradient', 'option')['colour__gradient_one'] ) ;?>;
-  --gradient-two: <?= strtolower( get_field('colour__gradient', 'option')['colour__gradient_two'] ) ;?>;
+  --csm_gradient-one: <?= strtolower( get_field('colour__gradient', 'option')['colour__gradient_one'] ) ;?>;
+  --csm_gradient-two: <?= strtolower( get_field('colour__gradient', 'option')['colour__gradient_two'] ) ;?>;
 <?php else: ?>
-  --gradient-one: <?= strtolower( get_field('colour__primary', 'option') ); ?>;
-  --gradient-two: <?= strtolower( get_field('colour__secondary', 'option') ); ?>;
+  --csm_gradient-one: <?= strtolower( get_field('colour__primary', 'option') ); ?>;
+  --csm_gradient-two: <?= strtolower( get_field('colour__secondary', 'option') ); ?>;
 <?php endif; ?>
 }
 
@@ -73,7 +73,7 @@ h1,
 <?php if( get_field('colour__typography', 'option')['colour__h1'] ): ?>
   color: <?= strtolower( get_field('colour__typography', 'option')['colour__h1'] ); ?>;
 <?php else: ?>
-  color: var(--primary);
+  color: var(--csm_primary);
 <?php endif; ?>
 }
 
@@ -82,7 +82,7 @@ h2,
 <?php if( get_field('colour__typography', 'option')['colour__h2'] ): ?>
   color: <?= strtolower( get_field('colour__typography', 'option')['colour__h2'] ); ?>;
 <?php else: ?>
-  color: var(--secondary);
+  color: var(--csm_secondary);
 <?php endif; ?>
 }
 
@@ -91,7 +91,7 @@ h3,
 <?php if( get_field('colour__typography', 'option')['colour__h3'] ): ?>
   color: <?= strtolower( get_field('colour__typography', 'option')['colour__h3'] ); ?>;
 <?php else: ?>
-  color: var(--info);
+  color: var(--csm_info);
 <?php endif; ?>
 }
 
@@ -100,7 +100,7 @@ h4,
 <?php if( get_field('colour__typography', 'option')['colour__h4'] ): ?>
   color: <?= strtolower( get_field('colour__typography', 'option')['colour__h4'] ); ?>;
 <?php else: ?>
-  color: var(--secondary);
+  color: var(--csm_secondary);
 <?php endif; ?>
 }
 
@@ -111,8 +111,8 @@ section.block-cta {
       color: <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>;
       border-bottom: 4px solid <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>;
 <?php else: ?>
-      color: var(--primary);
-      border-bottom: 4px solid var(--primary);
+      color: var(--csm_primary);
+      border-bottom: 4px solid var(--csm_primary);
 <?php endif; ?>
     }
   }
@@ -121,7 +121,7 @@ section.block-cta {
 <?php if( get_field('colour__typography', 'option')['colour__cta'] ): ?>
     color: <?= strtolower( get_field('colour__typography', 'option')['colour__cta'] ); ?>;
 <?php else: ?>
-    color: var(--info);
+    color: var(--csm_info);
 <?php endif; ?>
   }
 }
@@ -142,14 +142,14 @@ section.block-cta {
     left: 0;
     display: block;
     z-index: 0;
-    background-color: rgba(var(--backgroundRGB), 0.8);
+    background-color: rgba(var(--csm_backgroundRGB), 0.8);
   }
 
   .ig_headline {
     color: white;
   }
 <?php else: ?>
-  background-color: var(--primary) !important;
+  background-color: var(--csm_primary) !important;
   color: white;
 
   .ig_headline {
