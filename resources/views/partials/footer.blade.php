@@ -18,7 +18,7 @@
   <div class="container-fluid">
     <div class="row-footer">
       
-        <div class="col-footer text-lg-center">
+        <div class="col-footer text-center">
           @if( $logo )@if( $logoLink )<a href="{{ $logoLink }}">@endif<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] }}" class="img-fluid footer__logo mb-3">@if( $logoLink )</a>@endif @endif
           @if( !get_field('options__social_media_show_hide', 'option')['social_media__disable_footer'] )
             {!! App\social_list() !!}

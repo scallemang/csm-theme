@@ -15,11 +15,11 @@
     @endif
     <div class="wrap @if (App\display_sidebar()) container @endif" role="document">
       <div class="content @if (App\display_sidebar()) row @endif">
-        <main class="main @if (App\display_sidebar())col-md-8 col-lg-9 pb-4 @endif">
+        <main class="main @if (App\display_sidebar())col-md-8 col-lg-9 pb-4 mt-5 @endif">
           @yield('content')
         </main>
         @if (App\display_sidebar())
-          <aside class="sidebar col-md-4 col-lg-3 mt-5 mb-4 pt-lg-5">
+          <aside class="sidebar col-md-4 col-lg-3 mt-5 mb-4">
             @include('partials.sidebar')
           </aside>
         @endif

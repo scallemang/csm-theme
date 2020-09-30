@@ -38,7 +38,9 @@
             $buttonGroup = get_sub_field( 'hero__button' ); 
             $button = App\return_button($buttonGroup);
           @endphp
-          @include('partials.components.button', ['button' => $button])
+          <div class="mt-4">
+            @include('partials.components.button', ['button' => $button])
+          </div>
         @endif
       </div>
     </div>
