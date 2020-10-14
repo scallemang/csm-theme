@@ -3,6 +3,7 @@
   $num = get_sub_field('dynamic__number');
   $orderby = get_sub_field('dynamic__orderby');
   $cardColor = get_sub_field('colour_picker');
+  $customColor = get_sub_field( 'colour_picker__custom' );
   $hasButton = get_sub_field('dynamic__has_button');
   $background = App\return_background_from_type( get_sub_field('background_picker'), array('block'=>true) );
   $postCategories = ( $type == 'post' && get_sub_field('dynamic__post_options')['posts__category_picker'] ) ? get_sub_field('dynamic__post_options')['posts__category_picker'] : null;
@@ -55,7 +56,9 @@
 @endphp
  
 <section 
-  class="block-dynamic @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif @if( $align )text-{{ $align }} @endif{{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
+  class="block-dynamic 
+    @if( !$width )dynamic--rounded @else dynamic--full @endif
+    @if( 'bg-none' == $background['class'] )my-5 @else py-5 @endif @if( $align )text-{{ $align }} @endif{{ $background['class'] }} @if( $background['overlay'] )overlay-{{ $background['overlay']['color'] }}@endif" 
   @if( $background['type'] == 'image' ) style="background-image: url('{{ $background['value']['url'] }}'); background-size: cover; background-position: {{ $background['position'] }};" @endif
   @if( $background['type'] == 'color--custom' )style="background-color:{{ $background['value'] }}"@endif
 > 
@@ -65,7 +68,7 @@
         @while ( $dynamic_query->have_posts() )
           @php $dynamic_query->the_post(); @endphp
           @php $card = App\return_card($type, $cardArgs); @endphp
-          @include($template, ['card' => $card, 'color' => $cardColor, 'cols' => $colClass])
+          @include($template, ['card' => $card, 'color' => $cardColor, 'custom' => $customColor, 'cols' => $colClass])
         @endwhile
       </div>
       @if( $hasButton )

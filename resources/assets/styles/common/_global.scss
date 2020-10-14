@@ -121,6 +121,10 @@ ul {
   }
 }
 
+.main a {
+  color: var(--csm_primary);
+}
+
 .bg-primary {
   background-color: var(--csm_primary) !important;
 

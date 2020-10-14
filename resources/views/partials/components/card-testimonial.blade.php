@@ -1,7 +1,7 @@
 @if( $card )
 
 <div class="{{ $cols }} my-3">
-  <div class="card color-{{ $color }}">
+  <div class="card color-{{ $color }}" @if( 'custom' == $color )style="border-color:{{ $custom }} !important;" @endif>
       <div class="card-body">
           <div class="card-header__wrapper">
               @if( $card['testimonial__excerpt'] )
@@ -11,7 +11,7 @@
                 <div class="full mb-3">{!! $card['testimonial__full'] !!}</div>
               @endif
               @if( $card['title'] )
-                <p class="h6">{!! $card['title'] !!}</p>
+                <p class="h6" @if( 'custom' == $color )style="color:{{ $custom }} !important;" @endif>{!! $card['title'] !!}</p>
               @endif
               @if( $card['testimonial__image'] )
                 <div class="text-center">

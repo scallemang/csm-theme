@@ -29,6 +29,7 @@ aside.sidebar {
     }
   }
 
+  .widget_text:not(.widget_custom_html) a,
   .ig_shortcode_container.trigger_onclick {
     @extend .btn;
     @extend .btn-lg;

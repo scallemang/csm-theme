@@ -11,7 +11,7 @@
         <div class="card-body">
             <div class="card-header__wrapper">
                 @if( $card['title'] )
-                  <h3 class="mt-0 post-title">@if( $card['link'] )<a href="{{ $card['link'] }}" class="link">@endif{!! $card['title'] !!}@if( $card['link'] )</a>@endif</h3>
+                  <h3 class="mt-0 post-title" @if( 'custom' == $color )style="color:{{ $custom }} !important;" @endif>@if( $card['link'] )<a href="{{ $card['link'] }}" class="link" @if( 'custom' == $color )style="color:{{ $custom }} !important;" @endif>@endif{!! $card['title'] !!}@if( $card['link'] )</a>@endif</h3>
                 @endif
                 @if( $card['description'] )
                   <div class="s">{!! $card['descridivtion'] !!}</div>

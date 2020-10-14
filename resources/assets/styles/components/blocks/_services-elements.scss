@@ -14,47 +14,53 @@ h3 {
     margin-top: 0;
     font-weight: 500;
 
-    a {
+    a,
+    b {
       color: var(--csm_primary);
     }
   }
 
   section.block-services .card.color-primary & {
-    color: var(--csm_primary);
+    color: var(--csm_primary) !important;
 
-    a {
+    a,
+    b {
       color: var(--csm_primary) !important;
     }
   }
 
   section.block-services .card.color-secondary & {
-    color: var(--csm_secondary);
+    color: var(--csm_secondary) !important;
 
-    a {
+    a,
+    b {
       color: var(--csm_secondary) !important;
     }
   }
 
   section.block-services .card.color-info & {
-    color: var(--csm_info);
+    color: var(--csm_info) !important;
 
-    a {
+    a,
+    b {
       color: var(--csm_info) !important;
     }
   }
 
   section.block-services .card.color-background & {
-    color: var(--csm_background);
+    color: var(--csm_background) !important;
 
-    a {
+    a,
+    b {
       color: var(--csm_background) !important;
     }
   }
 
   section.block-services .card.color-text & {
-    color: var(--csm_text);
+    color: var(--csm_text) !important;
 
-    a {
+    a,
+    b {
       color: var(--csm_text) !important;
     }
   }

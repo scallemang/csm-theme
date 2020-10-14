@@ -1,7 +1,8 @@
 <!doctype html>
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
-  <body @php body_class() @endphp>
+  @if( get_field('header_secondary__sticky', 'option') )@php $stickynav = 'secondary--sticky';@endphp @else @php $stickynav = '';@endphp @endif
+  <body @php body_class($stickynav) @endphp>
     @if( get_field('scripts__gtm', 'option') )
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ get_field('scripts__gtm', 'option') }}"

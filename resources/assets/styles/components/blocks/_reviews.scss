@@ -1,0 +1,20 @@
+section.block-reviews:not(.bg-none) {
+  .rplg-box {
+    *:not(a):not(.rplg-review-name) {
+      color: #777 !important;
+    }
+
+    a {
+      color: var(--csm_secondary);
+    }
+  }
+
+  .rplg-review-name {
+    color: #fff !important;
+  }
+
+  &.reviews--rounded,
+  body.sidebar-primary & {
+    @include rounded-section();
+  }
+}

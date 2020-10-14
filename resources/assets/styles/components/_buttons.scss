@@ -4,6 +4,13 @@
   border-radius: 0;
   text-transform: uppercase;
 
+  &.btn-primary,
+  &.btn-secondary,
+  &.btn-info,
+  &.btn-text {
+    color: white;
+  }
+
   &.btn-default {
     background-color: var(--csm_secondary);
     color: white;
@@ -14,11 +21,44 @@
     }
   }
 
-  &.btn-primary,
-  &.btn-secondary,
-  &.btn-info,
+  &.btn-primary {
+    background-color: var(--csm_primary);
+    border-color: var(--csm_primary);
+
+    &:hover {
+      background-color: var(--csm_primary-dark);
+      border-color: var(--csm_primary-dark);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: var(--csm_secondary);
+    border-color: var(--csm_secondary);
+
+    &:hover {
+      background-color: var(--csm_secondary-dark);
+      border-color: var(--csm_secondary-dark);
+    }
+  }
+
+  &.btn-info {
+    background-color: var(--csm_info);
+    border-color: var(--csm_info);
+
+    &:hover {
+      background-color: var(--csm_info-dark);
+      border-color: var(--csm_info-dark);
+    }
+  }
+
   &.btn-text {
-    color: white;
+    background-color: var(--csm_text);
+    border-color: var(--csm_text);
+
+    &:hover {
+      background-color: var(--csm_text-dark);
+      border-color: var(--csm_text-dark);
+    }
   }
 
   &.btn-lg {

@@ -8,8 +8,10 @@
   $csm_secondaryDark = adjustBrightness( $csm_secondary, -26 );
   $csm_info = get_field('colour__info', 'option');
   $csm_infoRGB = hex2rgb( $csm_info );
+  $csm_infoDark = adjustBrightness( $csm_info, -26 );
   $csm_text = get_field('colour__text', 'option');
   $csm_textRGB = hex2rgb( $csm_text );
+  $csm_textDark = adjustBrightness( $csm_text, -26 );
   $csm_textLight = adjustBrightness( $csm_text, 30 );
   $csm_background = get_field('colour__background', 'option');
   $csm_backgroundRGB = hex2rgb( $csm_background );
@@ -53,8 +55,10 @@
   --csm_secondaryRGB: <?= strtolower( $csm_secondaryRGB ); ?>;
   --csm_secondary-dark: <?= strtolower( $csm_secondaryDark ); ?>;
   --csm_info: <?= strtolower( $csm_info );?>;
+  --csm_info-dark: <?= strtolower( $csm_infoDark );?>;
   --csm_infoRGB: <?= strtolower( $csm_infoRGB ); ?>;
   --csm_text: <?= strtolower( $csm_text ) ;?>;
+  --csm_text-dark: <?= strtolower( $csm_textDark ) ;?>;
   --csm_textRGB: <?= strtolower( $csm_textRGB ); ?>;
   --csm_text-light: <?= strtolower( $csm_textLight);?>;
   --csm_background: <?= strtolower( $csm_background ) ;?>;

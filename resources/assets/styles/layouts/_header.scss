@@ -204,3 +204,28 @@ header {
     }
   }
 }
+
+body.secondary--sticky {
+  @include media-breakpoint-up(md) {
+    margin-top: 26px;
+  }
+
+  .header-secondary {
+    @include media-breakpoint-up(md) {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100000;
+    }
+  }
+
+  &.admin-bar {
+    // margin-top: 58px;
+
+    .header-secondary {
+      @include media-breakpoint-up(md) {
+        top: 32px;
+      }
+    }
+  }
+}

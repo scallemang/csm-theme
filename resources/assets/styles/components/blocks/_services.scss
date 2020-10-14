@@ -19,6 +19,20 @@ section.block-services {
     }
   }
 
+  &:not(.bg-none) {
+    .card-body {
+      padding-top: 1.25rem !important;
+      padding-bottom: 1.25rem !important;
+    }
+  }
+
+  &.style-1,
+  &.style-2 {
+    .card-body *:not(a) {
+      color: var(--csm_text);
+    }
+  }
+
   &.style-1 {
     .row-services {
       // display: grid;
@@ -238,5 +252,10 @@ section.block-services {
         }
       }
     }
+  }
+
+  &.services--rounded,
+  body.sidebar-primary & {
+    @include rounded-section();
   }
 }

@@ -3,14 +3,14 @@
 
 @endphp
 <div class="{{ $cols }} my-3">
-    <div class="card color-{{ $color }} text-center">
+    <div class="card color-{{ $color }} text-center" @if( 'custom' == $color )style="border-color:{{ $custom }} !important;" @endif>
         <div class="card-body">
             <div class="card-header__wrapper">
                 @if( $card['image'] )
                 @if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif<img src="{!! $card['image']['url'] !!}" class="rounded-circle img-fluid">@if( $card['permalink'] )</a>@endif
                 @endif
                 @if( $card['title'] )
-                    <h3 class="post-title">@if( $card['permalink'] )<a href="{{ $card['permalink'] }}">@endif{!! $card['title'] !!}@if( $card['permalink'] )</a>@endif</h3>
+                    <h3 class="post-title" @if( 'custom' == $color )style="color:{{ $custom }} !important;" @endif>@if( $card['permalink'] )<a href="{{ $card['permalink'] }}" @if( 'custom' == $color )style="color:{{ $custom }} !important;" @endif>@endif{!! $card['title'] !!}@if( $card['permalink'] )</a>@endif</h3>
                 @endif
                 @if( $card['jobtitle'] )
                     <h4>{!! $card['jobtitle'] !!}</h4>

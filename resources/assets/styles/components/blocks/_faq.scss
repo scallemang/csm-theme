@@ -38,6 +38,16 @@ section.block-faq {
     }
   }
 
+  &:not(.bg-none) {
+    .card-body {
+      *:not(a),
+      p {
+        color: var(--csm_text) !important;
+      }
+    }
+  }
+
+  &.faq-rounded,
   body.sidebar-primary & {
     border-radius: 20px;
     overflow: hidden;
