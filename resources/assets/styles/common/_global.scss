@@ -154,12 +154,16 @@ ul {
 .bg-gradient {
   @include bg-gradient;
 
-  *:not(a) {
-    color: #fff;
-  }
+  // *:not(a) {
+  //   color: #fff;
+  // }
 
-  a:not(.btn) {
-    color: var(--csm_info);
+  // a:not(.btn) {
+  //   color: var(--csm_info);
+  // }
+  h2,
+  a {
+    color: white;
   }
 }
 
@@ -167,7 +171,7 @@ ul {
 .bg-secondary:not(.block-hero):not(.block-dynamic):not(.dark),
 .bg-info:not(.block-hero):not(.block-dynamic):not(.dark),
 .bg-image:not(.block-hero):not(.block-dynamic):not(.dark) {
-  :not(a):not(i):not(h2):not(h3):not(b) {
+  :not(a):not(i):not(h2):not(h3):not(b):not(strong) {
     color: #fff;
   }
 }

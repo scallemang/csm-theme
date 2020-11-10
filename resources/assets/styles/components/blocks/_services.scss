@@ -28,7 +28,7 @@ section.block-services {
 
   &.style-1,
   &.style-2 {
-    .card-body *:not(a) {
+    .card-body *:not(a):not(h3):not(b) {
       color: var(--csm_text);
     }
   }

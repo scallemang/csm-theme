@@ -64,6 +64,15 @@ h3 {
       color: var(--csm_text) !important;
     }
   }
+
+  section.block-services .card.color-custom & {
+    //color: var(--csm_text) !important;
+
+    a,
+    b {
+      color: inherit !important;
+    }
+  }
 }
 
 svg {
